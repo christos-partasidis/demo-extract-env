@@ -1,0 +1,393 @@
+/*------------------------------------------------------------------
+[Confirmation widget structure]
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[ Standards ]
+*/
+
+body {
+    font-family: arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.mainDiv {
+    font-size: 12px;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+}
+.bodyWrapper {
+    border: 0 solid #C7CED1;
+    background-color: #FFFFFF;
+}
+
+.headDivider {
+    background: url("../files/rc_logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 34px;
+    right: 0;
+    position: absolute;
+    top: 12px;
+    width: 172px;
+}
+
+/*------------------------------------------------------------------
+[ Header & Footer ]
+*/
+
+.headDiv {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.titlePt1 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.supplierDiv {
+    background: url("../files/suppliersrc.png") no-repeat scroll left center transparent;
+    margin: 2px 6px;
+    width: 370px;
+}
+.viewmoreDiv {
+    float: right;
+    margin: 4px 1%;
+    text-align: center;
+    width: 150px;
+}
+/*------------------------------------------------------------------
+[ Buttons ]
+*/
+/*-[ showdetails ]-*/
+
+.searchNowButton {
+    text-transform: capitalize;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 4px;
+    text-decoration: none;
+}
+:root .searchNowButton {
+    filter: none \0/IE9;
+}
+/* IE9 */
+/*-[ searchnow ]-*/
+
+.showDetailsButton {
+    font-family: inherit;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 70%;
+    padding: 7px 0;
+    text-decoration: none;
+}
+:root .showDetailsButton {
+    filter: none \0/IE9;
+}
+/* IE9 */
+
+.showDetailsButton {
+    *padding-left: 0% !important;
+    /* IE7 and below */
+
+    *padding-right: 0% !important;
+    /* IE7 and below */
+
+    *margin-left: 14px !important;
+    /* IE7 and below */
+}
+/*-[ viewmore ]-*/
+
+#viewImg {
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 14px;
+    min-width: 0%;
+    font-size: 13px;
+    white-space: nowrap;
+}
+/*-[ nocars ]-*/
+
+.nocars_button {
+    display: inline-block;
+    font-family: arial;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin-left: 12%;
+}
+:root .nocars_button {
+    filter: none \0/IE9;
+}
+/* IE9 */
+/*------------------------------------------------------------------
+[ Columns ]
+*/
+
+.car {
+    text-align: center;
+    width: 22%;
+    padding-right: 3%;
+    padding-left: 1%;
+}
+.result_info {
+    width: 26%;
+    padding-right: 3%;
+}
+.prices, .pricing {
+    width: 28%;
+    padding-top: 10px;
+}
+.wrapper .btn {
+    width: 22%;
+    margin: -16px;
+}
+.prices, .pricing {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 14px;
+    width: 20%;
+}
+/*------------------------------------------------------------------
+[ Columncontent ]
+*/
+
+.suppimage {
+    left: 10px;
+    position: absolute;
+    width: 5% !important;
+}
+.carimage {
+    max-height: 100%;
+    max-width: 110%;
+}
+.suppimage {
+    left: 6px;
+    position: absolute;
+    width: 60px !important;
+}
+.icons div div {
+    background-repeat: no-repeat;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 2px 0 14%;
+}
+.icons > div {
+    font-size: 11px;
+    padding: 0 6px 0 22px;
+}
+.make {
+    font-size: 13px;
+}
+.type {
+    line-height: 0;
+}
+.freeClx-msg {
+    line-height: 18px;
+    padding-top: 5px;
+    background-position: 0px 6px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 11px;
+}
+.was {
+    font-size: 11px;
+}
+.was, .total_pricing, .now, .total_pricing_number {
+    width: 100%;
+    line-height: 20px;
+}
+.now {
+    margin-bottom: 18px;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.from.ng-binding {
+    font-size: 15px;
+    line-height: 28px;
+    display: inline-block;
+}
+/* [ Nocars] */
+
+/*------------------------------------------------------------------ [ labels] */
+#puPuHour {
+    *margin-left: 1% !important;
+    /* IE7 and below */
+}
+label {
+    font-weight: normal;
+}
+/*------------------------------------------------------------------
+[ Misc ]
+*/
+/*---[ pay local toggle btn ]---*/
+
+#plDestination {
+    float: left;
+    width: auto;
+    margin-right: 30px;
+}
+
+.changebtn {
+    display: table-cell;
+    float: none;
+    font-family: arial;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: -3px !important;
+    padding: 2px 8%;
+    text-decoration: none;
+}
+
+.viewmoreDiv {
+    float: right;
+    margin: 4px 1%;
+    text-align: center;
+    width: 150px;
+}
+select::-ms-expand {
+    display: none;
+}
+.tooltip {
+    box-shadow: 1px 2px 2px #CCCCCC;
+    color: #003580;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 1px 64px;
+    background: #FFFFFF;
+}
+#whitebox {
+    color: #CC0001 !important;
+}
+select {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #aaa #ddd #ddd #aaa;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2) inset;
+    border-radius: 2px;
+    font-size: 10px;
+    margin: 0;
+    padding: 1px;
+}
+#deposit, .sellPanel {
+    display: none;
+}
+/*------------------------------------------------------------------
+[ Media Quires ]
+*/
+
+@media all and (max-width: 800px) {
+    .searchNowButton {
+        font-size: 12px;
+    }
+    .now {
+        font-size: 12px;
+    }
+    .titlePt1 {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .titlePt1 {
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 700px) and (min-width: 481px) {
+    .icons > div {
+        padding: 20px 0 0 0;
+        min-width: 22px;
+    }
+    .seats div {
+        background-position: left -63px
+    }
+    .doors div {
+        background-position: left -129px
+    }
+    .aircon div {
+        background-position: left 2px
+    }
+    .transmission div {
+        background-position: left -192px
+    }
+}
+@media all and (max-width: 550px) {
+    .supplierDiv {
+        width: 300px;
+    }
+    .headDivider {
+    display: none !important;
+}
+}
+@media all and (max-width: 480px) {
+    .wrapper > div {
+        text-align: center;
+    }
+    .freeClx-msg {
+        display: inline-block;
+    }
+    .car {
+        width: 50%;
+    }
+    .car, .result_info {
+        width: 46%;
+        text-align: left;
+    }
+    .wrapper .prices, .pricing {
+        float: left;
+        width: 50%;
+    }
+    .wrapper .btn {
+        width: 46%;
+        margin: 0;
+    }
+    .titlePt1 {
+        display: inline;
+        font-size: 14px;
+        line-height: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    .headlines {
+        float: none;
+        margin-left: 0;
+        width: 100%;
+    }
+    .wrapper .prices, .pricing {
+        float: left;
+        width: 51%;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .searchNowButton {
+        padding: 12px 2px;
+    }
+    .make, .type, .icons {
+        padding-top: 6px;
+    }
+    .icons > div {
+        margin: 0;
+    }
+
+}
+
+
+
+.nocars_container .addText {
+    display: none !important;
+}

@@ -1,0 +1,7535 @@
+
+body {
+	font:13px arial,helvetica,clean,sans-serif;
+	*font-size:small;
+	*font:x-small;
+}
+
+table {
+	font-size:inherit;
+	font:100%;
+}
+
+select, 
+input, 
+textarea {
+	font:99% arial,helvetica,clean,sans-serif;
+}
+
+pre, 
+code {
+	font:115% monospace;
+	*font-size:100%;
+}
+
+/* Default line-height based on font-size rather than "computed-value"
+see: http://www.w3.org/TR/CSS21/visudet.html#line-height */
+/*body * {line-height:1.22em;}*/
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #FFFFFF;
+}
+body, textarea, select, input, button {
+	font-family: Tahoma,Arial, sans-serif;
+	font-size: .7em;
+}
+textarea, select, input, button {
+	font-size: 1em;
+}
+
+
+h1 {
+	font-size: 1.2em;
+	color: black;
+}
+h2 {
+	font-size: 1.1em;
+	color: black;
+}
+h3 {
+	font-size: 1em;
+	color: black;
+}
+
+h1, h2, h3,p {
+	margin:0em 0pt 0.3em;
+	padding:0pt;
+}
+
+
+fieldset:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}/* Generic classes to be used throughout the application */
+.uc {
+    text-transform: uppercase;
+}
+.lc {
+    text-transform: lowercase;
+}
+.cap {
+    text-transform: capitalize;
+}
+.ra {
+    text-align: right;
+}
+.la {
+    text-align: left;
+}
+.ma {
+    text-align: center;
+}
+
+/* Palette colors: */
+.uicPaletteLight {
+    background-color: #FFFFFF;
+}
+.uicPaletteBorderLight {
+    border-color: #FFFFFF;
+}
+.uicPaletteMedium {
+    background-color: #f2f2f2;
+}
+.uicPaletteBorderMedium {
+    border-color: #f2f2f2;
+}
+.uicPaletteDark {
+    background-color: #E4E4E4;
+}
+.uicPaletteBorderDark {
+    border-color: #E4E4E4;
+}
+.uicPaletteSelected {
+    background-color: #E4E4E4;
+}
+.uicPaletteBorderSelected {
+    border-color: #E4E4E4;
+}
+.uicPaletteOver {
+    background-color: #f2f2f2 !important;
+}
+.uicPaletteBorderOver {
+    border-color: #f2f2f2 !important;
+}
+
+.uicPaletteDisabled {
+    color: #CECECE;
+}
+.uicPaletteMenu {
+    color:white;
+    background-color: #1A61A9;
+}
+.uicPaletteMenu a {
+    color:white;
+}
+.uicBorder {
+    border:1px solid #CECECE;
+}
+.uicPadding {
+    padding:0.5em;
+}
+.uicPaddingRight {
+    padding-right:0.5em;
+}
+.uicPaddingLeft {
+    padding-left:0.5em;
+}
+.uicBottomMargin {
+    margin-bottom:0.5em;
+}
+.uicRightMargin {
+    margin-right:0.5em;
+}
+.uicRight {
+    text-align:right;
+}
+.uicCenter {
+    text-align:center;
+}
+.uicLeft {
+    text-align:left;
+}
+.uicHidden {
+    display: none !important;
+}
+
+.uicInvisible{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:10000;
+    visibility:hidden;
+}
+
+.uicSROnly {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+    outline: none;
+}
+
+.uicDisabled {
+    opacity:.3;
+    filter:alpha(opacity=30);
+    *zoom:1;
+}
+
+a.uicDisabled {
+    cursor:default;
+}
+
+.uicBold{
+    font-weight: bold;
+}
+.yui-b {
+    padding: .5em;
+}
+
+/*************************************************************/
+/* 					Alert box styles:						 */
+/*************************************************************/
+
+.uicAlertBox {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 10px 15px;
+}
+.uicAlertBox.alertBoxinfo {
+    background: transparent url(../aria/img/alert/info.png) no-repeat scroll 4% 40%;
+}
+.uicAlertBox.alertBoxwarning {
+    background: transparent url(../aria/img/alert/warning.png) no-repeat scroll 4% 40%;
+}
+.uicAlertBox.alertBoxerror {
+    background: transparent url(../aria/img/alert/error.png) no-repeat scroll 4% 40%;
+}
+.uicAlertBox.alertBoxquestion {
+    background: transparent url(../aria/img/alert/question.png) no-repeat scroll 4% 40%;
+}
+.uicAlertBox .body {
+    margin-left: 70px;
+    overflow: auto;
+    background-color: #FFFFFF;
+    padding: 5px;
+    zoom:1;
+}
+
+.uicAlertBox .body .text {
+    margin: 2em 0;
+    font-weight: bold;
+    font-size: 1em;
+    color: #000000;
+}
+.uicAlertBox .body .description {
+    margin: 1em 0;
+}
+.uicAlertBox .footer {
+    text-align:center;
+    margin-left: 70px;
+    background-color: #FFFFFF;
+    padding: 5px;
+    height: 30px;
+}
+
+/*PTR 04486610 : FF hack as button as margin even if all is set to 0 */
+.uicAlertBox .footer .uicButton {
+    margin-right: 3px;
+}
+@-moz-document url-prefix() {
+    .uicAlertBox .footer .uicButton {
+        margin-right: 0px;
+    }
+}
+
+/*************************************************************/
+
+
+
+/*************************************************************/
+/* 				Loader overlay styles declaration 			 */
+/*************************************************************/
+
+.uicLoaderOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.uicLoaderOverlay.uicLo-loading {
+    background: #FFFFFF url(../aria/img/loadingStatus/loading.gif) no-repeat center center;
+    filter: alpha(opacity=80);
+    -moz-opacity: .80;
+    opacity: .80;
+}
+.uicLoaderOverlay.uicLo-disabled {
+    background: #FFFFFF;
+    filter: alpha(opacity=80);
+    -moz-opacity: .80;
+    opacity: .80;
+}
+
+.uicLoaderOverlay .text {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    top: 60%;
+    left: 0;
+}
+
+.uicLoaderOverlayShim {
+    position: absolute;
+    visibility: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    z-index:0;
+    /*filter: alpha(opacity=0);*/
+    filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0);
+}
+
+/*************************************************************/
+
+.uicImage {
+    border:0;
+    vertical-align:middle;
+}
+
+.uicDependencyLoader {
+    display: none;
+}
+
+.uicHiddenExpand{
+    height:0px;
+    overflow: hidden;
+}
+
+.uicBeforeExpand{
+    height: auto !important;
+    opacity: 0;
+    overflow: visible;
+    position: relative;
+    visibility: hidden;
+}
+
+a.iconExpand,
+a.iconCollapse{
+    background-repeat:no-repeat;
+    background-position:center left;
+    padding-left:16px;
+    cursor:pointer;
+    zoom:1;
+}
+/*************************************************************/
+/* 					Expand/collapse styles:                  */
+/*************************************************************/
+
+a.iconExpand{
+    background-image: url(../aria/img/icons/plus.png);
+}
+a.iconCollapse{
+    background-image:url(../aria/img/icons/minus.png);
+}
+
+
+/*************************************************************/
+
+
+/* Loading message when an APF app starts */
+.uicApfAppLoading {
+    font-weight: bold;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    padding: 3px 5px;
+}
+
+/*Style for iframe IE protection*/
+.uicShim {
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    position: absolute;
+    filter: alpha(opacity=0);
+}
+
+.uicOverflow{
+    overflow:hidden;
+    width:auto;
+}
+
+.uicTtNav{
+    background:transparent url(../aria/img/uicNavTT.png) no-repeat scroll left top;
+    font-weight:bold;
+    line-height:1.5em;
+    text-align:center;
+    color:white;
+}
+.uicTtNav.uicDisabled{
+    opacity:0.3;
+    filter:alpha(opacity=30);
+}
+
+.uicStackLogerror {
+    color: red;
+}
+.uicStackLogwarn{
+    color: blue;
+}
+
+/*
+ Define proxy characteristics for proxy element (for drag'n drop
+ splitter or border layout for instance)
+*/
+.uicProxy {
+    background-color: #BBBBBB;
+}
+
+
+
+form {
+	margin: 0;
+	padding: 0;
+}
+
+
+fieldset {
+	border: 1px solid #CECECE;
+	border-width: 1px;
+	margin: 0.4em;
+	padding: .7em;
+	background-color: transparent;
+	clear: both;
+}
+
+/*******************************************************/
+/* 			Anchor states styling                      */
+/*******************************************************/
+
+a, a:link {
+	color: #1a7ead ;/*  #6666FF; */
+	text-decoration: none;
+	font-weight: 400 ;
+	background-color: transparent;
+}
+a:visited {
+	color: #1a7ead;
+	text-decoration: none;
+	font-weight: 400 ;
+	background-color: transparent;
+}
+a:hover {
+	color: #1a7ead;
+	text-decoration: underline;
+	font-weight: 400 ;
+	background-color: transparent;
+}
+a:active {
+	color: #1a7ead;
+	text-decoration: none;
+	font-weight: 400 ;
+	background-color: transparent;
+}
+
+/*******************************************************/
+
+html>body fieldset {
+	*padding-top:0px; // hack to remove the top padding for ie7
+}
+
+fieldset.simple {
+	border: 0;
+}
+
+fieldset.stackable {
+	clear: none;
+	float: left;
+	width: 300px;
+	margin-right: 0.4em;
+}
+
+fieldset legend {
+	color: #000000;
+	background-color: transparent ;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	_margin-bottom: .5em;	/* ie6 */
+
+
+}
+*:first-child+html fieldset legend {
+	margin-bottom: .5em;	/* ie7 */
+}
+.textField, .datePicker {
+	margin: .5em 0;
+	white-space: nowrap;
+}
+
+* html .textField, * html .datePicker {
+	margin: .1em 0;
+}
+
+
+/* Setting default styling for label and input */
+.textField label, .textField input, .datePicker label, .datePicker input {
+	margin: 0 0.2em;
+	padding: 1px 2px;
+	color: #000000;
+	vertical-align: middle;
+
+}
+.textField input, .datePicker input {
+	border-style: solid ;
+	border-color: #c4c4c4 ;
+	border-width: 1px;
+	background-color: #FFFFFF;
+	width: 13em;
+}
+.textField label, .datePicker label {
+	line-height: 1.4em;
+	padding-right:0px;
+}
+div.textField span {
+	line-height:1.54em;
+	*line-height:1.6em;
+}
+.datePicker input {
+	width: 8em;
+}
+div.textField,
+div.datePicker {
+	clear: left;
+}
+div.textField label,
+div.datePicker label {
+	display: block;
+	float: left;
+	min-width: 10em;
+}
+* html div.textField label,
+* html div.datePicker label {
+	width: 10em;
+}
+.textField input.normal,
+.datePicker input.normal {
+
+}
+
+.textArea {
+	margin: .5em 0;
+}
+
+* html .textArea {
+	margin: .1em 0;
+}
+
+
+/* Setting default styling for label and textarea */
+.textArea label, .textArea textarea {
+	margin: 0 0.2em;
+	padding: 1px 2px;
+	color: #000000;
+}
+.textArea textarea {
+	border-style: solid ;
+	border-color: #c4c4c4 ;
+	border-width: 1px;
+	background-color: #FFFFFF;
+	vertical-align: top;
+	width: 13em;
+}
+.textArea textarea.sizable {
+	width: auto;
+}
+.textArea label {
+
+}
+div.textArea label {
+	display: block;
+	float: left;
+	min-width: 10em;
+	padding-top:0.18em;
+}
+html>body div.textArea label {
+	*padding-top:0.3em;
+}
+* html div.textArea label {
+	width: 10em;
+	padding-top:1em;
+}
+
+.normal textarea {
+	border-style: solid;
+}
+
+.mandatory textarea {
+
+	background-color: #ffe4b0;
+	border-style: solid;
+	color: #000000;
+
+}
+
+.readOnly textarea {
+	border-color: #c4c4c4;
+	background-color: #FFFFFF;
+	border-style: solid;
+	color: #000000;
+}
+
+.disabled textarea {
+	border-color: #E4E4E4;
+	background-color: #FFFFFF;
+	border-style: solid;
+	color: #CECECE;
+}
+
+.error textarea {
+	border-color: #ce0058;
+	border-style: solid;
+	color: #000000;
+}
+
+.textArea .focused {
+	border-color: #000000;
+	border-style: solid;
+	color: #000000;
+}
+
+.textField span {
+vertical-align: middle;
+}
+
+.uicTextAreaIT {
+	display: block;
+	float: left;
+}
+.uicTextAreaIB {
+	display: block;
+	float: left;
+}
+div.uicTextAreaBB label {
+	float: none;
+}
+div.uicTextAreaBT br {
+	clear: both;
+}
+div.uicTextAreaBR input {
+	display: block;
+	float: left;
+}
+div.uicTextAreaBR label {
+	display: inline;
+	float: none;
+}
+
+
+
+.textField .focused,
+.datePicker .focused {
+	border-color: #000000;
+	border-style: solid;
+	color: #000000;
+}
+
+.mandatory input {
+	border-color: #c4c4c4;
+	background-color: #ffe4b0;
+	color: #000000;
+}
+
+.error input, .error .focused {
+	color: #000000;
+	border-color: #ce0058;
+	border-style: solid;
+}
+
+.readOnly input {
+	color: #000000;
+}
+
+.readOnly input[type=text] {
+	border-color: #c4c4c4;
+	background-color: #FFFFFF;
+}
+
+.disabled input {
+	color: #CECECE;
+}
+
+.disabled input[type=text] {
+	border-color: #E4E4E4;
+	background-color: #FFFFFF;
+}
+
+.textField input.uicStatic {
+	border:1px solid transparent;
+	padding-top:0px;
+}
+
+input.uicHelpValue {
+	color:#999999 !important;
+	font-style:italic !important;
+}
+
+.datePicker .datePickerImage {
+	width: 12px;
+	height: 15px;
+	border: 0;
+	padding: 0;
+
+	margin-left:-2px ;
+
+	margin-left:0 ;
+	left:-2px;
+	vertical-align: middle;
+	cursor: pointer;
+	background:	url(../aria/img/calendar/picker.gif) no-repeat left center;
+}
+.datePicker .datePickerImage.fade {
+	background:	url(../aria/img/calendar/picker_disabled.gif) no-repeat left center;
+}
+* html .datePicker .datePickerImage {
+	top: -1px;
+}
+.datePicker .datePickerImage span {
+	display: none;
+}
+
+.textField span {
+	vertical-align: middle;
+}
+
+.uicTextFieldIT, .uicDatePickerIT {
+	display: block;
+	float: left;
+}
+.uicTextFieldIB {
+	display: block;
+	float: left;
+}
+div.uicTextFieldBB label {
+	float: none;
+}
+div.uicTextFieldBT br, div.uicDatePickerBT br {
+	clear: both;
+}
+div.uicTextFieldBR input {
+	display: block;
+	float: left;
+}
+div.uicTextFieldBR label {
+	display: inline;
+	float: none;
+}
+
+.select {
+	margin: .5em 0;
+}
+div.select {
+	clear: left;
+}
+
+* html .select {
+	margin: .1em 0;
+}
+
+.select label, .select select {
+	margin: 0 0.2em;
+	padding: 1px 2px;
+	color: #000000;
+	vertical-align: middle;
+}
+.select label {
+	line-height: 1.4em;
+}
+.select select {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #c4c4c4;
+	background-color: #FFFFFF;
+	width: 13.5em;
+	padding: 0;
+}
+.select select.sizable {
+	width: auto;
+}
+div.select label {
+	display: block;
+	float: left;
+	min-width: 10em;
+}
+* html div.select label {
+	width: 10em;
+}
+
+.mandatory select{
+	background-color: #ffe4b0;
+}
+
+.readOnly select{
+	background-color: #FFFFFF;
+}
+
+.disabled select{
+	border-color: #E4E4E4;
+	background-color: #FFFFFF;
+}
+
+.error select{
+	border-color: #ce0058;
+	border-style: solid;
+}
+
+.select span.error {
+	padding: 1px 0px 1px 1px;
+	border-color: #ce0058;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.select select.focused {
+	border-color: #000000;
+	border-style: solid;
+	/* background-color: ; */
+}
+
+.disabled select {
+	color: #CECECE ;
+}
+
+div.uicSelectBT br {
+	clear: both;
+}
+div.uicSelectBR label {
+	float: none;
+	display: inline;
+}
+.uicSelectIT {
+	display:block;
+	float:left;
+}
+.uicSelectIB {
+	display:block;
+	float:left;
+}
+
+.uicRadio {
+	margin: .5em 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.uicRadioLabel{
+  display:block;
+  float:left;
+  min-width: 10em;
+  margin:0 0.2em;
+  vertical-align:middle;
+  padding: 1px 2px;
+  color: #000000;
+}
+
+* html .uicRadioLabel{
+width: 10em;
+}
+
+* html .uicRadio {
+	margin:0;
+	zoom:1; /*needed to avoid label disapearing*/
+}
+
+.uicRadio label {
+	color: #000000;
+	padding: 0 0.4em;
+}
+
+.uicRadio .uicRadioButton {
+	margin: .5em 0 0;
+	padding: 0;
+	list-style-type: none;
+	height: 1.4em;
+}
+
+.uicRadioHR label{
+	padding-right:1em;
+	padding-left:0.4em;
+}
+
+.uicRadioHR input{
+	padding-right:0;
+	padding-left:0.2em;
+}
+
+.uicRadioHL label{
+	padding-left:1em;
+	padding-right:0.4em;
+}
+
+.uicRadioHL input{
+	padding-left:0;
+	padding-right:0.2em;
+}
+
+* html .uicRadio .uicRadioButton {
+	margin:0;
+}
+.uicRadio .uicRadioContainer {
+	margin: 0 0 0 1em;
+	padding: 1px 2px;
+	/*list-style-type: none;
+	width: 100%;*/
+}
+
+.uicRadio .uicRadioButton input {
+	vertical-align: middle;
+	margin: 0;
+}
+.uicRadio .uicRadioButton input, .uicRadio .uicRadioButton label {
+	vertical-align:middle;
+}
+
+.uicRadioL .uicRadioButton label {
+	display: block;
+	float: left;
+	min-width: 10em;
+	padding: 1px 2px;
+}
+* html .uicRadioL .uicRadioButton label {
+	width: 10em;
+}
+
+.uicRadioL .uicRadioContainer {
+	margin: 0;
+	padding: 0;
+}
+
+.uicRadioH .uicRadioButton {
+	display: inline;
+}
+.uicRadioH .uicRadioButton label {
+	display: inline;
+	float: none;
+}
+
+.uicRadioI {
+	display: inline;
+	margin: 0;
+}
+.uicRadioI .uicRadioButton {
+	display: inline;
+}
+
+.uicRadio .uicRadioContainerHidden, .uicRadioL .uicRadioContainerHidden {
+	display: none;
+	/*width: 100%;*/
+}
+
+.checkbox {
+	margin: .5em 0;
+}
+
+* html .checkbox {
+	margin: .1em 0;
+}
+*:first-child+html .checkbox {
+	margin: .1em 0;
+}
+
+
+.checkbox label, .checkbox input {
+	margin: 0 0.2em;
+	padding: 1px 2px;
+	color: #000000;
+	vertical-align:middle;
+}
+
+.uicCheckBoxIT {
+	display:block;
+	float:left;
+}
+.uicCheckBoxIB {
+	display:block;
+	float:left;
+}
+
+
+/*
+ this rules should be after checkboxes, texfield CSS
+ rules to override this rule ".checkbox input" for instance
+*/
+.disabled label{
+	color: #CECECE;
+}
+
+
+.uicErrorHolder {
+	padding: .7em;
+	margin: .5em 0;
+	background: white;
+	border: 0;
+}
+.uicErrorHolder.uicErrorHolder_E,
+.uicErrorHolder.uicErrorHolder_F,
+.uicErrorHolder.uicErrorHolder_W,
+.uicErrorHolder.uicErrorHolder_I,
+.uicErrorHolder.uicErrorHolder_C,
+.uicErrorHolder.uicErrorHolder_WC,
+.uicErrorHolder.uicErrorHolder_O {
+	background-color: white;
+	border: 1px solid transparent;
+}
+
+.uicErrorHolder .uicErrorHolderTitle {
+	font-size: 1em;
+	font-weight: bold;
+	color: #000000;
+	margin: 0 0 .5em 0;
+	padding: 0 0 0 23px;
+	line-height: 19px;
+	background-image: url(../aria/img/errors/sprite.gif);
+	background-repeat: no-repeat;
+	background-position: 0 -16px;
+}
+
+.uicErrorHolder .uicErrorTitleText{
+ float:left;
+ min-height:20px;
+}
+
+.uicErrorHolder.uicErrorHolder_E .uicErrorHolderTitle  { background-position: 0 -16px;  }
+.uicErrorHolder.uicErrorHolder_F .uicErrorHolderTitle  { background-position: 0 -66px;  }
+.uicErrorHolder.uicErrorHolder_W .uicErrorHolderTitle  { background-position: 0 -116px; }
+.uicErrorHolder.uicErrorHolder_I .uicErrorHolderTitle  { background-position: 0 -166px; }
+.uicErrorHolder.uicErrorHolder_C .uicErrorHolderTitle  { background-position: 0 -216px; }
+.uicErrorHolder.uicErrorHolder_WC .uicErrorHolderTitle { background-position: 0 -266px; }
+.uicErrorHolder.uicErrorHolder_O .uicErrorHolderTitle  { background-position: 0 -316px; }
+
+.uicErrorHolder .uicErrors {
+	margin: 0;
+	padding: 0 0 0 33px;  
+	list-style-type: none;
+}
+
+.uicErrorHolder .uicErrors .uicError {
+	font-size: 1em;
+	font-weight: normal;
+	color: #000000;
+	margin: 0.1em 0;
+	padding: 0;
+	line-height: 14px;
+	list-style-type: square;   
+}
+
+
+.uicErrorHolder .uicErrors .uicError .uicErrorLk {
+	color: #000000;
+	text-decoration: none;
+}
+.uicErrorHolder .uicErrors .uicError .uicErrorLk:visited {
+	color: #000000;
+	text-decoration: none;
+}
+.uicErrorHolder .uicErrors .uicError .uicErrorLk:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+.uicErrorHolder .uicErrors .uicError .uicErrorNb {
+	color: #000000;
+	font-size: inherit;
+	font-weight: inherit;
+	margin-left: .2em;
+}
+
+/* Contextual errors (in input fields) */
+.uicFieldContextError {
+	position: absolute;
+	visibility: hidden;
+	z-index:11040;
+	top: 0;
+	left: 0;
+	width: 15em;
+	padding: 0 0 16px 0;
+	border: none;
+	background-color: transparent;
+	
+        background-image: url(../aria/img/errors/contextualErrorBackground.gif);
+      
+	background-repeat: no-repeat;
+	background-position: bottom left;
+}
+.uicFieldContextError .uicFieldContextErrorTxt {
+	margin: 0;
+	padding: 5px;
+	color: white;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1.3em;
+	border-color: #ce0058;
+	border-style: solid;
+	border-width: 0;
+	border-bottom: 0;
+	background: #ce0058;
+	overflow-x:hidden;
+}
+.uicFieldContextErrorIFrame {
+	position: absolute;
+	visibility: hidden;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	z-index:0;
+	filter: alpha(opacity=0);
+}
+
+.uicFCE-upon-right {  
+        background-image: url(../aria/img/errors/contextualErrorBackground.gif);
+
+	background-position: bottom left;
+	padding: 0 0 16px 0;
+}
+
+.uicFCE-upon-left {
+        background-image: url(../aria/img/errors/contextualErrorBackground_left.gif);
+	
+	background-position: bottom right;
+	padding: 0 0 16px 0;
+}
+
+
+.uicFCE-below-right {
+        background-image: url(../aria/img/errors/contextualErrorBackgroundBelow.gif);
+    
+	background-position: top left;
+	padding: 16px 0 0 0;
+}
+
+.uicFCE-below-left {
+        background-image: url(../aria/img/errors/contextualErrorBackgroundBelow_left.gif);
+  
+	background-position: top right;
+	padding: 16px 0 0 0;
+}
+
+.uicFCE-upon-right .uicFieldContextErrorTxt {
+	border-width: 1px 1px 0 1px;
+}
+
+.uicFCE-upon-left .uicFieldContextErrorTxt {
+	border-width: 1px 1px 0 1px;
+}
+
+.uicFCE-below-right .uicFieldContextErrorTxt {
+	border-width: 0 1px 1px 1px;
+}
+
+
+.uicFCE-below .uicFieldContextErrorTxt {
+	border-width: 0 1px 1px 1px;
+}
+
+.uicButton {
+	margin: 0;
+		cursor: pointer;
+	vertical-align: middle;
+	font-size: 1em;
+	line-height:1.2em;
+}
+
+/* required for FF - PTR 08655629, followed by PTRs 08716665 and 08895315 */
+@-moz-document url-prefix() {
+	.uicButton {
+		overflow: auto;
+	}
+}
+
+/* Default padding fix for IE6 */
+* html .uicButton {
+	width: auto;
+	overflow: visible;
+}
+
+/* ie7 padding hack */
+html>body .uicButton {
+	*overflow:visible
+}
+
+/* BLOCK MODE */
+
+
+/* CUSTOMIMAGES MODE */
+
+.uicButton .uicButtonHd,
+.uicButton .uicButtonBd,
+.uicButton .uicButtonFt {
+	display: block;
+	*padding: 0  0 ;
+}
+
+
+.uicButton .uicButtonFt {
+	background-position: bottom left;
+}
+.uicButton .uicButtonHd strong,
+.uicButton .uicButtonBd strong,
+.uicButton .uicButtonFt strong {
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+	color: #1a7ead;
+	font-weight: 400;
+}
+.uicButton .uicButtonBd strong img {
+	vertical-align: middle;
+}
+.uicButton .uicButtonHd strong {
+	line-height: 1px;
+}
+
+.uicButton .uicButtonFt strong {
+	line-height: 1px;
+}
+.uicButton .uicButtonHd > strong,
+.uicButton .uicButtonFt > strong {
+	height: 1px;
+}
+*+html .uicButton .uicButtonHd strong,
+*+html .uicButton .uicButtonFt strong {
+	height: auto;
+}
+.uicButton .uicButtonHd strong,
+.uicButton .uicButtonFt strong {
+	text-indent: -9999px;
+}
+
+.uicButtonDisabled {
+	cursor: default;
+}
+
+
+.uicButtonDisabled .uicButtonHd strong,
+.uicButtonDisabled .uicButtonBd strong,
+.uicButtonDisabled .uicButtonFt strong {
+	color: #a4cade;
+	font-weight: 400;
+}
+
+
+.uicButtonDefault .uicButtonHd strong,
+.uicButtonDefault .uicButtonBd strong,
+.uicButtonDefault .uicButtonFt strong {
+	color: white;
+	font-weight: 400;
+}
+
+
+
+
+.uicButtonPushed .uicButtonHd strong,
+.uicButtonPushed .uicButtonBd strong,
+.uicButtonPushed .uicButtonFt strong {
+	color: #1a7ead;
+	font-weight: 400;
+}
+
+
+.uicButtonDefaultPushed .uicButtonHd strong,
+.uicButtonDefaultPushed .uicButtonBd strong,
+.uicButtonDefaultPushed .uicButtonFt strong {
+	color: #1a7ead;
+	font-weight: 400;
+}
+
+/* ie7 padding hack */
+html>body .uicButton .uicButtonHd strong,
+html>body .uicButton .uicButtonFt strong {
+	*padding-top:0px;
+	*padding-bottom:0px;
+	*height:;
+	*line-height:0px;
+	*text-indent:0;
+}
+html>body .uicButton .uicButtonHd strong {
+	*height:;
+}
+html>body .uicButton .uicButtonFt strong {
+	*height:;
+}
+
+html>body .uicButton .uicButtonBd,
+html>body .uicButton .uicButtonBd strong {
+	*min-height:1.3em;
+}
+
+html>body .uicButton .uicButtonHd {
+	*height: ;
+}
+html>body .uicButton .uicButtonFt {
+	*height: ;
+}
+
+html>body .uicButton .uicButtonBd .uicButtonIcon {
+	*display:block;
+}
+
+html>body .uicButton .uicButtonHd .uicButtonIcon,
+html>body .uicButton .uicButtonFt .uicButtonIcon {
+	*display:block;
+	*height:0px;
+	*padding-top:0px;
+	*padding-bottom:0px;
+}
+
+/* 1 px is missing in height, but we can't use padding here to add it, because of the variable height */
+
+/* ie7 padding hack END */
+
+.uicButtonField .uicButton {
+	margin-left: 10em;
+}
+
+.uicButtonIcon {
+	background-repeat: no-repeat;
+	padding: 2px 0 2px 20px;
+}/* Header */			
+.uic-ALH {
+	position:absolute;
+	margin:0;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+}
+
+/* Footer */
+.uic-ALF {
+	position:absolute;
+	margin:0;
+	bottom:0;
+	left:0;
+	display:block;
+	width:100%;
+}
+
+/* Columns */
+.uic-ALC1, .uic-ALC2, .uic-ALC3 {
+	position:absolute;
+	z-index:4; 
+	overflow:auto;
+	overflow-x: hidden;
+}	
+* html .uic-ALC1, * html .uic-ALC2, * html .uic-ALC3 {
+	height:100%;
+	top:0;
+	bottom:0;
+}
+
+.uicAccordion {
+	border-top: 1px solid #CECECE;
+}
+
+dl.uicAccordion {
+	margin: 0px;
+	padding: 0px;
+}
+
+.uicAccordion .uicAccToggle-open,
+.uicAccordion .uicAccToggle-closed,
+.uicAccordion .uicAccToggle-disabled {
+	float: right;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 16px;
+	text-indent: -10000px;
+}
+
+.uicAccordion .uicAccToggle-open {
+	background-image: url(../aria/img/viewtoggle1.gif);
+}
+.uicAccordion .uicAccToggle-closed {
+	background-image: url(../aria/img/viewtoggle2.gif);
+}
+.uicAccordion .uicAccToggle-disabled {
+	background-image: url(../aria/img/viewtoggle3.gif);
+}
+
+dt.uicAccordion {
+	margin: 0px;
+	padding: .1em 4px;;
+
+	 	background-position: bottom top;
+		background-repeat: repeat-x;
+		background-image: url();
+
+	background-color: #E4E4E4;
+	border: 1px solid #CECECE;
+	border-width: 0px 1px;
+	zoom:1;
+}
+
+dt.uicAccordion, dt.uicAccordion a {
+	color: #000000;
+	font-weight: 700;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+dt.uicAccordion .uicAccText.uicEllipsis {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-right: 16px;
+}
+
+.uicAccordion dt.disabled,
+.uicAccordion dt.disabled a {
+	color: #CECECE;
+}
+
+dd.uicAccordion{
+	padding: 0em 0.3em;
+	margin: 0px;
+	position:relative;
+	background-color: #FFFFFF;
+	border: 1px solid #CECECE;
+	border-width: 1px;
+	border-bottom-width: 0px;
+	zoom:1;
+}
+
+/* Bug fix for including relatively positioned elements in the accordion on IE7 (still failing on IE6) */
+*:first-child+html .uicAccordion dd {
+	position: relative;
+}
+
+.uicAccordion dd.open {
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+	border-bottom: 1px solid #CECECE;
+}
+
+.uicAccordion dd.closed {
+	overflow: hidden;
+	height: 0px;
+}
+
+.uicAccordion dd.closed *{
+	display: none;
+}
+
+.uicAccordion dd.disabled {
+	overflow: hidden;
+	height: 0px;
+}
+
+.beforeexpand {
+	height: auto !important;
+	opacity: 0;
+	overflow: visible;
+	position: relative;
+	visibility: hidden;
+}
+
+.ACRes,
+.ACResGen {
+    position:absolute;
+    top:1.7em;
+    left:0em
+}
+
+.ACRes .yui-ac-content,
+.ACResGen .yui-ac-content {
+
+             background-color: #FFFFFF ;
+
+    border: 1px solid #CECECE;
+    max-height:15em;
+    overflow:auto;
+    overflow-x:hidden;
+    overflow-y:auto;
+    z-index:9050;
+}
+
+.ACRes,
+.ACRes .yui-ac-content {
+    width:25em;
+}
+
+.ACResGen,
+.ACResGen .yui-ac-content {
+    width:15em;
+}
+
+.ACRes ul,
+.ACResGen ul {
+    margin:0pt;
+    padding:5px 0pt;
+}
+.ACRes li, .ACResGen li {
+    cursor:pointer;
+}
+.ACRes li.yui-ac-highlight,
+.ACResGen li.yui-ac-highlight {
+    color:  #000000 ;
+    font-weight: 400 ;
+    background-color: #E4E4E4;
+}
+
+.ysearchSuggestCountry,
+.ysearchSuggestUicCode{
+    font-family:arial;
+    font-size:1em;
+    float:right;
+    right:5px;
+    color:#808080;
+    z-index:10;
+}
+.ysearchSuggestRow,
+.ysearchSuggestAirport,
+.ysearchSuggestAllAirports,
+.ysearchSuggestSubAllAirports,
+.ysearchSuggestRail,
+.ysearchSuggestRailStation,
+.ysearchSuggestRailMainStation,
+.ysearchSuggestRailSubStation,
+.ysearchSuggestMixed,
+.ysearchSuggestCity,
+.ysearchSuggestCountryName,
+.ysearchSuggestPorAttraction,
+.ysearchSuggestPorBusiness,
+.ysearchSuggestPorCity,
+.ysearchSuggestPredefined,
+.ysearchSuggestPredefinedLast {
+    padding-top:2px;
+    font-family:arial;
+    font-size:1em;
+    padding-left:18px;
+}
+.ysearchSuggestSeparator{
+    height:5px;
+    background:transparent url(../aria/img/autocomp/dots.gif) repeat-x scroll left top;
+}
+.ysearchSuggestGeneric {
+    padding-left:5px;
+}
+.ysearchSuggestGenericKey {
+    padding-left:2px;
+}
+
+.ysearchSuggestAirport {
+    background:transparent url(../aria/img/autocomp/IcoFlight3-2.gif) no-repeat scroll left top;
+}
+
+.ysearchSuggestSubAllAirports {
+    padding-left:30px;
+    background:transparent url(../aria/img/autocomp/IcoFlight3-2_sub.gif) no-repeat scroll left top;
+}
+
+.ysearchSuggestAllAirports {
+    background:transparent url(../aria/img/autocomp/IcoFlight3-4.gif) no-repeat scroll left top;
+}
+
+.ysearchSuggestRail {
+    background:transparent url(../aria/img/autocomp/IcoTrain3.gif) no-repeat scroll left top;
+}
+
+.ysearchSuggestRailMainStation {
+    background:transparent url(../aria/img/autocomp/IcoTrainDouble.gif) no-repeat scroll left top;
+}
+
+.ysearchSuggestRailSubStation {
+padding-left:30px;
+    background:transparent url(../aria/img/autocomp/IcoTrain3_sub.gif) no-repeat scroll left top;
+}
+
+.ysearchSuggestMixed {
+    background:transparent url(../aria/img/autocomp/IcoTrain-Flight.gif) no-repeat scroll left top;
+    padding-left:18px;
+}
+.ysearchSuggestCity {
+    background:transparent url(../aria/img/autocomp/Ico_city1-1.gif) no-repeat scroll left top;
+}
+
+.ysearchSuggestCountryName {
+    background:transparent url(../aria/img/autocomp/IcoFavourite1-2.gif) no-repeat scroll left 3px;
+}
+
+.ysearchSuggestPorAttraction {
+    background:transparent url(../aria/img/autocomp/Ico_city1-1.gif) no-repeat scroll left top;
+}
+.ysearchSuggestPorBusiness {
+    background:transparent url(../aria/img/autocomp/Ico_city1-1.gif) no-repeat scroll left top;
+}
+.ysearchSuggestPorCity {
+    background:transparent url(../aria/img/autocomp/Ico_city1-1.gif) no-repeat scroll left top;
+}
+
+.ysearchSuggestPredefined,
+.ysearchSuggestPredefinedLast {
+    background:transparent url(../aria/img/autocomp/IcoFavourite1-2.gif) no-repeat scroll left top;
+}
+.ysearchSuggestPredefinedLast {
+    border-bottom: dashed #EEEEEE;
+}
+
+span.autoCompleteExpand {
+    display: inline-block;
+}
+
+.autoCompleteExpand {
+    width: 16px;
+    height: 16px;
+    border: 0;
+    padding: 0;
+
+    margin-left:0px ;
+
+    margin-left:2 ;
+    left:-2px;
+    vertical-align: middle;
+    cursor: pointer;
+    background:	url(../aria/img/autocomp/expand.png) no-repeat left center;
+}
+* html .autoCompleteExpand {
+    padding-top: -1px;
+}
+
+/* Different block/inline combination with label positions */
+.uicAutoCompleteIT {
+    display: block;
+    float: left;
+}
+.uicAutoCompleteIB {
+    display: block;
+    float: left;
+}
+
+div.uicAutoCompleteBB label {
+    float: none;
+}
+.uicAutoCompleteBT br {
+    clear: both;
+}
+
+.acLoading{
+    background:url(../aria/img/autocomp/spinner.gif) no-repeat right center;
+}
+
+.low_accuracy{
+    color:#aaa;
+}
+
+.med_accuracy{
+    color:#666;
+}
+
+.high_accuracy{
+    color:#000000;
+}
+
+.yui-ac-bd ul li {
+    clear:both
+}
+
+
+.calculator {
+	background-color: #FFFFFF;
+	border: 1px solid #CECECE;
+	width: 24em;
+	height: 15em;
+}
+/* Strangely, IE needs a larger container to fit all the buttons */
+* html .calculator {
+	width: 24.5em;
+}
+html>body .calculator {
+	width: 24.5em;
+	*height:16.5em;
+}
+
+/* Total display textfield */
+.calculator .display {
+	display: block;
+	margin: 0.4em;
+	width: 23em;
+	border: 1px solid #c4c4c4;
+	background-color: #FFFFFF;
+}
+
+/* Row of keys */
+.calculator .keyRow {
+	clear: left;
+}
+
+/* A single button */
+.calculator button {
+	float: left;
+	width: 4em;
+}
+
+.calendarHolder {
+	display: none;
+	background-color: #FFFFFF;
+	float: left;
+	border: solid 1px #CECECE
+}
+
+.calendarHolder .calendarTitle {
+	
+	 	background-image: url();
+	
+	background-color: #FFFFFF;	
+	color: #000000;
+	margin: 2px;
+	padding: 3px;
+	font-size: 1em;
+}
+
+.calendarHolder .calendarBody {
+	font-size: .9em;
+}
+
+.yui-calcontainer {
+	/* position:relative; => Might be a bug in IE6 under certain conditions */
+	position:static;
+	padding:3px;
+	overflow:hidden;
+}
+
+.yui-calcontainer iframe {
+	position:absolute;
+	border:none;
+	margin:0;
+	padding:0;
+	left:-1px;
+	top:-1px;
+	z-index:0;
+	width:50em;
+	height:50em;
+}
+
+.yui-calcontainer.multi {
+	padding:0;
+}
+
+.yui-calcontainer.multi .groupcal {
+	padding:3px;
+	background-color:transparent;
+	z-index:1;
+	float:left;
+	position:relative;
+	border:none;
+}
+
+.yui-calendar {
+	border: solid 1px #FFFFFF ;
+	text-align:center;
+	border-spacing:0;
+	border-collapse:separate;
+	position:relative;
+}
+
+.yui-calcontainer.withtitle {
+	padding-top:1.5em;
+}
+
+.yui-calendar .calnavleft {
+	background-image: url(../aria/img/calendar/callt.png);
+	position:absolute;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	width:12px;
+	height:12px;
+	left:2px;
+	z-index:1;
+	top:-1px;
+}
+
+.yui-calendar .calnavright {
+	background-image: url(../aria/img/calendar/calrt.png);
+	position:absolute;
+	background-repeat:no-repeat;
+	cursor:pointer;
+	width:12px;
+	height:12px;
+	right:2px;
+	z-index:1;
+	top:-1px;
+}
+
+
+.yui-calendar td.calcell {
+	padding:.1em .2em;
+	border:1px solid #FFFFFF;
+	text-align:center;
+}
+
+/* Grey-ing the week end days */
+.yui-calendar td.wd6, 
+.yui-calendar td.wd0 {
+	background-color:  #f2f2f2;
+	border: 1px solid #f2f2f2;
+	font-weight: 400 ;
+}
+
+.yui-calendar td.calcell a {
+	color: #000000;
+	text-decoration:none;
+}
+
+.yui-calendar td.calcell a:hover {
+	font-weight: 400 ;
+}
+
+.yui-calendar td.wd6 a, 
+.yui-calendar td.wd0 a {
+	color: #000000;
+}
+
+
+
+.yui-calendar td.calcell.today {
+	border: 1px solid #E4E4E4;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-weight: 400
+}
+
+.yui-calendar td.calcell.today.previous {
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	color: #CECECE;
+	font-weight: 400
+}
+
+.yui-calendar td.calcell.oom,
+.yui-calendar td.calcell.previous  {
+	cursor:default;
+	font-weight: 400 ;
+	background-color:#FFFFFF;
+	border:1px solid #FFFFFF;
+}
+
+
+.yui-calendar td.calcell.oom {
+	color: #FFFFFF;
+}
+
+.yui-calendar td.oom {
+	color:#FFFFFF;
+}
+
+.yui-calendar td.previous {
+	color:#CECECE;
+}
+
+.yui-calendar td.calcell.selected {
+	color: #000000 ;
+	font-weight: 400 ;
+	background-color:#E4E4E4!important;
+	border:1px solid #000000!important;
+}
+
+.yui-calendar td.calcell.calcellhover {
+	cursor:pointer;
+}
+
+.yui-calendar td.calcell.restricted {
+	text-decoration:line-through;
+}
+
+.yui-calendar td.calcell.highlight1 { background-color:#CCFF99; }
+.yui-calendar td.calcell.highlight2 { background-color:#99CCFF; }
+.yui-calendar td.calcell.highlight3 { background-color:#FFCCCC; }
+.yui-calendar td.calcell.highlight4 { background-color:#CCFF99; }
+
+.yui-calendar .calhead {
+	border: 1px solid #f2f2f2;
+	border-width: 1px 0;
+	vertical-align: middle;
+	background-color: #FFFFFF;
+	font-weight: 700;
+	color: #000000;
+}
+
+.yui-calendar .calheader {
+	position:relative;
+	width:100%;
+	text-align:center;
+}
+
+.yui-calendar .calheader img {
+	border:none;
+}
+
+.yui-calendar .calweekdaycell {
+	color: #000000;
+	font-weight: 700;
+	text-align: center;
+	width: 1.5em;
+	border: none;
+	background-color: #FFFFFF ;
+	border-width: 0;
+}
+
+/* Is it still used ? */
+.yui-calendar .calfoot {
+	background-color:#EEE;
+}
+
+/* Is it still used ? */
+.yui-calendar .calrowhead, 
+.yui-calendar .calrowfoot {
+	color:#000;
+	font-size:0.8em;
+	font-style:italic;
+	font-weight:normal;
+	width:15px;
+}
+
+/* Is it still used ? */
+.yui-calendar .calrowhead {
+	border-right-width:2px;
+}
+.uicCardLayout {
+	overflow: auto;
+}
+
+.uicCardLayout .uicCardLayoutPanel {
+	display: none;
+	_visibility: hidden;
+	height: 100%;
+}
+
+/* Container of the label and the button*/
+.uicColorPicker {
+	margin: .5em 0;
+	white-space: nowrap;
+}
+
+.uicColorPicker label {
+	margin: 0 0.2em;
+	padding: 1px 2px;
+	color: black;
+	vertical-align: middle;
+	line-height: 1.4em;
+}
+
+div.uicColorPicker label {
+	display: block;
+	float: left;
+	min-width: 10em;
+}
+
+* html div.uicColorPicker label {
+width: 10em;
+}
+
+.uicColorPicker .uicColorPickerButton{
+	vertical-align:middle;
+	margin:0;
+	padding:0;
+	cursor:pointer;
+	font-size:0.7em;
+}
+
+.uicColorPicker .uicColorPickerButton .uicColorPickerButtonBody{
+	width:1.3em;
+	height:100%;
+	background-color:white;
+	border-width: 1px;
+	border-style: solid;
+	border-color:transparent;
+	margin:0em;
+	font-weight:bold;
+	text-align:center;
+	font-size:0.7em;
+}
+
+.uicColorPicker .uicColorPickerButton .uicColorPickerButtonBody{ 
+	_border-color:tomato; /*For IE6-*/ 
+	_filter:chroma(color=tomato);/*For IE6-*/
+}
+
+.uicColorPickerBody {
+	position:absolute;
+	display:none;
+	padding:.5em 0 0 0;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CECECE;
+	z-index:20;
+	background-color: #FFFFFF;
+}
+.uicColorPickerBody .uicSelectedColor {	
+	float:left;
+	padding:0em;
+}
+
+.uicColorPickerBody .uicSelectedColor .uicColorPreview{
+	width:5em;
+	height:1.2em;
+	margin:0em 0.2em 0em .5em;
+	padding:1px 2px;
+	float:left;
+	border: 1px solid #CECECE;
+	display:inline;
+}
+.uicColorPickerBody .uicSelectedColor .uicHexValue{	
+	margin:0em;
+	padding:0em;
+}
+.uicColorPickerBody .uicSelectedColor .uicHexValue input{
+	width:5em;	
+	margin:0em;
+	position:relative;	
+	top: 0px;	
+}
+* html div.uicColorPickerBody .uicSelectedColor .uicHexValue input {
+	top: -1px;
+}
+*:first-child+html div.uicColorPickerBody .uicSelectedColor .uicHexValue input {
+	top: -1px;
+}
+.uicColorPickerBody .uicClose{
+	height:11px;
+	width:11px;	
+	cursor:pointer;
+	z-index:10;
+	border:none;
+	background:url(../aria/img/colorPicker/cp-close.gif) no-repeat top right;
+	position:absolute;
+	right:.5em;	
+}
+* html .uicColorPickerBody .uicClose {
+	right: 0.3em;
+}
+.uicColorPickerBody .uicActiveZone {		
+	padding: .5em;	
+	overflow:hidden;
+	clear:both;
+	font-size:0.9em;
+	height:13em;
+	width:16.1em;
+}
+.uicColorPickerBody .uicActiveZone .uicWebSafeColors {	
+	margin:0em;
+	overflow:hidden;
+	line-height:1px;
+	height:13em;
+	width:100%;
+}
+.uicColorPickerBody .uicActiveZone .uicWebSafeColors div {
+	clear:left;
+	margin:0;
+	padding:0;
+}
+.uicColorPickerBody .uicActiveZone .uicWebSafeColors span {
+	line-height:1px;
+	padding:0em;
+	display:block;
+	float:left;
+	height:0.9em;
+	width:0.9em;
+	margin:0em 0em 0.1em 0.1em;
+	cursor:pointer;
+}
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker {
+	position:relative;
+	margin:0em;
+	height:13em;
+	width:100%;
+}
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker .uicHueThumb { 
+	cursor:default; 
+	width:20px; 
+	height:11px; 
+	z-index: 9; 
+	position:absolute;
+	top:-5px;
+}
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker .uicHue {
+	-moz-outline: none; 
+	outline:0px none;
+	background:url(../aria/img/blank.gif) repeat-x;
+	/*background:url(../aria/img/blank.gif) repeat-x;*/
+	float:right;
+	height:125px; 
+	width:20px; 
+	top:1px;
+	z-index:-1;
+	
+}
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker .uicHueBg {
+	/*background:url(../aria/img/colorPicker/hue.png) repeat-x;*/
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CECECE;
+	height:124px;
+	width:18px;
+	position:absolute;
+	top:0px;
+	z-index:-1;
+}
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker .uicHue .uicHueThumb {
+	cursor:ns-resize;
+	z-index:1;
+	background:url(../aria/img/colorPicker/hline.gif) repeat-x;
+}
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker .uicPickerDiv {
+	-moz-outline: none;  
+	outline:0px none; 
+	height:125px; 
+	width:125px; 
+	background-color:#FF0000; 
+	float:left;
+}
+
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker .uicPickerDiv .uicPickerbg {	
+	width:124px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CECECE;
+	position:absolute;
+	z-index: 1; 
+	top:0px; 
+	left:0px; 
+}
+
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker .uicPickerDiv .uicSelector { 
+	cursor:default; 
+	width:11px; 
+	height:11px; 
+	z-index: 9; 
+	position:absolute; 
+	top:0px; 
+	left:0px; 
+}
+
+.uicColorPickerBody .uicActiveZone .uicAdvColorPicker .uicPickerDiv .uicColorThumb {
+	background:url(../aria/img/colorPicker/select.gif) no-repeat;
+	width:11px;
+	cursor:pointer;
+	position:relative;
+	left:-4px;
+	top:-4px;
+}
+.uicColorPickerBody .uicControls {
+	margin:0 .5em .5em .5em;
+	text-align:center;
+	clear:both;
+}
+.uicGauge {
+  border: 1px solid #C2D1F0;
+  float: left;
+  height: 1.3em;
+  padding: 1px;
+  position: relative;
+}
+
+.uicGauge .uicGaugeProgress {
+  background-color: #C2D1F0;
+  
+      background-image: url(../aria/img/gauge/back.gif);
+  
+  background-position: top left;
+  background-repeat: repeat-x;
+  border-right: 1px solid #C2D1F0;
+  height: 100%;
+}
+
+.uicGauge .uicGaugeIndicator {
+  position: absolute;
+  text-align: center;
+  top: 0.15em;
+  width: 100%
+}.dataGrid {
+	overflow: auto;
+}
+
+.ygrid-cell-text {
+	display: block;
+	overflow: hidden;
+	padding: 3px 5px;
+	white-space: nowrap;
+}
+.ygrid-col{
+	cursor: default;
+	height:21px !important;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position:absolute;
+	display:block;
+	-moz-outline: none;
+	-moz-user-focus: normal;
+	overflow: hidden;
+	border-left: 1px solid #FFFFFF;
+}
+.yeditgrid .ygrid-col{
+	-moz-outline: normal;
+}
+.ygrid-col, .ygrid-hd {
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+.ygrid-col-0{
+	display:none;
+}
+.ygrid-col-1{
+	border-left: 0px;
+}
+.ygrid-col-last{
+	border-right: 1px solid #FFFFFF;
+}
+
+/*
+.ygrid-editor{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position:absolute;
+	visibility:hidden;
+	border: 1px solid #afbdc9;
+	z-index:10;
+}
+.ygrid-editor input{
+	border: 0px;
+	padding-top:2px;
+	padding-left:3px;
+}
+.ygrid-editor-container{
+	overflow:hidden;
+	display:block;
+	background-color:white;
+}
+.ygrid-editor .pick-button{
+	width:15px;
+	height:20px;
+	position:absolute;
+	display:block;
+	right:0;
+	top:0;
+	z-index:2;
+	background-image: url(../aria/img/datagrid/pick-button.gif);
+	background-repeat: no-repeat;
+}
+.ygrid-editor-invalid{
+	background-image: url(../aria/img/datagrid/invalid_line.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border: 1px solid #afbdc9;
+}*/
+/*
+.ygrid-checkbox-editor{
+text-align: center;
+overflow:hidden;
+display:block;
+background-color:white;
+}
+.ygrid-checkbox-editor input{
+margin-top:3px;
+height:13px;
+width:13px;
+}
+select.ygrid-editor{
+	padding: 0px;
+	-moz-outline: none;
+	border: 1px solid #afbdc9;
+}*/
+/*
+.ygrid-num-editor{
+	text-align:right;
+	padding-top:2px;
+	padding-left:3px;
+}
+.ygrid-text-editor{
+	padding-top:2px;
+	padding-left:3px;
+}*/
+.ygrid-hd{
+	background-color: #E4E4E4;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display: block;
+	position: absolute;
+	overflow:hidden;
+}
+.ygrid-column-sizer {
+	width:1px;
+	border-right:1px dashed #6593cf;
+	background:none;
+	cursor: col-resize;
+}
+.ygrid-drag-proxy{
+	width:150px;
+	height:24px;
+	background-color:#3366cc;
+	border: 1px solid #002266;
+	position:absolute;
+	visibility:hidden;
+	z-index:10000;
+}
+.ygrid-drag-text{
+	color:white;
+	position:absolute;
+	top:0px;
+	left:26px;
+	padding:3px;
+	display:block;
+}
+.ygrid-drop-icon{
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:block;
+	width:24px;
+	height:100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ygrid-drop-nodrop{
+	background-image: url(../aria/img/datagrid/drop-no.gif);
+}
+.ygrid-drop-ok{
+	background-image: url(../aria/img/datagrid/drop-yes.gif);
+}
+.ygrid-hd .sort-asc {
+	background-image: url(../aria/img/datagrid/sort_asc.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+	display: none;
+	height: 14px;
+	width: 16px;
+}
+.ygrid-hd .sort-desc {
+	background-image: url(../aria/img/datagrid/sort_desc.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+	display: none;
+	height: 14px;
+	width: 16px;
+}
+.ygrid-hd-body {
+	cursor: default;
+	display: block;
+	left: 0;
+	overflow: hidden;
+	padding: 3px 5px;
+	position: relative;
+	top: 0;
+	white-space: nowrap;
+}
+
+.ygrid-hd-body table tbody, .ygrid-hd-body table td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.ygrid-hd-body span {
+	white-space: nowrap; 
+}
+.ygrid-hd-over{
+	border-bottom: 2px solid #f2f2f2 !important;
+}
+.ygrid-hd-over .ygrid-hd-body{
+	background-color: #f2f2f2 !important;
+	border-bottom: 1px solid #f2f2f2 !important;
+}
+.ygrid-hd-split {
+	background-image: url(../aria/img/datagrid/grid-split.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: e-resize;
+	display: block;
+	font-size: 1px;
+	height: 16px;
+	overflow: hidden;
+	position: absolute;
+	top: 2px;
+	width: 6px;
+	z-index: 3;
+}
+.ygrid-hrow{
+	background-color: #E4E4E4;
+	display: block;
+	height: 22px;
+	left: 0;
+	position: relative;
+	top: 0;
+	width: 10000px;
+	overflow:hidden;
+	z-index:2;
+}
+
+.ygrid-hrow-frame{
+	height: 22px;
+	left: 0;
+	display:block;
+	position: absolute;
+	top: 0;
+	width: 10000px;
+	z-index:1;
+}
+
+.ygrid-footer .ytoolbar{
+	border:0px;
+}
+
+.ygrid-page-number{
+	width:24px;
+	height:14px;	
+}
+.ygrid-page-first{
+	background-image: url(../aria/img/datagrid/page-first.gif);
+}
+.ygrid-loading{
+	background-image: url(../aria/img/datagrid/done.gif);
+}
+.ygrid-page-last{
+	background-image: url(../aria/img/datagrid/page-last.gif);
+}
+.ygrid-page-next{
+	background-image: url(../aria/img/datagrid/page-next.gif);
+}
+.ygrid-page-prev{
+	background-image: url(../aria/img/datagrid/page-prev.gif);
+}
+.ytb-button-disabled .ygrid-loading{
+	background-image: url(../aria/img/datagrid/loading.gif);
+}
+.ytb-button-disabled .ygrid-page-first{
+	background-image: url(../aria/img/datagrid/page-first-disabled.gif);
+}
+.ytb-button-disabled .ygrid-page-last{
+	background-image: url(../aria/img/datagrid/page-last-disabled.gif);
+}
+.ytb-button-disabled .ygrid-page-next{
+	background-image: url(../aria/img/datagrid/page-next-disabled.gif);
+}
+.ytb-button-disabled .ygrid-page-prev{
+	background-image: url(../aria/img/datagrid/page-prev-disabled.gif);
+}
+.ygrid-mso{
+}
+.ygrid-mso .ygrid-hd{
+	background:none;
+	border-bottom:0px;
+}
+.ygrid-mso .ygrid-footer {
+	border-top: 1px solid #E4E4E4;
+}
+
+.ygrid-mso .ygrid-footer .ygrid-fbutton{
+	border:0px;
+}
+.ygrid-mso .ygrid-hd-body {
+	border-bottom:0px;
+}
+.ygrid-mso .ygrid-hd-over{
+	border-bottom:0px;
+}
+.ygrid-mso .ygrid-hd-over .ygrid-hd-body{
+	background-color: transparent;
+}
+.ygrid-mso .ygrid-hd-split {
+	background-image: url(../aria/img/datagrid/grid-blue-split.gif);
+}
+.ygrid-mso .ytoolbar .ytb-sep {
+	background-image: url(../aria/img/datagrid/grid-blue-split.gif);
+}
+.ygrid-mso .ygrid-hrow{
+	background: url(../aria/img/datagrid/mso-hd.gif);
+	border-bottom: 1px solid #6593cf;
+	height: 21px;
+}
+.ygrid-mso .ygrid-row{
+	color: black;
+	border-bottom: 1px solid #ddecfe;
+}
+.ygrid-mso .ygrid-row-alt{
+	background-color: #f5f5f5;
+}
+.ygrid-mso .ygrid-row-selected{
+	background-color: #E4E4E4 !important;
+	color: black;
+}
+.ygrid-mso .ygrid-row-selected span{
+	color: black !important;
+}
+.yprops-grid .ygrid-col-1{
+ 	background-color: #f1efe2;
+}
+.yprops-grid .ygrid-col-1 .ygrid-cell-text{
+ 	background-color: white;
+}
+.yprops-grid .ygrid-col-0{
+ 	background-color: #f1efe2;
+}
+.yprops-grid .ygrid-col-0 .ygrid-cell-text{
+	 background-color: white;
+	 margin-left:10px;
+}
+.yprops-grid .ygrid-prop-edting .ygrid-col-0 .ygrid-cell-text{
+	 background-color: #316ac5;
+	 color: white;
+}
+.yprops-grid .ygrid-prop-edting .ygrid-col-0{
+	 color: white;
+}
+.yprops-grid .ygrid-num-editor{
+	text-align:left;
+}
+.ygrid-row{
+	/* This border should have the same color as the background*/
+	border-bottom: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	overflow: visible;
+	white-space: nowrap;
+	height:21px;
+	width:10000px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	display:block;
+	position:absolute;
+	
+}
+.ygrid-row-alt{
+	background-color: #f2f2f2;
+}
+.ygrid-row-over{
+	background-color: #f2f2f2 !important;
+	color: black;
+}
+.ygrid-row-selected{
+	background-color: #E4E4E4 !important;
+	color: black;
+}
+.ygrid-row-selected span{
+	color: black !important;
+}
+.ygrid-vista{
+ 	border:1px solid #535353;
+}
+.ygrid-vista .ygrid-hd{
+	border-bottom:0px;
+	background:none;
+}
+.ygrid-vista .ygrid-hd-body {
+	border-bottom: 1px solid #b3bcc0;
+}
+.ygrid-vista .ygrid-hd-over{
+	border-bottom:0px;
+}
+.ygrid-vista .ygrid-hd-over .ygrid-hd-body{
+	background-color: transparent;
+	border-bottom:0px;
+}
+.ygrid-vista .ygrid-hd-split {
+	background-image: url(../aria/img/datagrid/grid-split.gif);
+}
+.ygrid-vista .ygrid-hrow{
+	background: url(../aria/img/datagrid/grid-vista-hd.gif);
+	height: 21px;
+}
+.ygrid-vista .ygrid-row-alt{
+	background-color: #f5f5f5;
+}
+.ygrid-vista .ygrid-row-selected{
+	background-color: #535353  !important;
+	color: white;
+}
+.ygrid-vista .ygrid-row-selected span{
+	color: white !important;
+}
+.ygrid-vista .ygrid-wrap-body {
+}
+.ygrid-vista .ytoolbar{
+	border: 0px none;
+	background: url(../aria/img/datagrid/grid-vista-hd.gif);
+}
+.ygrid-vista .ytoolbar .ytb-sep{
+	background-image: url(../aria/img/datagrid/grid-split.gif);
+}
+/* 
+To have the scrollbars overlap the header, change .ygrid-wrap top style to 0 and 
+and ygrid-wrap-body top to 22px
+Then grid.getView().scrollbarMode = YAHOO.ext.grid.GridView.SCROLLBARS_OVERLAP;
+*/
+.ygrid-wrap {
+	height: 100%;
+	left: 0;
+	overflow: auto;
+	position: relative;
+	top: 22px;
+	width: 100%;
+}
+.ygrid-footer{
+	display: block;
+	padding:0px;
+	border-top: 1px solid #cbc7b8;
+}
+.ygrid-wrap-footer {
+	display: block;
+	overflow: hidden;
+	width:100%;
+	height:25px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	background-color: #ebeadb;
+	position:absolute;
+	bottom:0px;
+}
+.ygrid-wrap-body {
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	display: block;
+}
+.ygrid-wrap-headers {
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	z-index: 12;
+}
+
+
+.ypopcal{
+	background: white;
+	padding:2px;
+	border: 1px solid gray;
+	z-index:12001;
+	-moz-outline:none;
+	position:absolute;
+	display:none;
+	top:0;
+	left:0;
+}
+.ypopcal-shadow {
+	background: #dddddd;
+	filter: progid:DXImageTransform.Microsoft.Blur(MakeShadow=true,pixelradius=1) Alpha(opacity=35,style=1,startX=0,finishX=200,FinishOpacity=35);
+	padding: 0px;
+	position:absolute;
+	z-index:12000;
+	display:none; 
+	top:0; 
+	left:0;
+}
+.ypopcal-head{
+	width:150px;
+	background: #93b5e4;
+}
+.ypopcal-head td{
+	padding:1px;
+}
+.ypopcal-month{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	text-align:center;
+}
+.ypopcal-head .ypopcal-arrow{
+	width:16px;
+	text-align:center;
+	cursor:pointer;
+	-moz-user-select: none;
+}
+
+.ypopcal-head .next-month{
+	width:16px;
+	background-image: url(../aria/img/datagrid/arrow-right-white.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+.ypopcal-head .prev-month{
+	width:16px;
+	background-image: url(../aria/img/datagrid/arrow-left-white.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor:pointer;
+}
+
+.ypopcal-table {
+	background:white;
+	border-bottom: 1px solid #cccccc;
+}
+
+.ypopcal-table td{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid white;
+	text-align:right;
+	color:#aaaaaa;
+	cursor:pointer;
+	background:white;
+	padding:1px 2px;
+	width:12px;
+	height:12px;
+}
+.ypopcal-table td.today{
+	border: 1px solid darkred;
+}
+.ypopcal-table .ypopcal-daynames td{
+	text-align:center !important;
+	border:0px;
+	border-bottom: 1px solid #cccccc;
+	font-weight: normal;
+	text-align:right;
+	color:black;
+	cursor:default;
+}
+.ypopcal-table td.active{
+	cursor:pointer;
+	color:black;
+}
+.ypopcal-table td.ypopcal-disabled{
+	cursor:default;
+	background:#eeeeee;
+	border: 1px solid #eeeeee;
+	color:#bbbbbb;
+}
+.ypopcal-table td.selected{
+	background: #ddecfe;
+	border: 1px solid #c3daf9;
+}
+.ypopcal-today{
+	color: black;
+	cursor: hand;
+	display: inline-block;
+	margin-left: 2px;
+	text-decoration: none;
+	margin-top:2px;
+}
+
+.ygrid-simple-view .ygrid-col{
+	 height:100% !important;
+	 position:static;
+	 display:table-cell;
+	 display:inline-block;
+}
+.ygrid-simple-view .ygrid-row{
+	 position:static; 
+	 display: table-row;
+}
+
+
+
+.uicGroupBox {
+	zoom: 1;
+}
+
+.uicGroupBox .header {				
+	background-color: #E4E4E4;	
+	background-image: url();
+	background-repeat: repeat-x;
+	background-position: top left;
+	border: 1px solid #CECECE;
+	margin: .1em;
+	border-bottom-width: 0;
+	margin-bottom: 0;
+}
+.uicGroupBoxCollapsed .header {
+	border-bottom: 1px solid #CECECE; 
+}
+.uicGroupBox .header .title {
+	font-weight: bold;
+	font-size: 1em;
+	padding: .3em;
+	margin: 0;
+	color: #000000;
+}
+.uicGroupBox .header .links {
+padding:  .3em;
+margin: 0;
+list-style-type: none;
+float: right;
+}
+.uicGroupBox .header .links .link {
+	display: inline;
+	padding-right: 3px;
+	margin-right: 3px;
+	border-right: 1px solid blue;
+	font-size: .9em;
+}
+.uicGroupBox .header .links .link.last {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+.uicGroupBox .header .links .link a {
+	color: blue;
+}
+.uicGroupBox .content {
+	border: 1px solid #CECECE;
+	margin: .1em;
+	border-top-width: 0;
+	margin-top: 0;
+	background-color: #FFFFFF;
+}
+
+.uicHeader {
+	font-weight: bold;
+	font-size: 1em;
+	padding: .3em;
+	margin: 0;
+	background-color: #E4E4E4;
+	background-image: url();
+	background-repeat: repeat-x;
+	background-position: top left;
+	border-top: 1px solid #CECECE;
+	border-bottom: 1px solid #CECECE;
+	position: relative;
+	top: -1px;
+}
+
+.uicGroupHeader .uicGroupHeaderTab {
+margin: 0 24px 0 0;
+padding: 0 0 0 20px;
+background: url(../aria/img/groupheader/TitleTab.gif) no-repeat bottom left;
+color: #FFFFFF;
+float: right;
+}
+.uicGroupHeader .uicGroupHeaderTab .uicGroupHeaderText {
+background-color: #1A61A9;
+font-family:Arial;
+display: block;
+padding: .2em 15px 0 0;
+margin:0;
+}
+.uicGroupHeader .uicGroupHeaderBody {
+clear: right;
+border-color:#1A61A9;
+border-style:solid;
+border-width:11px 3px 3px;
+background-color: null;
+}
+.uicGroupHeader .uicEmptyGroupHeaderBody {
+clear: right;
+border-color:#1A61A9;
+border-style:solid;
+border-width:11px 0px 0px;
+}
+.uicGroupHeader .uicGroupHeaderFooter {
+color: white;
+background-color: #1A61A9;
+padding:0px 2px 4px 5px;
+display:block;
+}
+
+.iconOpen {
+background-image: url(../aria/img/icons/Open_16x16.gif);
+}
+.iconSave {
+background-image: url(../aria/img/icons/Save_16x16.gif);
+}
+.iconSaveAs {
+background-image: url(../aria/img/icons/SaveAs_16x16.gif);
+}
+.iconPrint {
+background-image: url(../aria/img/icons/Print_16x16.gif);
+}
+.iconUndo {
+background-image: url(../aria/img/icons/Undo_16x16.gif);
+}
+.iconRedo {
+background-image: url(../aria/img/icons/Redo_16x16.gif);
+}
+.iconNew {
+background-image: url(../aria/img/icons/New_16x16.gif);
+}
+.iconCut {
+background-image: url(../aria/img/icons/Cut_16x16.gif);
+}
+.iconCopy {
+background-image: url(../aria/img/icons/Copy_16x16.gif);
+}
+.iconPaste {
+background-image: url(../aria/img/icons/Paste_16x16.gif);
+}
+.iconRefresh {
+background-image: url(../aria/img/icons/Refresh_16x16.gif);
+}
+.iconDelete {
+background-image: url(../aria/img/icons/Delete_16x16.gif);
+}
+.iconSearch {
+background-image: url(../aria/img/icons/Search_16x16.gif);
+}
+.iconAddLine {
+background-image: url(../aria/img/icons/AddLine_16x16.gif);
+}
+.iconDelLine {
+background-image: url(../aria/img/icons/DelLine_16x16.gif);
+}
+.iconBackward {
+background-image: url(../aria/img/icons/Backward_16x16.gif);
+}
+.iconForward {
+background-image: url(../aria/img/icons/Forward_16x16.gif);
+}
+.iconDown {
+background-image: url(../aria/img/icons/Down_16x16.gif);
+}
+.iconUp {
+background-image: url(../aria/img/icons/Up_16x16.gif);
+}
+.iconEdit {
+background-image: url(../aria/img/icons/Edit_16x16.gif);
+}
+.iconExport {
+background-image: url(../aria/img/icons/Export_16x16.gif);
+}
+.iconImport {
+background-image: url(../aria/img/icons/Import_16x16.gif);
+}
+.iconFolder {
+background-image: url(../aria/img/icons/Folder_16x16.gif);
+}
+.iconPrefs {
+background-image: url(../aria/img/icons/Prefs_16x16.gif);
+}
+.iconZoomIn {
+background-image: url(../aria/img/icons/ZoomIn_16x16.gif);
+}
+.iconZoomOut {
+background-image: url(../aria/img/icons/ZoomOut_16x16.gif);
+}
+.iconClear {
+background-image: url(../aria/img/icons/Clear_16x16.gif);
+}
+.iconClearAll {
+background-image: url(../aria/img/icons/ClearAll_16x16.gif);
+}
+.iconAttach {
+background-image: url(../aria/img/icons/attach_16x16.png);
+}
+.iconClose {
+background-image: url(../aria/img/icons/close_16x16.png);
+}
+.iconMail {
+background-image: url(../aria/img/icons/mail_16x16.png);
+}
+.iconAir {
+background-image: url(../aria/img/icons/Air_16x16.gif);
+}
+.iconCar {
+background-image: url(../aria/img/icons/Car_16x16.gif);
+}
+.iconTrain {
+background-image: url(../aria/img/icons/Train_16x16.gif);
+}
+.iconCruise {
+background-image: url(../aria/img/icons/Cruise_16x16.gif);
+}
+.iconHotel {
+background-image: url(../aria/img/icons/hotel.png);
+}
+.iconSystem {
+background-image: url(../aria/img/icons/System_16x16.gif);
+}
+.iconHelp {
+background-image: url(../aria/img/icons/Help_16x16.gif);
+}
+.iconProfile {
+background-image: url(../aria/img/icons/Profile_16x16.gif);
+}
+.iconWarning {
+background-image: url(../aria/img/icons/Warning_16x16.gif);
+}
+.iconCmdRecall {
+background-image: url(../aria/img/icons/cmdRecall.gif);
+}
+.iconLeftExpand {
+background-image: url(../aria/img/icons/LeftExpand_16x16.gif);
+}
+.iconLeftCollapse {
+background-image: url(../aria/img/icons/LeftCollapse_16x16.gif);
+}
+.iconRightExpand {
+background-image: url(../aria/img/icons/RightExpand_16x16.gif);
+}
+.iconRightCollapse {
+background-image: url(../aria/img/icons/RightCollapse_16x16.gif);
+}
+.iconBottomExpand {
+background-image: url(../aria/img/icons/BottomExpand_16x16.gif);
+}
+.iconBottomCollapse {
+background-image: url(../aria/img/icons/BottomCollapse_16x16.gif);
+}
+.iconInformation {
+background-image: url(../aria/img/icons/Information_16x16.gif);
+}
+.iconActivate {
+background-image: url(../aria/img/icons/Activate_16x16.gif);
+}
+.iconDeactivate {
+background-image: url(../aria/img/icons/Deactivate_16x16.gif);
+}
+.iconDisplay {
+background-image: url(../aria/img/icons/Display_16x16.gif);
+}
+.iconFavorite {
+background-image: url(../aria/img/icons/Favorite_16x16.gif);
+}
+.iconNotFavorite {
+background-image: url(../aria/img/icons/NotFavorite_16x16.gif);
+}
+.iconError {
+background-image: url(../aria/img/icons/Error_16x16.gif);
+}
+.iconComplete {
+background-image: url(../aria/img/icons/Complete_16x16.gif);
+}
+.iconValidate {
+background-image: url(../aria/img/icons/Validate_16x16.gif);
+}
+.iconMoney {
+background-image: url(../aria/img/icons/Money_16x16.gif);
+}
+.iconFlag {
+background-image: url(../aria/img/icons/Flag_16x16.gif);
+}
+.iconFerry {
+background-image: url(../aria/img/icons/Ferry_16x16.gif);
+}
+.iconSelected {
+background-image: url(../aria/img/icons/selected_16x16.gif);
+}
+.iconUnselected {
+background-image: url(../aria/img/icons/unselected_16x16.gif);
+}
+.iconGroup {
+background-image: url(../aria/img/icons/Group_16x16.gif);
+}
+.iconUser {
+background-image: url(../aria/img/icons/User_16x16.gif);
+}
+.iconOffline {
+background-image: url(../aria/img/icons/Offline_16x16.gif);
+}
+.iconHourglass {
+background-image: url(../aria/img/icons/Hourglass_13x13.gif);
+}
+.iconAllFares {
+background-image: url(../aria/img/icons/AllFares_16x16.gif);
+}
+.iconDisabledGreen {
+background-image: url(../aria/img/icons/DisabledGreen_16x16.gif);
+}
+.iconDisabledRed {
+background-image: url(../aria/img/icons/DisabledRed.gif);
+}
+.iconDisabledYellow {
+background-image: url(../aria/img/icons/DisableYellow_16x16.gif);
+}
+.iconFareWizard {
+background-image: url(../aria/img/icons/FareWizard_16x16.gif);
+}
+.iconFerry {
+background-image: url(../aria/img/icons/Ferry_16x16.gif);
+}
+.iconFirstPage {
+background-image: url(../aria/img/icons/FirstPage_16x16.gif);
+}
+.iconFont {
+background-image: url(../aria/img/icons/Font_16x16.gif);
+}
+.iconGreen {
+background-image: url(../aria/img/icons/Green_16x16.gif);
+}
+.iconHotelPlus {
+background-image: url(../aria/img/icons/HotelPlus_16x16.gif);
+}
+.iconLastPage {
+background-image: url(../aria/img/icons/LastPage_16x16.gif);
+}
+.iconNextPage {
+background-image: url(../aria/img/icons/NextPage_16x16.gif);
+}
+.iconPreviousPage {
+background-image: url(../aria/img/icons/PreviousPage_16x16.gif);
+}
+.iconPSMAdmin {
+background-image: url(../aria/img/icons/PSMAdmin_16x16.gif);
+}
+.iconPSM {
+background-image: url(../aria/img/icons/PSM_16x16.gif);
+}
+.iconQueue {
+background-image: url(../aria/img/icons/Queue_16x16.gif);
+}
+.iconRail {
+background-image: url(../aria/img/icons/Rail_16x16.gif);
+}
+.iconRed {
+background-image: url(../aria/img/icons/Red_16x16.gif);
+}
+.iconSortDown {
+background-image: url(../aria/img/icons/SortDown_16x16.gif);
+}
+.iconSortUp {
+background-image: url(../aria/img/icons/SortUp_16x16.gif);
+}
+.iconSort {
+background-image: url(../aria/img/icons/Sort_16x16.gif);
+}
+.iconTickets {
+background-image: url(../aria/img/icons/Tickets_16x16.gif);
+}
+.iconWindowSettings {
+background-image: url(../aria/img/icons/WindowSettings_16x16.gif);
+}
+.iconYellow {
+background-image: url(../aria/img/icons/Yellow_16x16.gif);
+}
+
+
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+/* For aria applications using a borderlayout or such in the body, we need to hide the scrollbars
+ * This does not work in quirks mode. The style should be applied on the body tag.
+ */
+html.ariaFullScreenApp {
+	overflow: hidden;
+}
+
+.ariaLayoutFrontRegion {
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 10010;
+display: none;
+}
+
+.ylayout-container{
+width:100%;
+height:100%;
+overflow:hidden;
+background-color: #F3F2E7;
+background-color: null;
+}
+.ylayout-collapsed{
+position:absolute;
+left:-10000px;
+top:-10000px;
+visibility:hidden;
+background-color:#F3F2E7;
+width:20px;
+height:20px;
+overflow:hidden;
+border:1px solid #CECECE;
+z-index:20;
+}
+.ylayout-collapsed-over{
+cursor:pointer;
+ background-color:#FBFBEF;
+}
+.ylayout-collapsed-west  .ylayout-tools-button{
+float:right;
+}
+.ylayout-collapsed-east  .ylayout-tools-button{
+float:left;
+}
+.ylayout-collapsed-north, .ylayout-collapsed-south{
+text-align:right;
+}
+.ylayout-collapsed .ylayout-tools-button{
+margin:2px;
+ width:12px;
+ text-align:center;
+}
+.ylayout-inactive-content{
+position:absolute;
+left:-10000px;
+top:-10000px;
+visibility:hidden;
+}
+.ylayout-active-content{
+visibility:visible;
+
+height: 100%;
+}
+.ylayout-panel-east, .ylayout-panel-west {
+z-index:10;
+}
+.ylayout-panel-north, .ylayout-panel-south {
+z-index:11;
+}
+.ylayout-collapsed-north, .ylayout-collapsed-south, .ylayout-collapsed-east, .ylayout-collapsed-west {
+z-index:12;
+}
+.ylayout-panel{
+	position:absolute;
+	border:1px solid #CECECE;
+	overflow:hidden;
+	background-color: #FFFFFF;
+}
+
+.ylayout-panel-body{
+overflow:hidden;
+position: relative;
+}
+.ylayout-grid-wrapper{
+
+}
+.ylayout-split{
+position:absolute;
+height:6px;
+width:6px;
+line-height:1px;
+font-size:1px;
+z-index:3;
+background-color: #FFFBF1;
+background-color: null;
+}
+.ylayout-panel-hd{
+background-image: url(../aria/img/layout/panel-title-light-bg.gif);
+color: black;
+border-bottom:1px solid #CECECE;
+position:relative;
+}
+.ylayout-panel-hd-text{
+font:normal 1em tahoma, verdana, helvetica;
+padding: 4px;
+padding-left: 4px;
+display:block;
+}
+.ylayout-panel-hd-tools{
+position:absolute;
+right:0px;
+top:0px;
+text-align:right;
+padding-top:2px;
+padding-right:2px;width:40px;
+}
+.ylayout-tools-button{
+z-index:6;
+padding:2px;
+cursor:pointer;
+float:right;
+}
+.ylayout-tools-button-over{
+padding:1px;
+border:1px solid #CECECE;
+background-color:white;
+}
+.ylayout-tools-button-inner{
+height:12px;
+width:12px;
+line-height:1px;
+font-size:1px;
+background-repeat:no-repeat;
+background-position:center;
+}
+.ylayout-close{
+background-image:url(../aria/img/layout/panel-close.gif);
+}
+.ylayout-collapse-west,.ylayout-expand-east{
+background-image:url(../aria/img/layout/collapse.gif);
+}
+.ylayout-expand-west,.ylayout-collapse-east{
+background-image:url(../aria/img/layout/expand.gif);
+}
+.ylayout-collapse-north,.ylayout-expand-south{
+background-image:url(../aria/img/layout/ns-collapse.gif);
+}
+.ylayout-expand-north,.ylayout-collapse-south{
+background-image:url(../aria/img/layout/ns-expand.gif);
+}
+.ylayout-split-h{
+background-image:url(../aria/img/sizer/e-handle.gif);
+background-position: left;
+}
+
+.ylayout-nested-layout .ylayout-split-h{
+border-left: 1px solid #CECECE; 
+border-right: 1px solid #CECECE; 
+}
+
+.ylayout-split-v{
+background-image:url(../aria/img/sizer/s-handle.gif);
+background-position: top;
+}
+
+.ylayout-nested-layout .ylayout-split-v{
+border-top: 1px solid #CECECE; 
+border-bottom: 1px solid #CECECE; 
+}
+
+.ylayout-panel .ytab-wrap{
+background:url(../aria/img/layout/gradient-bg.gif);
+}
+.ylayout-panel .yui-ext-tabbody {
+background-color:transparent;
+overflow:auto;height:100%;
+}
+.ylayout-component-panel, .ylayout-nested-layout {
+position:relative;
+padding:0px;
+overflow:hidden;
+width:200px;
+height:200px;
+}
+.ylayout-nested-layout .ylayout-panel {
+  border:0px;
+}
+
+.yui-ext-repaint{
+zoom:1;
+ background-color: transparent;
+}
+.ylayout-panel-dragover {
+border: 2px solid #CECECE;
+}
+
+.ylayout-nested-layout  .ylayout-panel-dragover {
+border: 1px solid #CECECE; !important
+}
+.ylayout-panel-proxy {
+	background-image: url(../aria/img/layout/gradient-bg.gif);
+	background-color:#F3F2E7;
+	border:1px dashed #CECECE;
+	z-index:10001;
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.ylayout-slider {
+	z-index:15;
+	overflow:hidden;
+	position:absolute;
+}
+
+.ytab-wrap {
+	border-bottom:1px solid #CECECE;
+	padding-top:2px;
+	position:relative;
+}
+.ytab-wrap table{
+	table-layout: fixed;
+	margin-bottom:-1px;
+	position:relative;
+	top:0; 
+	left:0;
+}
+.ytab-strip td{
+	padding-left:2px;
+}
+.ytab-strip a, .ytab-strip span, .ytab-strip em {
+	display:block;
+}
+.ytab-strip a {
+	text-decoration:none !important;
+	-moz-outline: none;
+	outline: none;
+}
+.ytab-strip .ytab-text {
+	font:bold 1em tahoma,arial,helvetica;
+	color:#666;
+	overflow:hidden;
+	white-space: nowrap;
+	cursor:pointer;
+	text-overflow: ellipsis;
+}
+.ytab-strip .on .ytab-text {
+	cursor:default;
+	color:#083772;
+}
+.ytab-strip .disabled .ytab-text {
+	cursor:default;
+	color:#aaaaaa;
+}
+.ytab-strip .ytab-inner {
+ padding:4px 10px;	
+}
+
+.ytab-strip .on .ytab-right {
+ background: url(../aria/img/tabs/tab-sprite.gif) no-repeat right 0px;
+}
+.ytab-strip .on .ytab-left {
+ background: url(../aria/img/tabs/tab-sprite.gif) no-repeat 0px -100px;
+}
+.ytab-strip .ytab-right {
+ background: url(../aria/img/tabs/tab-sprite.gif) no-repeat right -50px;
+}
+.ytab-strip .ytab-left {
+ background: url(../aria/img/tabs/tab-sprite.gif) no-repeat 0px -150px;
+}
+
+.ytab-strip  a {
+position:relative;
+top:0; left:0;
+}
+.ytab-strip .on a {
+
+}
+.ytab-strip .on .ytab-inner {
+padding-bottom:5px;
+}
+/** closable tabs */
+.ytab-strip .ytab-closable .ytab-inner{
+padding-right:28px;
+position:relative;
+}
+.ytab-strip .ytab-closable .close-icon{
+line-height: 1px;
+font-size:1px;
+background-image:url(../aria/img/layout/tab-close.gif);
+display:block;
+position:absolute;
+right:5px;
+top:6px;
+width:11px;
+height:11px;
+cursor:pointer;
+}
+.ytab-strip .on .close-icon{
+background-image:url(../aria/img/layout/tab-close.gif);
+top: 6px;
+}
+.ytab-strip .ytab-closable .close-over{
+background-image:url(../aria/img/layout/tab-close-on.gif);
+}
+
+.ytabs-bottom .ytab-wrap {
+	border-top:1px solid #CECECE;
+	border-bottom:0px none;
+	padding-top:0px;
+	padding-bottom:2px;
+}
+.ytabs-bottom .ytab-strip .ytab-right {
+ background: url(../aria/img/tabs/tab-btm-inactive-right-bg.gif) no-repeat bottom left;
+}
+.ytabs-bottom .ytab-strip .ytab-left {
+ background: url(../aria/img/tabs/tab-btm-inactive-left-bg.gif) no-repeat bottom right;
+}
+.ytabs-bottom .ytab-strip .on .ytab-right {
+ background: url(../aria/img/tabs/tab-btm-right-bg.gif) no-repeat bottom left;
+}
+.ytabs-bottom .ytab-strip .on .ytab-left {
+ background: url(../aria/img/tabs/tab-btm-left-bg.gif) no-repeat bottom right;
+}
+.ytabs-bottom .ytab-strip  a {
+position:relative;
+top:0; left:0;
+}
+.ytabs-bottom .ytab-strip .on a {
+margin-top:-1px;
+}
+.ytabs-bottom .ytab-strip .on .ytab-inner {
+padding-top:5px;
+}
+
+
+/* Application panels are inside a specific DIV. Everywhere except in North, some padding
+.ylayout-panel-west .applicationPanelHolder,
+.ylayout-panel-east .applicationPanelHolder,
+.ylayout-panel-south .applicationPanelHolder,
+.ylayout-panel-center .applicationPanelHolder {
+padding: .2em;
+}*/
+
+
+/* The framework automatically creates an applicationPanelHolder DIV around panels. */
+/* By default, they occupy 100% of the dimensions of the region container */
+/* Up to the developers to add another DIV inside to limit the width and add some padding */
+.applicationPanelHolder {
+width: 100%;
+height: 100%;
+}
+
+/* Hidden print DIV. Only shown by the media=print stylesheet */
+#ariaLayoutPrintPanel {
+display: none;
+background: white;	
+}
+
+div.yuimenu {
+ z-index:10054;
+}
+
+.ylayout-handler{
+height:23px;
+margin-bottom:-23px;
+width:20px;
+background-image:url(../aria/img/layout/tabHandler.png);
+	
+}
+
+#ft{clear:both;}
+/**/
+/* 750 centered, and backward compatibility */ 
+#doc,#doc2,#doc3,.yui-t1,.yui-t2,.yui-t3,.yui-t4,.yui-t5,.yui-t6,.yui-t7 {
+	margin:auto;text-align:left;
+	width:57.69em;*width:56.3em;min-width:750px;}
+/* 950 centered */ 
+#doc2 {
+	width:73.074em;*width:71.313em;min-width:950px;}
+/* 100% with 10px viewport side matting */ 
+#doc3 {
+	margin:auto 10px; /* not for structure, but so content doesn't bleed to edge */
+	width:auto;}
+	
+/* below required for all fluid grids; adjust widths and margins above accordingly */
+
+	/* to preserve source-order independence for Gecko */
+	.yui-b{position:relative;}
+	.yui-b{_position:static;} /* for IE < 7 */
+	#yui-main .yui-b{position:static;} 
+
+#yui-main {width:100%;}
+.yui-t1 #yui-main,
+.yui-t2 #yui-main,
+.yui-t3 #yui-main{float:right;margin-left:-25em;/* IE: preserve layout at narrow widths */}
+
+.yui-t4 #yui-main,
+.yui-t5 #yui-main,
+.yui-t6 #yui-main{float:left;margin-right:-25em;/* IE: preserve layout at narrow widths */}
+
+.yui-t1 .yui-b {
+	float:left;
+    width:12.3207em;*width:12.0106em;}
+.yui-t1 #yui-main .yui-b{
+    margin-left:13.3207em;*margin-left:13.0106em;
+}
+
+.yui-t2 .yui-b {
+	float:left;
+    width:13.8456em;*width:13.512em;}
+.yui-t2 #yui-main .yui-b {
+    margin-left:14.8456em;*margin-left:14.512em;
+}
+
+.yui-t3 .yui-b {
+	float:left;
+    width:23.0759em;*width:22.52em;}
+.yui-t3 #yui-main .yui-b {
+    margin-left:24.0759em;*margin-left:23.52em;
+}
+
+.yui-t4 .yui-b {
+	float:right;
+    width:13.8456em;*width:13.512em;}
+.yui-t4 #yui-main .yui-b {
+    margin-right:14.8456em;*margin-right:14.512em;
+}
+
+.yui-t5 .yui-b {
+	float:right;
+    width:18.4608em;*width:18.016em;}
+.yui-t5 #yui-main .yui-b {
+    margin-right:19.4608em;*margin-right:19.016em;
+}
+
+.yui-t6 .yui-b {
+	float:right;
+    width:23.0759em;*width:22.52em;}
+.yui-t6 #yui-main .yui-b {
+    margin-right:24.0759em;*margin-right:23.52em;
+}
+
+.yui-t7 #yui-main .yui-b {
+	display:block;margin:0 0 1em 0;
+}
+#yui-main .yui-b {float:none;width:auto;}
+/* GRIDS (not TEMPLATES) */
+.yui-g .yui-u, 
+.yui-g .yui-g, 
+.yui-gc .yui-u,
+.yui-gc .yui-g .yui-u,
+.yui-ge .yui-u, 
+.yui-gf .yui-u{float:right;display:inline;}
+.yui-g div.first, 
+.yui-gc div.first,
+.yui-gc div.first div.first,
+.yui-gd div.first, 
+.yui-ge div.first, 
+.yui-gf div.first{float:left;}
+.yui-g .yui-u, 
+.yui-g .yui-g{width:49.1%;}
+.yui-g .yui-g .yui-u,
+.yui-gc .yui-g .yui-u {width:48.1%;}
+.yui-gb .yui-u, 
+.yui-gc .yui-u, 
+.yui-gd .yui-u{float:left;margin-left:2%;*margin-left:1.895%;width:32%;}
+.yui-gb div.first, 
+.yui-gc div.first, 
+.yui-gd div.first{margin-left:0;}
+.yui-gc div.first, 
+.yui-gd .yui-u{width:66%;}
+.yui-gd div.first{width:32%;}
+.yui-ge .yui-u{width:24%;}
+.yui-ge div.first, 
+.yui-gf .yui-u{width:74.2%;}
+.yui-gf div.first{width:24%;}
+.yui-ge div.first{width:74.2%;}
+#bd:after,
+.yui-g:after, 
+.yui-gb:after, 
+.yui-gc:after, 
+.yui-gd:after, 
+.yui-ge:after, 
+.yui-gf:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#bd,
+.yui-g, 
+.yui-gb, 
+.yui-gc, 
+.yui-gd, 
+.yui-ge, 
+.yui-gf{zoom:1;}
+/*** Map container when maximized view ***/
+.uicMapMaximizedView {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border: 5px solid null/ borderlayout/ minimize.gif );
+}
+
+.uicMapMaximizeIcon {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	background-image: url(../aria/img/borderlayout/maximize.gif);
+}
+
+.uicMiniMapButton {
+	background-color: transparent;
+	background-position: 0pt;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	display: block;
+	height: 11px;
+	width: 11px;
+	z-index: 100;
+	position: absolute;
+}
+
+.uicMiniMapHideNE {
+	right: 0px;
+	top: 0px;
+	background-image: url(../aria/img/map/miniMapHideNE.gif);
+}
+
+.uicMiniMapShowNE {
+	right: 0px;
+	top: 0px;
+	background-image: url(../aria/img/map/miniMapShowNE.gif);
+}
+
+.uicMiniMapHideSE {
+	right: 0px;
+	bottom: 0px;
+	background-image: url(../aria/img/map/miniMapHideSE.gif);
+}
+
+.uicMiniMapShowSE {
+	right: 0px;
+	bottom: 0px;
+	background-image: url(../aria/img/map/miniMapShowSE.gif);
+}
+
+.uicMiniMapNE {
+	left: auto !important;
+	top: 0px !important;
+	right: 0px !important;
+}
+
+.uicMiniMapSE {
+	top: auto !important;
+	left: auto !important;
+	bottom: 0px !important;
+	right: 0px !important;
+}
+
+/* The tags in VE are surrounded by a tag, so we override the global a style */
+.map a,.map a:hover {
+	text-decoration: none;
+	cursor: default;
+}
+
+.map a:link {
+	text-decoration: none;
+}
+
+/*** MapTag CSS ***/ /* Generic attribute */
+.uicMapTag {
+	cursor: normal;
+}
+
+.uicGoogleMap .uicMapTag {
+	position: absolute;
+}
+
+/*IE6 hack*/
+* html .uicMapMM div.uicMapTag {
+	width: 1px;
+}
+
+.uicMapTag .tagBody {
+	padding: 0.3em;
+	margin: 0em;
+	text-align: center;
+	margin: 0px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+* html .uicMapTag .tagBody {
+	width: auto;
+	overflow: visible;
+}
+
+.uicMapTag .tagBody .tagHd,.uicMapTag .tagBody .tagBd,.uicMapTag .tagBody .tagFt
+	{
+	display: block;
+	padding: 0px;
+}
+
+.uicMapTag .tagBody .tagHd {
+	line-height: 1px;
+}
+
+.uicMapTag .tagBody .tagFt {
+	background-position: bottom left;
+	line-height: 1px;
+}
+
+.uicMapTag .tagBody .tagHd .label,.uicMapTag .tagBody .tagBd .label,.uicMapTag .tagBody .tagFt .label
+	{
+	display: block;
+	padding: 0;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.uicMapTag .tagBody .tagHd .label {
+	line-height: 1px;
+}
+
+.uicMapTag .tagBody .tagFt .label {
+	background-position: bottom right;
+	padding: 0;
+	line-height: 1px;
+}
+
+.uicMapTag .tagBody .tagHd>.label,.uicMapTag .tagBody .tagFt>.label {
+	height: 1px;
+}
+
+html>body .uicMapTag .tagBody .tagHd .label,html>body .uicMapTag .tagBody .tagFt .label
+	{ *
+	height: auto;
+}
+
+.uicMapTag .tagFooter {
+	font-weight: bold;
+	width: 100%;
+}
+
+.uicMapTag_blank {
+	padding: 0px;
+}
+
+.uicMapTag_blankCorner {
+	position: relative;
+	cursor: normal;
+}
+
+/*IE6 hack*/
+* html div.uicMapTag_blankCorner {
+	top: 7px;
+}
+
+.uicMapTag_blankCorner a:hover,.uicMapTag_blankCorner a {
+	text-decoration: none;
+	cursor: default;
+	color: inherit;
+	font-size: inherit;
+}
+
+.uicMapTag_green .tagBody,.uicMapTag_greenCorner .tagBody {
+	padding: 3px;
+	border: 1px solid black;
+	background: #54CE43 url(../aria/img/map/greenGradient.png) bottom
+		repeat-x;
+	color: black;
+	font-weight: normal;
+	font-size: 7.5pt;
+}
+
+.uicMapTag_green .tagBody a,.uicMapTag_green .tagBody a:hover,.uicMapTag_greenCorner .tagBody a,.uicMapTag_greenCorner .tagBody a:hover
+	{
+	color: black;
+}
+
+.uicMapTag_green .tagFooter {
+	margin-top: -1px;
+	background: url(../aria/img/map/greenTagPike.gif) no-repeat
+		center top;
+	height: 8px;
+}
+
+.uicMapTag_blue .tagBody,.uicMapTag_blueCorner .tagBody {
+	padding: 3px;
+	border: 1px solid black;
+	background: #8ED7F8 url(../aria/img/map/blueGradient.png) bottom
+		repeat-x;
+	color: black;
+	font-weight: normal;
+	font-size: 7.5pt;
+}
+
+.uicMapTag_blue .tagBody a,.uicMapTag_blue .tagBody a:hover,.uicMapTag_blueCorner .tagBody a,.uicMapTag_blueCorner .tagBody a:hover
+	{
+	color: black;
+}
+
+.uicMapTag_blue .tagFooter {
+	margin: -1px 0px 0px 0px;
+	background: url(../aria/img/map/blueTagPike.gif) no-repeat center
+		top;
+	height: 7px;
+}
+
+.uicMapTag_blueCorner {
+	position: relative;
+	cursor: normal;
+}
+
+/*IE6 hack*/
+* html div.uicMapTag_blueCorner {
+	top: 7px;
+}
+
+.uicMapTag_blueCorner .tagBody {
+	margin: 0px position :       relative;
+	z-index: -1;
+}
+
+.uicMapTag_blueCorner .tagFooter {
+	position: relative;
+	bottom: -1px;
+	z-index: 1;
+	background: url(../aria/img/map/blueTagPikeCorner.gif) no-repeat
+		left top;
+	height: 7px;
+	width: 12px;
+}
+
+/*IE6 hack*/
+* html div.uicMapTag_blueCorner .tagFooter {
+	bottom: -6px;
+}
+
+* html div.uicMapTag_blueCorner .tagBody {
+	position: relative;
+	bottom: 7px;
+}
+
+.uicMapTag_greenCorner {
+	position: relative;
+}
+
+/*IE6 hack*/
+* html div.uicMapTag_greenCorner {
+	top: 7px;
+}
+
+.uicMapTag_greenCorner .tagBody {
+	margin: 0px position :       relative;
+	z-index: -1;
+}
+
+.uicMapTag_greenCorner .tagFooter {
+	margin: 0px;
+	position: relative;
+	bottom: -1px;
+	z-index: 1;
+	background: url(../aria/img/map/greenTagPikeCorner.gif) no-repeat
+		left top;
+	height: 7px;
+	width: 12px;
+}
+
+/*IE6 hack*/
+* html div.uicMapTag_greenCorner .tagFooter {
+	bottom: -6px;
+}
+
+* html div.uicMapTag_greenCorner .tagBody {
+	position: relative;
+	bottom: 7px;
+}
+
+.uicMapTag_orange .tagBody,.uicMapTag_orangeCorner .tagBody,.uicMapTag_orangeCorner .tagBody a,.uicMapTag_orangeCorner .tagBody a:hover
+	{
+	padding: 0px;
+	color: black;
+	font-weight: normal;
+	font-size: 7.5pt;
+}
+
+.uicMapTag_orange .tagFooter {
+	margin-top: -2px;
+	background: url(../aria/img/map/orangeTagPike.gif) no-repeat
+		center top;
+	height: 8px;
+}
+
+.uicMapTag_orange .tagBody .tagHd,.uicMapTag_orange .tagBody .tagBd,.uicMapTag_orange .tagBody .tagFt,.uicMapTag_orangeCorner .tagBody .tagHd,.uicMapTag_orangeCorner .tagBody .tagBd,.uicMapTag_orangeCorner .tagBody .tagFt
+	{
+	display: block;
+	background: url(../aria/img/map/sprite_tag_orange.gif) no-repeat
+		top left;
+	padding: 0 0 0 5px;
+}
+
+.uicMapTag_orange .tagBody .tagHd .label,.uicMapTag_orange .tagBody .tagBd .label,.uicMapTag_orange .tagBody .tagFt .label,.uicMapTag_orangeCorner .tagBody .tagHd .label,.uicMapTag_orangeCorner .tagBody .tagBd .label,.uicMapTag_orangeCorner .tagBody .tagFt .label
+	{
+	background: url(../aria/img/map/sprite_tag_orange.gif) no-repeat
+		top right;
+	padding: 3px 5px 0 0;
+}
+
+.uicMapTag_orange .tagBody .tagBd,.uicMapTag_orangeCorner .tagBody .tagBd
+	{
+	background-position: center left;
+}
+
+.uicMapTag_orange .tagBody .tagBd .label,.uicMapTag_orangeCorner .tagBody .tagBd .label
+	{
+	background-position: center right;
+	padding: 0 5px 0 0;
+}
+
+.uicMapTag_orange .tagBody .tagFt,.uicMapTag_orangeCorner .tagBody .tagFt
+	{
+	background-position: bottom left;
+}
+
+.uicMapTag_orange .tagBody .tagHd .label,.uicMapTag_orangeCorner .tagBody .tagHd .label
+	{
+	line-height: 1px;
+}
+
+.uicMapTag_orange .tagBody .tagBd .label,.uicMapTag_orangeCorner .tagBody .tagBd .label
+	{
+	background-position: center right;
+	padding: 0 5px 0 0;
+}
+
+.uicMapTag_orange .tagBody .tagFt .label,.uicMapTag_orangeCorner .tagBody .tagFt .label
+	{
+	background-position: bottom right;
+	padding: 3px 5px 0 0;
+	line-height: 1px;
+}
+
+.uicMapTag_orangeCorner {
+	position: relative;
+}
+
+/*IE6 hack*/
+* html div.uicMapTag_orangeCorner {
+	top: 7px;
+}
+
+.uicMapTag_orangeCorner .tagBody {
+	margin: 0px position :       relative;
+	z-index: -1;
+}
+
+.uicMapTag_orangeCorner .tagFooter {
+	margin: 0px;
+	position: relative;
+	bottom: -2px;
+	z-index: 1;
+	background: url(../aria/img/map/orangeTagPikeCorner.gif)
+		no-repeat left top;
+	height: 7px;
+	width: 12px;
+}
+
+/*IE6 hack*/
+* html div.uicMapTag_orangeCorner .tagFooter {
+	bottom: -7px;
+}
+
+* html div.uicMapTag_orangeCorner .tagBody {
+	position: relative;
+	bottom: 7px;
+}
+
+/* Static map CR 03191592 */ /* Main container styles */
+.uicMapContainter {
+	vertical-align: middle;
+}
+
+/* Legend styles */
+.uicMapLegendContainer {
+	border: 1px solid #AB9B85;
+	background-color: #F2ECDE;
+	overflow: hidden;
+	padding: 6px;
+	display: inline;
+	float: left;
+}
+
+.uicMapLegendContainer ul {
+	list-style-type: none;
+	margin-bottom: 0.3em;
+	margin-left: 0;
+	margin-top: 0;
+	padding: 4px;
+	display: inline;
+}
+
+.uicMapLegendContainer ul li {
+	display: block;
+	float: left;
+	clear: left;
+	margin-left: 0;
+	margin-top: 0;
+	overflow: hidden;
+	display: inline;
+	padding-top: 10px;
+}
+
+.uicMapLegendContainer ul img {
+	vertical-align: middle;
+}
+
+.uicMapLegendContainerUpDown {
+	border: 1px solid #AB9B85;
+	background-color: #F2ECDE;
+	overflow: hidden;
+	padding-bottom: 6px;
+}
+
+.uicMapLegendContainerUpDown ul {
+	list-style-type: none;
+	margin: 6px auto
+}
+
+.uicMapLegendContainerUpDown ul li {
+	display: block;
+	float: left;
+	margin-left: 0;
+	margin-top: 0;
+	overflow: hidden;
+	width: 144px;
+	padding-top: 10px;
+}
+
+.uicMapLegendContainerUpDown ul img {
+	vertical-align: middle;
+	border: 0px;
+}
+
+/* Marker image */
+.uicTag,.uicTag a {
+	font-weight: bold;
+	font-family: arial;
+	color: black;
+	font-size: 1.1em;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.uicMicrosoftTag,.uicMicrosoftTag a {
+	font-weight: bold;
+	font-family: arial;
+	color: black;
+	font-size: 12px;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+/* PTR 03894636 */
+.uicMicrosoftTag a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.uicMicrosoftTag,.uicMicrosoftTag a {
+	font-weight: bold;
+	font-family: arial;
+	color: black;
+	font-size: 12px;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+/* PTR 03894636 */
+.uicMicrosoftTag a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.uicGoogleTag {
+	position: relative;
+	bottom: 8px;
+	left: 2px;
+}
+
+.uicBingTag {
+	position: relative;
+	bottom: 8px;
+	left: 2px;
+}
+
+.uicMultimapTag {
+	position: relative;
+	bottom: 8px;
+	left: 1px;
+}
+
+.uicBlueSquare {
+	background-image: url(../aria/img/map/blueSquareMarker.gif);
+	width: 25px;
+	height: 28px;
+	line-height: 20px;
+}
+
+.uicGreenSquare {
+	background-image: url(../aria/img/map/greenSquareMarker.gif);
+	width: 25px;
+	height: 28px;
+	line-height: 20px;
+	color: white;
+}
+
+.uicGreenSquare a,.uicGreenSquare a:hover {
+	color: white;
+}
+
+.uicRedCircle {
+	background-image: url(../aria/img/map/redCircleMarker.gif);
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	color: white;
+	font-size: 11px;
+	bottom: 0px;
+	left: 5px;
+}
+
+.uicRedCircle a,.uicRedCircle a:hover {
+	color: white;
+	font-size: 1em;
+}
+
+.uicGoogleTag.uicRedCircle {
+	bottom: 1px;
+}
+
+.uicRed {
+	background-image: url(../aria/img/map/redBalloonMarker.gif);
+	float: left;
+	width: 20px;
+	height: 34px;
+	margin-right: 6px;
+	line-height: 22px;
+}
+
+.uicMicrosoftTag.uicRed {
+	line-height: 19px;
+}
+
+.uicYellow {
+	background-image: url(../aria/img/map/yellowBalloonMarker.gif);
+	float: left;
+	width: 20px;
+	height: 34px;
+	margin-right: 6px;
+	line-height: 22px;
+}
+
+.uicBlue {
+	background-image: url(../aria/img/map/blueBalloonMarker.gif);
+	float: left;
+	width: 20px;
+	height: 34px;
+	margin-right: 6px;
+	line-height: 22px;
+}
+
+.uicGoogleTag.uicRed,.uicGoogleTag.uicYellow,.uicGoogleTag.uicBlue {
+	bottom: 10px;
+}
+
+.bingTag4 {
+	background-image: url(../aria/img/map/tag4.gif);
+	float: left;
+	width: 23px;
+	height: 26px;
+	margin-right: 6px;
+	line-height: 22px;
+	color: white;
+}
+
+.bingTag10 {
+	background-image: url(../aria/img/map/tag10.gif);
+	float: left;
+	width: 23px;
+	height: 26px;
+	margin-right: 6px;
+	line-height: 22px;
+	color: white;
+}
+
+.bingTag23 {
+	background-image: url(../aria/img/map/tag23.gif);
+	float: left;
+	width: 23px;
+	height: 26px;
+	margin-right: 6px;
+	line-height: 22px;
+	color: white;
+}
+
+.bingTag22 {
+	background-image: url(../aria/img/map/redCircleMarker.gif);
+	color: white;
+	float: left;
+	height: 15px;
+	line-height: 15px;
+	margin-bottom: -7px;
+	margin-right: 6px;
+	margin-top: 7px;
+	width: 15px;
+}
+
+.MapPushpinBase {
+	pointer-events: auto !important;
+}
+
+
+/*
+
+	The menubar compoenent follow this cacading order:
+
+		-- For the menubar itself:
+
+		.yuimenubar
+		  .yuimenubaritem
+		  	<a>
+		  .yuimenubaritem
+		  	<a>
+		  .yuimenubaritem
+		  	<a>
+
+		-- For each popup menu containing a list of clickable items:
+
+		.yuimenu
+		  .yuimenuitem
+		  	<a>
+		  .yuimenuitem
+		  	<a>
+		  .yuimenuitem
+		  	<a>
+		.yuimenu
+		.yuimenu
+		.yuimenu
+
+ */
+
+
+/* MenuBar Styles */
+div.yuimenubar {
+	background-color: #91B3D6;
+	background-image: url();
+	background-repeat: repeat-x;
+	background-position: bottom left;
+	padding: 2px;
+	border: 0;
+	border-width: 0;
+	zoom:1;
+}
+
+/* If the menu is an application one, there is a DIV around the yuimenubar */
+div.yuimenubarcoin {
+	margin-bottom: 2.5em;
+	background-color: #91B3D6;
+	background-image: url();
+	background-repeat: repeat-x;
+	background-position: left bottom;
+	position: relative;
+	border: 0;
+	border-width: 0;
+}
+
+div.yuimenubartoolbar {
+	margin-bottom: 0;
+}
+
+div.yuimenubarcoin div.yuimenubar {
+	overflow:hidden;
+	padding: 1.2em 0 0 0;
+	height: 2em;
+	border: 0;
+}
+
+
+
+
+	div.yuimenubarcoin div.yuimenubar {
+		background: url(../aria/img/menu/coin.png) no-repeat left bottom;
+		padding-left: 145px ;
+	}
+
+	div.yuimenubartoolbar div.yuimenubar {
+		background-image: url(../aria/img/menu/coin.png);
+	}
+
+	div.yuimenubarcoin .coin {
+		position: absolute;
+		top: 3.2em;
+		left: 0;
+		width: 145px ;
+		height: 22px;
+		background: url(../aria/img/menu/coin.png) no-repeat left top;
+	}
+
+	div.yuimenubartoolbar .coin {
+		background-image: url(../aria/img/menu/coin.png);
+	}
+
+	* html div.yuimenubarcoin .coin {
+		top: 3.16em;
+	}
+
+	*:first-child+html div.yuimenubarcoin .coin {
+		top: 3.16em;
+	}
+
+
+/*
+	Applying a width triggers "haslayout" in IE so
+	that the module's body clears its floated elements
+*/
+div.yuimenubar div.bd {
+	width:100%;
+}
+
+/* Clear the module body for other browsers */
+div.yuimenubar div.bd:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both;
+}
+
+div.yuimenu {
+	/*
+		../aria/img/menuleftarea.gif: this image has
+		the  #f2f2f2
+	*/
+	background: url() repeat-y top left;
+	background-color: #FFFFFF;
+	border: 1px solid #CECECE;
+	padding: 1px;
+}
+
+/* Submenus are positioned absolute and hidden by default */
+div.yuimenu div.yuimenu,
+div.yuimenubar div.yuimenu {
+	position:absolute;
+	visibility:hidden;
+	_width: 0; /* Fix for IE6 to avoid the creation of scrollbar during loading */
+}
+
+/* Matches the group title (H6) inside a Menu or MenuBar instance == Not specified in the GUI-guide*/
+div.yuimenu h6,
+div.yuimenubar h6 {
+	font-size:100%;
+	font-weight:normal;
+	margin:0;
+	border:1px solid black;
+	color:#b9b9b9;
+}
+div.yuimenubar h6 {
+	float:left;
+	display:inline; /* Prevent margin doubling in IE */
+	padding:4px 12px;
+	border-width:0 1px 0 0;
+}
+div.yuimenu h6 {
+	float:none;
+	display:block;
+	border-width:1px 0 0 0;
+	padding:5px 10px 0 10px;
+}
+
+
+/* Matches the UL inside a Menu or MenuBar instance */
+div.yuimenubar ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+div.yuimenu ul {
+	list-style-type:none;
+	border: 1px solid #f2f2f2;
+	border-width: 2px 0 0 0;
+	margin:0;
+	padding:0;
+
+	/* PTR 04118334 - submenu issues, remove hasLayout on IE */
+	/*overflow:hidden;*/
+	*zoom: normal;
+}
+
+div.yuimenu ul.first-of-type,
+div.yuimenu ul.hastitle,
+div.yuimenu h6.first-of-type {
+	border-width:0;
+}
+
+/* MenuItem and MenuBarItem styles */
+div.yuimenu li,
+div.yuimenubar li {
+	cursor:pointer;
+	cursor:hand;
+	white-space:nowrap;
+	text-align:left;
+}
+
+div.yuimenu li.yuimenuitem {
+	padding: 2px 24px;
+	margin: 4px 0;
+	background-repeat: no-repeat;
+	background-position: 1px 0;
+	width:auto;
+}
+
+div.yuimenu li li,
+div.yuimenubar li li {
+	font-size:100%;
+}
+
+/* Matches the help text for a menu item */
+div.yuimenu li em {
+	font-style:normal;
+	margin:0 0 0 40px;
+}
+
+div.yuimenu li a em {
+	display:block;
+	font-style:normal;
+	margin:-1.2em 0 0 10em;
+}
+
+div.yuimenu li a,
+div.yuimenubar li a {
+	/* "zoom:1" triggers "haslayout" in IE to ensure that the mouseover and mouseout events bubble to the parent LI in IE. */
+	zoom:1;
+	color: #000000;
+	text-decoration: none;
+}
+div.yuimenu li a:hover {
+	color: black;
+	text-decoration:none;
+}
+
+div.yuimenu li a:visited {
+	color: #000000;
+	text-decoration: none;
+	font-weight: 400
+}
+
+div.yuimenu li.hassubmenu,
+div.yuimenu li.hashelptext {
+	/*text-align:right; --> PTR2300402 */
+	background:url(../aria/img/menu/menuarorght8_nrm_1.gif) no-repeat scroll 97% 50%;
+}
+
+div.yuimenu li.hassubmenu a.hassubmenu,
+div.yuimenu li.hashelptext a.hashelptext {
+	/*float:left; --> PTR2300402: commented because causing problems in Opera and Safari. Might be an issue when helptext is used */
+	display:inline; /* Prevent margin doubling in IE */
+	text-align:left;
+}
+
+/* Matches disabled menu items */
+div.yuimenu li.disabled,
+div.yuimenubar li.disabled {
+	cursor:default;
+}
+
+div.yuimenubar li.disabled a.disabled {
+	color: #CECECE;
+	cursor:default;
+}
+
+div.yuimenu li.disabled a.disabled,
+div.yuimenu li.disabled em.disabled {
+	color: #CECECE;
+	cursor:default;
+}
+
+/* Matches focused and selected menu items */
+div.yuimenubar li.selected {
+	background-color: transparent;
+}
+
+div.yuimenu li.selected a.selected,
+div.yuimenu li.selected em.selected
+ {
+	color:  #000000 !important;
+	font-weight: 400
+}
+
+div.yuimenu li.selected {
+	color:  #000000 !important ;
+	font-weight: 400 ;
+	background-color: #f2f2f2 !important;
+}
+
+
+
+
+div.yuimenubar li.yuimenubaritem {
+	float:left;
+	display:inline; /* Prevent margin doubling in IE */
+	border-width: 0;
+	border-style:solid;
+	border-color:transparent;
+	padding:4px;
+	margin:0 4px;
+	color: white;	/* While the menubar JS hasn't been loaded the white color will still be here */
+}
+
+div.yuimenubar li.selected {
+	background-color: transparent ;
+}
+
+div.yuimenubar li.yuimenubaritem a {
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: 400;
+	background-color: transparent ;
+}
+div.yuimenubar li.yuimenubaritem a.selected {
+	color: #f2f2f2 !important;
+	text-decoration: none;
+	font-weight: 400;
+	background-color: transparent ;
+}
+
+/* Menu item skinning in lists : */
+div.yuimenubar li.yuimenuitem a {
+	color: #000000;
+	font-weight: 400 ;
+	text-decoration: none;
+	background-color: transparent ;
+}
+
+/* Item skinning in lists when they are hovered ("selected" class) : */
+div.yuimenubar li.yuimenuitem a.selected {
+	color:  #000000 !important;
+	font-weight: 400 ;
+	text-decoration: none;
+	background-color: #f2f2f2 !important ;
+}
+
+div.yuimenubar li.yuimenubaritem.first-of-type {
+	border-width:0;
+}
+
+/* Matches the submenu indicator for menu items */
+div.yuimenubar li.yuimenubaritem img {
+	height:0px;
+	width:0px;
+	margin:0px;
+}
+
+div.yuimenu li.yuimenuitem img {
+	height:11px;
+	width:11px;
+	margin:0 -16px 0 0;
+	padding-left:10px;
+	border:0;
+}
+
+div.yuimenu li.checked {
+	position:relative;
+}
+
+div.yuimenu li.checked img.checked {
+	height:8px;
+	width:8px;
+	margin:0;
+	padding:0;
+	border:0;
+	position:absolute;
+	left:6px;
+	top:.5em;
+}
+
+/* CSS fix for menubar / bordeLayout integration */
+div.yuimenu {
+	z-index: 10054;
+}
+
+/* LinkBar */
+
+.linkBar {
+	background-color:#065484;
+	padding: 0.3em 0;
+	margin: 0;
+}
+
+.linkBar .linkBarItem {
+	display: inline;
+	padding: 0 1em;
+}
+
+.linkBar .linkBarItem a {
+	color: white;
+}
+.linkBar .linkBarItem a:hover {
+	text-decoration: none;
+}
+
+.yuiMenuNoIcons{
+	background-color:#FFFBF1 !important;
+	border:1px solid black;
+	padding:1px;
+}
+
+div.yuiMenuNoIcons li {
+	padding:2px 10px !important;
+}
+
+.uicMenuDisabled{
+cursor:default !important;
+	opacity:0.3;
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+   	user-select: none;
+}
+
+.uicMenuDisabled a{
+	cursor:default !important;
+}
+
+div.bd {
+	overflow:display;
+}
+
+
+
+/*
+
+aria.multiselect.expandIcon.width=16px
+aria.multiselect.expandIcon.height=16px
+aria.multiselect.expandIcon.leftPadding=2
+aria.multiselect.container.border.color=#CECECE
+aria.multiselect.container.background.color=#FFFFFF
+aria.multiselect.images.expandIcon=../aria/img/autocomp/expand.png
+aria.multiselect.footer.background.color
+*/
+
+.uicMS{
+	position: relative;
+}
+
+.uicMSlistholder{
+	position:absolute;
+}
+.uicMSList {
+	background-color: #FFFFFF;
+	border-width:1px;
+	border-style: solid;
+	border-color: #CECECE ;
+	overflow:auto;
+	padding-bottom:2px;
+}
+/* Deprecated for multiselect v2*/
+.uicMSList ul{
+	list-style-type:none;
+	margin-left:0em;
+	margin-top:0em;
+	margin-bottom:0.3em;
+	padding-left:0em;
+}
+/* Deprecated for multiselect v2*/
+.uicMSList input{
+	color: #000000;
+	margin:0pt 0.2em;
+	padding:1px 2px;
+	vertical-align:middle;
+}
+
+.uicMSList  label{
+	color: #000000;
+}
+
+.uicMSList  label.disabled{
+	color: #CECECE;
+}
+
+/* Deprecated for multiselect v2*/
+.uicMSList li{
+	display:block;
+	float: left;
+	margin-left:0em;
+	margin-top:0em;
+	overflow:hidden;
+}
+/* Deprecated for multiselect v2*/
+.uicMSList li div {
+	padding-left:1.7em;
+	text-indent:-1.7em;
+	line-height:1.5em;
+	*line-height:1.9em;
+}
+
+.multiSelectExpand {
+	background:transparent url(../aria/img/autocomp/expand.png) no-repeat scroll left center;
+	cursor:pointer;
+	height:16px;
+	width:16px;
+	text-decoration:none;
+	*padding-top: 2px;
+	border: 0;
+	padding: 0;	
+	vertical-align: middle;
+}
+
+/* Deprecated for multiselect v2*/
+.uicMSFooter,
+.uicMSBigFooter {	
+	background-color: #f2f2f2;
+	border-left:1px solid #CECECE;
+	border-right:1px solid #CECECE;
+	border-bottom:1px solid #CECECE;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+/* Deprecated for multiselect v2*/
+.uicMSFooter {
+	height:1.5em;
+}
+/* Deprecated for multiselect v2*/
+.uicMSBigFooter {
+	height:2.5em;
+}
+
+/* Deprecated for multiselect v2*/
+.uicMSBigFooter .footerBottomWrapper {
+	display: block;
+}
+
+/* Deprecated for multiselect v2*/
+.uicMSFooter a,
+.uicMSBigFooter a {
+	text-decoration:none;
+	color:#1a7ead;
+}
+
+.uicMSClose {
+	float:right; 
+	text-align:right;
+}
+
+.uicMSDeselectAll {
+	float:left; 
+	text-align:left;
+}
+
+
+/*******************************************/
+/*  Multiselect v2 CSS and overrrides      */
+/*******************************************/
+
+
+.uicMSOptionList {
+	background-color: #FFFFFF;
+	border:1px solid #CECECE;
+	overflow:auto;
+	overflow-x: hidden; /* PTR 03941196 for IE7 */
+	padding-bottom:2px;
+	zoom: 1; /* Trigger hasLayout for IE6 */
+	padding-left: 2px;
+	padding-bottom: 2px;
+}
+
+.uicMSOptionList .uicMSOptionWrapper{
+	list-style-type:none;
+	margin-left:0;
+	margin-top:0;
+	margin-bottom:0;
+	padding-left:0;
+}
+
+.uicMSOptionList .uicMSOptionCheckbox{
+	cursor:pointer;
+	color: #000000;
+	margin:0;
+	padding:0;
+	vertical-align:middle;
+	*width:13px;
+	*height:13px;
+}
+
+.uicMSOption{
+	zoom: 1;
+	margin-top: 1px;
+	*margin-top: 3px;
+	word-break:break-all;
+}
+
+.uicMSOptionList  label{
+	color: #000000;
+}
+
+.uicMSOptionList  label.disabled{
+	color: #CECECE;
+}
+
+/*
+ *	Override for normal tableMode:
+ */
+.uicMSNotTableMode .uicMSOptionList .uicMSOption{
+	cursor: pointer;
+	display:block;
+	float: left;
+	margin-left:0em;
+	
+	overflow:hidden;
+}
+
+/*
+ *	Override for tableMode:
+ */
+.uicMSTableMode .uicMSOptionList .uicMSOption {
+	cursor: pointer;
+}
+
+.uicMSOptionList .uicMSCheckboxWrapper {
+	display: block;
+	width:100%;
+	
+	padding-left:1.7em;
+	text-indent:-1.7em;
+	/*line-height:1.5em;*/
+	
+}
+
+/* 
+	Modifications for vertical layout:
+*/
+.uicMSOptionList .uicMSColumnWrapper {
+	padding: 0;
+	margin: 0;
+	display:block;
+	float: left;
+}
+
+.uicMSOptionList .uicMSColumnWrapper .uicMSOption{
+	float: none;
+}
+
+
+/*
+	Label styles:
+*/
+.uicMSOptionList  label {
+	cursor: pointer;
+}
+
+.uicMSOptionList .uicMSOptionDisabled label {
+	color: #CECECE;
+} 
+
+
+.uicMSLinksArea {
+	background-color:#f2f2f2;
+	 border-left:1px solid #CECECE;
+	 border-right:1px solid #CECECE;
+	 border-bottom:1px solid #CECECE;
+	 padding : 1px 3px ;
+	 *zoom: 1;
+}
+.uicMSLinksArea .footerBottomWrapper {
+	display: block;
+	*zoom: 1;
+}
+
+.uicMSLinksArea .footerBottomWrapper:after {
+	content: ".";
+    	display: block;
+   	height: 0;
+    	clear: both;
+    	visibility: hidden;
+}
+
+.uicMSLinksArea .uicMSLink a {
+	 *zoom:1;
+	 cursor: pointer;
+	 text-decoration:none;
+	 color:#1a7ead;
+}
+
+.uicMSLinksArea .uicMSLink a:hover {
+	 *zoom:1;
+	 text-decoration: underline;
+}
+
+
+.uicSteps {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	height: 1.9em;
+	font-size: 1em;
+}
+.uicSteps .uicStep, 
+.uicSteps .uicStepShrink {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.uicSteps .uicStep {
+	padding-top: .2em;
+	padding-right: 0;
+	padding-bottom: .3em;
+	padding-left: 0;
+	text-align: center;
+}
+
+.uicSteps .uicStepShrink {
+	padding-top: .2em;
+	padding-right:  2.5em;
+	padding-bottom:  .3em;
+	padding-left:  1em;
+	text-align: left;
+}
+
+.uicSteps .uicStep.done, 
+.uicSteps .uicStepShrink.done {
+	background: #f2f2f2 url(../aria/img/steps/arrowDone.gif) no-repeat center right;
+	color: #000000;
+	font-weight: normal;
+}
+.uicSteps .uicStep.done.previous, 
+.uicSteps .uicStepShrink.done.previous {
+	background: #f2f2f2 url(../aria/img/steps/arrowPrevious.gif) no-repeat center right;
+	color: #000000;
+	font-weight: normal;
+}
+.uicSteps .uicStep.current, 
+.uicSteps .uicStepShrink.current {
+	background: #E4E4E4 url(../aria/img/steps/arrowCurrent.gif) no-repeat center right;
+	color: #000000;
+	font-weight: bold;
+}
+.uicSteps .uicStep.finished, 
+.uicSteps .uicStepShrink.finished {
+	background: #E4E4E4 url(../aria/img/steps/arrowFinished.gif) no-repeat center right;
+	color: #000000;
+	font-weight: bold;
+}
+.uicSteps .uicStep.todo, 
+.uicSteps .uicStepShrink.todo {
+	background: #f2f2f2 url(../aria/img/steps/arrowTodo.gif) no-repeat center right;
+	color: #CECECE;
+	font-weight: normal;
+}
+.uicSteps .uicStep.todo.last, 
+.uicSteps .uicStepShrink.last {
+	background: #f2f2f2 url(../aria/img/steps/arrowLast.gif) no-repeat center right;
+	color: #CECECE;
+	font-weight: normal;
+}
+.uicRss {
+	margin: 0px;
+	padding: 0px;
+	zoom:1;
+}
+
+.uicRss h3 {
+	cursor: pointer;
+}
+
+.uicRss li {
+	clear:both;
+	list-style-type:none;
+	margin:0px;
+	padding:5px;
+	display:block;
+	border-bottom:1px solid #E1E1E1;
+}
+
+
+.uicRss h3 a{
+	color:#000;
+	border-bottom:1px solid #DDDDDD;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+.uicRss h3 a:hover{
+	color:blue;
+}
+
+.uicRss h3 a:visited{
+	color:#888888;
+}
+
+.uicRss img{
+	_width:60px; 
+	_height:60px;
+	max-width:60px;
+	max-height:60px;
+}
+
+.uicRss .errortext{
+	color:red;
+	border-bottom:0px;
+}
+
+.uicRss .uicRss-open, .uicRss .uicRss-closed {
+float: right;
+display: block;
+background-repeat: no-repeat;
+background-position: center center;
+width: 16px;
+text-indent: -10000px;
+}
+.uicRss .uicRssToggle-open {
+}
+.uicRss .uicRssToggle-closed {
+}
+
+
+
+.uicRss p {
+margin: 0px;
+}
+.uicRss .container{
+	float:left;
+height:60px;
+overflow:hidden;
+text-align:center;
+width:60px;
+margin:0pt;
+padding:0pt;
+}
+.uicRss .right{
+	float:right;
+	margin-bottom:0px;
+}
+
+
+
+.uicRss p.open {
+display: block;
+overflow: hidden;
+}
+.uicRss p.closed {
+overflow: hidden;
+height: 0px;
+}
+
+
+.uicSliderContainer {
+	margin-bottom:1em;
+}
+
+.horizontal{
+	background:transparent url(../aria/img/slider/ruler.gif) repeat-x center;
+	height:25px;
+	position:relative;
+}
+
+.uicSliderNoTick {
+	background:transparent url(../aria/img/slider/ruler.gif) repeat-x center;
+}
+
+
+.uicThumb {
+	position:absolute;
+	width:18px;
+	height:100%;
+	background:no-repeat url(../aria/img/slider/leftThumb.gif) bottom center;
+
+}
+
+.uicSliderLabel {
+	display:block;
+	height:0.7em;
+	width:100%;
+	position:relative;
+}
+
+.uicSliderLabelThumb {
+	text-align:center;
+	position:absolute;
+	white-space:nowrap;
+	background-color: transparent ;
+	font-weight: 400 ;
+	color: #000000 ;
+}
+
+.uicSliderTickLabel{
+	position:absolute;
+}
+
+.uicSliderLabelMovingThumb {
+	background-color: transparent ;
+	font-weight: 400 ;
+	color: #000000 ;
+	z-index:5000;
+}
+
+.uicLimit{
+	width:5px;
+	height:10px;
+	position:absolute;
+	display:block;
+	margin-top:11px;
+	background-color: #292994;
+	background-position: top;
+} 
+
+.min {
+	left:0px;
+}
+
+.max {
+	right:0px;
+}
+
+.uicSliderTick{
+	width:1px;
+	height:5px;
+	position:absolute;
+	background-color: #73C5E6;
+	top:7px;
+	overflow:hidden;
+}
+
+.uicSliderRange {
+	background: transparent url(../aria/img/slider/range.gif) repeat-x center;
+	height:25px;
+	position:absolute;
+	left:0px;
+}
+
+img.thumb{
+	width:38px;
+	margin:1px;
+	cursor:pointer;
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	opacity: 1;
+}
+ 
+img.selected{
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.4;
+	opacity: 0.4; 
+}
+
+
+img.slide{
+	border:2px solid #FFFFFF;
+	z-index:1;
+	overflow:hidden;
+}
+.slideholder{
+	/*background-color: white;*/
+	padding:5px;
+	position:relative;
+}
+
+.uicSlideButton{
+	width:100px;
+	position:absolute;
+	top:0;
+}
+
+.uicSlideRight{
+	background: transparent url(../aria/img/slideshow/next.png) no-repeat left -100px;
+	right:0;
+}
+
+.uicSlideLeft{
+	background: transparent url(../aria/img/slideshow/previous.png) no-repeat left -100px;
+	left:0;
+}
+
+.uicSlideLeftOver{
+	cursor:pointer;
+	background: transparent url(../aria/img/slideshow/previous.png) no-repeat left 35px;
+}
+* html .uicSlideLeftOver{
+	filter: alpha(opacity=100);
+}
+.uicSlideRightOver{
+	cursor:pointer;	
+	background: url(../aria/img/slideshow/next.png) no-repeat right 35px;
+}
+
+* html .uicSlideRightOver{
+	filter: alpha(opacity=100);
+}
+
+.uicSSright{
+	float:right;
+}
+
+.uicSSleft{
+	float:left;
+}
+
+.uicSlideShow{
+	clear:both;
+	margin:5px;
+	overflow:hidden;
+}		
+
+.uicSlide{
+	border:0px;
+	margin:5px;
+}
+
+/*.uicSlideShowResize{
+	height:190px;
+	width:310px;
+}*/
+
+.uicSlideholder{
+	position:relative;
+	overflow:hidden;
+	background-color: #CECECE;
+}
+.ssAltOverlay{
+	width:100%;
+	position:absolute;
+	left:0px;
+	bottom:0.20em; 
+	filter: alpha(opacity=60);
+}
+.ssAltOverlayInside{
+	text-align:justify;
+	padding:0.50em;
+	-moz-opacity: 0.6;
+	opacity: 0.6; 
+	margin:5px 5px 5px 5px;
+	background-color:black;
+	color:white;
+}
+
+
+.uicSplitter {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+}
+.uicSplitter .uicSplitterMask {
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	opacity: 0;
+	background-color: #FFFFFF;	
+}
+.uicSplitter .uicSHandleH {
+	width: 6px;
+	border-width: 0px;
+	margin: 0px;
+	padding: 0px;
+	cursor: e-resize;
+	background-image: url(../aria/img/sizer/e-handle.gif);
+	background-color: #FFFFFF;
+	background-position: left center;
+	background-repeat: no-repeat;
+	border: 1px solid #CECECE;
+}
+.uicSplitter .uicSHandleV {
+	height: 6px;
+	border-width: 0px;
+	margin: 0px;
+	padding: 0px;
+	cursor: n-resize;
+	background-image:url(../aria/img/sizer/s-handle.gif);
+	background-color: #FFFFFF;
+	background-position: center top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	border: 1px solid #CECECE;
+}
+.uicSplitter .uicSProxyH, .uicSplitter .uicSProxyV {
+	width: 6px;
+	height: auto;
+	border-width: 0px;
+	margin: 0px;
+	padding: 0px;
+	cursor: e-resize;
+	background-color: #BBBBBB;
+	visibility: hidden;
+	line-height: 1px;
+	font-size: 1px;
+}
+.uicSplitter .uicSProxyV {
+	width: auto;
+	height: 6px;
+}
+.uicSplitter .uicSplitterPanel {
+	overflow: auto;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position:relative;
+}
+.uicSplitterBorder .uicSplitterPanel {
+	border: 1px solid #CECECE;
+}
+.uicSplitterNoBorder .uicSplitterPanel {
+	border: 0;
+}
+.uicSplitterBorder .uicSHandleH {
+	border-width: 1px 0;
+}
+.uicSplitterBorder .uicSHandleV {
+	border-width: 0 1px;
+}
+.uicSplitterNoBorder .uicSHandleV {
+	border-width: 1px 0;
+}
+.uicSplitterNoBorder .uicSHandleH {
+	border-width: 0 1px;
+}
+
+/* default space between tabs */
+.yui-navset .yui-nav li {
+        margin:0 1px 0 0; /* horizontal tabs */
+
+}
+.yui-navset-left .yui-nav li {
+        margin:0 0 0 0; /* vertical tabs */
+}
+
+.yui-navset-right .yui-nav li {
+        margin:0 0 0 0; /* vertical tabs */
+}
+
+/* default width for side tabs */
+.yui-navset-left .yui-nav, .yui-navset-right .yui-nav { width:6em; }
+.yui-navset-left { padding-left:6em; } /* map to nav width */
+.yui-navset-right { padding-right:6em; } /* ditto */
+
+/* core */
+
+.yui-nav, .yui-nav li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.yui-navset li em { font-style:normal; }
+
+.yui-navset {
+    margin: .5em 0;
+    position:relative; /* contain absolute positioned tabs (left/right) */
+    zoom:1;
+}
+
+.yui-navset .yui-content { zoom:1; }
+
+
+.yui-navset .yui-nav li span.iconClose{
+    padding-left:16px;
+    background-repeat:no-repeat;
+     background-position:top right;
+    margin-left:1em;
+    padding-bottom:3px;
+}
+
+.yui-navset .yui-nav li.closable a em{
+    padding-right:.3em;
+}
+
+.yui-navset .yui-nav li.selected {
+    border-bottom: 0;
+    background: none;
+}
+
+.yui-navset .yui-nav li.selected span.iconClose{
+    visibility:visible;
+}
+
+.yui-navset .yui-nav li span.iconClose{
+    visibility:hidden;
+}
+
+.yui-navset-left .yui-nav li, .yui-navset-right .yui-nav li {
+    display:block;
+}
+
+.yui-navset .yui-nav a {
+    outline:0; /* gecko: keep from shifting */
+}
+
+.yui-navset .yui-nav a { position:relative; } /* IE: to allow overlap */
+
+.yui-navset .yui-nav li a {
+    display:block;
+    display:inline-block;
+    vertical-align:bottom; /* safari: for overlap */
+    zoom:1;
+    color: red;
+    text-decoration: none;
+    border-bottom: 1px solid #CECECE;  /* label and content borders */
+}
+
+.uicTabHeader {
+    margin: 0;
+}
+
+
+* html .yui-navset .yui-nav li a {
+    position: static; /* IE6 */
+}
+
+.yui-navset-left .yui-nav li a, .yui-navset-right .yui-nav li a {
+    display:block;
+}
+
+.yui-navset-bottom .yui-nav li a {
+    vertical-align:text-top; /* for inline overlap (reverse for Op border bug) */
+}
+
+
+/* CSS rules for NOT selected tabs (disabled and not selected): */
+.yui-navset .yui-nav li {
+    display:inline-block;
+    *display:inline; /* IE */
+    vertical-align:bottom; /* safari: for overlap */
+    /*cursor:pointer;  gecko: due to -moz-inline-stack on anchor */
+    zoom:1; /* IE: kill space between horizontal tabs */
+    margin-right: 1px;
+}
+
+/* Target Firefox 2.0 and below : */
+.yui-navset .yui-nav li, x:-moz-any-link {
+   display:-moz-inline-stack;
+}
+
+
+
+.yui-navset .yui-nav li a {
+    cursor:pointer;
+    padding-left: 3px;
+    white-space: nowrap;
+    background: url() no-repeat top left;
+}
+
+/* focused element */
+.yui-navset .yui-nav li a.uicFocused {
+    outline: dotted 1px black;
+}
+
+.yui-navset .yui-nav li a em {
+    cursor:pointer;
+    display: block;
+    text-align: center;
+    color: #000000;
+    font-weight: 400;
+    float: left;
+    background: url() no-repeat top right;
+    /* Define padding around each tabbar's labels: */
+    padding-top: 3px;
+    padding-bottom: 3px; /* We have a dependency with padding-bottom of ".yui-navset .yui-nav li.selected a em" */
+    padding-left: 22px;
+    padding-right: 22px;
+
+}
+
+/* CSS rules for selected tabs: */
+/* defaults to orientation "top" */
+.yui-navset .yui-nav li.selected a {
+    /* border-bottom-width:0 ; */ /* no bottom border for active tab */
+    /* padding-bottom: 1px; */ /* to match height of other tabs */
+    /* border-color: white ; */
+    border: none;
+    font-weight: 700;
+    background: url() no-repeat left top ;
+}
+
+.yui-navset .yui-nav li.selected a em {
+    font-weight: 700;
+    color: #000000;
+    float: left;
+    padding-bottom: 4px; /* We have a dependency with padding-bottom of ".yui-navset .yui-nav li.selected a em" */
+    background: url() no-repeat top right;
+}
+
+/* position left and right oriented tabs */
+.yui-navset-left .yui-nav,
+.yui-navset-right .yui-nav {
+    position:absolute;
+    z-index:1;
+    }
+.yui-navset-left .yui-nav { left:0; }
+.yui-navset-right .yui-nav { right:0; }
+
+.yui-navset .yui-content {
+    /* content borders */
+    border:1px solid #CECECE;
+}
+
+.yui-navset .yui-nav .selected a,
+.yui-navset .yui-content {
+    /* active tab, tab hover, and content bgcolor */
+    background-color: white;
+}
+
+/* Define style of label in "disabled" state: */
+.yui-navset .yui-nav .disabled a em {
+    color: #CECECE;
+    font-weight: 400;
+    cursor: default;
+}
+
+.yui-navset .yui-content-sized{
+    margin-top:-1px; /* for active tab overlap */
+    padding: 0.5em; /* Some internal padding */
+    overflow:auto;
+}
+
+.yui-navset .yui-content {
+    margin-top:-1px; /* for active tab overlap */
+    padding: 0.5em; /* Some internal padding */
+    overflow: hidden;	/* Force the container to size correctly even if all content is floated */
+}
+
+
+/* overrides for other orientations */
+
+.yui-navset-bottom .yui-nav .selected a {
+    border-width:0 1px 1px; /* no top border for active tab */
+    padding:1px 0 0; /* to match height of other tabs */
+}
+
+.yui-navset-bottom .yui-content {
+    margin:0 0 -1px; /* for active tab overlap */
+}
+
+.yui-navset-left .yui-nav li.selected a {
+    border-width:1px 0 1px 1px; /* no right border for active tab */
+    padding:0 1px 0 0; /* to match width of other tabs */
+}
+
+.yui-navset-left .yui-content {
+    margin:0 0 0 -1px; /* for active tab overlap */
+}
+
+.yui-navset-right .yui-nav li.selected a {
+    border-width:1px 1px 1px 0; /* no left border for active tab */
+    padding:0 0 0 1px; /* to match width of other tabs */
+}
+
+.yui-navset-right .yui-content {
+    margin:0 -1px 0 0; /* for active tab overlap */
+}
+/* Hiding inative Tabs by default to avoid weird loading effect */
+.yui-content .tab {
+    display: none;
+}
+.yui-content .tab.active {
+    display: block;
+}
+.uicTabZone {
+    position: absolute;
+    z-index: -1;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+}
+.uicTabIcon {
+    background-repeat: no-repeat;
+    background-position: center left;
+    padding: 2px 2px 3px 20px;
+}
+
+.uictabiframe iframe{
+    border:0px;
+    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
+    width:100%;
+}
+.uicTableOddColor {
+	background-color: #FFFFFF ;
+}
+
+.uicTableEvenColor {
+	background-color:  #FFFFFF;
+}
+
+.uicTableFooterColor {
+	background-color:  #f2f2f2;
+}
+
+.uicTableHeaderColor {
+	background-color:  #f2f2f2;
+}
+
+.uicTableHover {
+	background-color:  #f2f2f2 !important;
+}
+
+.uicTableSelected {
+	background-color:  #E4E4E4;
+}
+
+.uicTable caption {
+	font-weight: bold;
+	color: #7C6646;
+	border-bottom: 2px solid #7C6646;
+	text-align: left;
+	margin: .5em 0 2px 0;
+}
+
+.uicUnSelectable{
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.uicTable {
+	overflow: hidden;
+	position: relative;
+	zoom: 1;
+}
+
+.uicTable a.uicfocus {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 19px;
+	lineHeight: 1px;
+	outline:none;
+	cursor:default;
+}
+
+.uicTable a.uicfocus:link,
+.uicTable a.uicfocus:hover,
+.uicTable a.uicfocus:focus {
+	border:none !important;
+	text-decoration:none !important;
+}
+
+.uicTable table {
+	position: relative;
+	width: 100%;
+	border-collapse: collapse;
+	zoom: 1;
+}
+
+.uicTable td, .uicTable th {
+	/* NOWRAPPER */
+	padding: .2em 5px;
+}
+
+.uicTable .uicTHWrapper, .uicTable .uicTFWrapper {
+	overflow: hidden;
+	position: relative;
+	zoom: 1;
+	border: 1px solid #FFFBF1;
+
+}
+
+/*
+.uicTable .uicTFWrapper {
+	overflow: hidden;
+	position: relative;
+	zoom: 1;
+	border: 1px solid #FFFBF1;
+}
+*/
+
+.uicTable .uicTSWrapper {
+	position: relative;
+	overflow: auto;
+	zoom:1 ;
+}
+
+.uicTable .uicTSWrapper a.focus {
+	outline-style: none;
+	outline-width: 0;
+	outline-color: -moz-use-text-color;
+}
+
+.uicTable tbody th,
+.uicTable thead th {
+	/* NOWRAPPER */
+	color: #000000 ;
+	font-weight: 700;
+}
+
+.uicTable tfoot {
+	/* NOWRAPPER */
+	color: #000000 ;
+	font-weight: 400;
+}
+
+tfoot .paginate .status {
+	color: #000000 ;
+	font-weight: 400;
+}
+
+.uicTable th.uicSortableColumn,
+.uicTable th.uicSortableColumnAsc,
+.uicTable th.uicSortableColumnDesc {
+	cursor:pointer;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-image: url(../aria/img/datagrid/sort.gif);
+}
+
+.uicTable th.uicSortableColumnDesc {
+	background-image: url(../aria/img/datagrid/sort_desc.gif);
+}
+
+.uicTable th.uicSortableColumnAsc {
+	background-image: url(../aria/img/datagrid/sort_asc.gif);
+}
+
+.uicTable th.uicSortableColumn,
+.uicTable th.uicSortableColumnAsc,
+.uicTable th.uicSortableColumnDesc {
+	/* NOWRAPPER */
+	padding-right: 16px;
+}
+
+.uicTable tr.uicTableOddColor td{
+	border: 1px solid #FFFFFF;
+}
+
+.uicTable tr.uicTableEvenColor td{
+	border: 1px solid #FFFFFF;
+}
+
+.uicTable .uicTSWrapper th,
+.uicTable .uicTFWrapper,
+.uicTable .uicTSWrapper {
+	border: 1px solid #FFFFFF;
+}
+
+.uicTable .uicTSWrapper {
+	border-right: none;
+}
+
+.uicTable .uicTHWrapper th,
+.uicTable .uicTSWrapper th,
+.uicTable .uicTFWrapper th  {
+	text-align: left;
+	border: 1px solid #FFFBF1;
+	border-top: none;
+	border-left: none;
+	border-color: #FFFBF1;
+}
+.uicTable .uicTHWrapper th { border-bottom: none; }
+
+.uicTable td.paginate {
+	text-align: right;
+	padding: .1em 0 0;
+}
+
+.uicTable td.paginate input { width: 20px; text-align:center; }
+
+.uicTable td.paginate span {
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+	padding: .2em 0;
+	-moz-user-select: none;
+}
+
+.uicTable td.paginate span.first,
+.uicTable td.paginate span.prev,
+.uicTable td.paginate span.next,
+.uicTable td.paginate span.last,
+.uicTable td.paginate span.firstdisabled,
+.uicTable td.paginate span.prevdisabled,
+.uicTable td.paginate span.nextdisabled,
+.uicTable td.paginate span.lastdisabled,
+.uicTable td.paginate span.spinneron,
+.uicTable td.paginate span.spinneroff {
+	padding-left: 1em;
+}
+
+.uicTable td.paginate span.status {
+	width:auto;
+	padding-left: .3em;
+}
+.uicTable td.paginate span.spinneron {
+	margin-left: .2em;
+	background-image: url(../aria/img/datagrid/loading.gif);
+}
+.uicTable td.paginate span.spinneroff {
+	margin-left: .2em;
+	background-image: none;
+}
+
+.uicTable td.paginate span.first {
+	background-image: url(../aria/img/datagrid/page-first.gif);
+}
+.uicTable td.paginate span.firstdisabled {
+	cursor: default;
+	background-image: url(../aria/img/datagrid/page-first-disabled.gif);
+}
+
+.uicTable td.paginate span.prev {
+	background-image: url(../aria/img/datagrid/page-prev.gif);
+}
+.uicTable td.paginate span.prevdisabled {
+	cursor: default;
+	background-image: url(../aria/img/datagrid/page-prev-disabled.gif);
+}
+.uicTable td.paginate span.next {
+	background-image: url(../aria/img/datagrid/page-next.gif);
+}
+.uicTable td.paginate span.nextdisabled {
+	cursor: default;
+	background-image: url(../aria/img/datagrid/page-next-disabled.gif);
+}
+.uicTable td.paginate span.last {
+	background-image: url(../aria/img/datagrid/page-last.gif);
+}
+.uicTable td.paginate span.lastdisabled {
+	cursor: default;
+	background-image: url(../aria/img/datagrid/page-last-disabled.gif);
+}
+
+
+@media print {
+	.uicTable div.uicTHWrapper, .uicTable div.uicTFWrapper {
+		display:none;
+	}
+}
+.uicTable tr.uicEmptyRow td {
+	text-align: center;
+}
+
+.uicTable .uicPaletteSelected {
+	background-color: #E4E4E4 !important;
+}
+
+/* Taskbar UL container */
+.uicTaskbar {
+	background-color: #f4f4f4;
+	background-image: url();
+	background-repeat: repeat-x;
+	background-position: top left;
+	_width: 100%;
+	line-height: 2em;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+/* Rules for a taskbar item */
+.uicTaskbar li {
+	color: black;
+	float: left;
+	/* Base width for an item */
+	width: 162px;
+	list-style-type: none;
+	/*font-family: Tahoma, Arial, sans serif;*/
+	font-size: 1.1em;
+	font-weight: 700;
+	margin-right: .2em;
+	padding: .2em 0;
+	_height: 2em;
+	position: relative;
+	margin-left: 4px;
+	zoom: 1;
+	cursor: pointer;
+}
+
+.uicTaskbar li.label {
+	width: auto;
+	cursor:default;
+	float: right;
+	text-align: right;
+	color: black;
+	font-weight: 700;
+}
+
+.uicTaskbar li.label span{
+	white-space:pre;
+	display:inline;
+}
+
+.uicTaskbar li.main {
+	color: black;
+	font-weight: 700;
+}
+
+.uicTaskbar li.selectedMain {
+	color: white;
+	font-weight: 700;
+}
+
+.uicTaskbar li.selectedFile,
+.uicTaskbar li.selectedSearch,
+.uicTaskbar li.selectedProfile {
+	color: white;
+	font-weight: 700;
+}
+
+.uicTaskbar li.main,
+.uicTaskbar li.selectedMain {
+	margin-right: .5em;
+	width: 86px;
+}
+
+/* Hidden sizer */
+.uicTaskItemSize {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline;
+	font-family: Tahoma, Arial, sans serif;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+/* Ellipsis Span for Firefox */
+.uicTaskbar li div.c span.uicTaskEllipsis {
+	background: url() repeat -2px 26px;
+	padding: 0 0 0 3px;
+	position: absolute;
+	right: 4px;
+	top: -2px;
+	width: auto;
+}
+
+.uicTaskbar li.selectedMain div.c span.uicTaskEllipsis,
+.uicTaskbar li.selectedFile div.c span.uicTaskEllipsis,
+.uicTaskbar li.selectedSearch div.c span.uicTaskEllipsis,
+.uicTaskbar li.selectedProfile div.c span.uicTaskEllipsis {
+	background: url() repeat -2px 49px;
+}
+
+/* Background sprite images for the buttons */
+.uicTaskbar li div.tl,
+.uicTaskbar li div.tr,
+.uicTaskbar li div.bl,
+.uicTaskbar li div.c {
+	background-color: transparent;
+	background-image: url();
+}
+
+.uicTaskbar li.main div.tl,
+.uicTaskbar li.main div.tr,
+.uicTaskbar li.main div.bl,
+.uicTaskbar li.main div.c {
+	background-image: url();
+}
+
+.uicTaskbar li.selectedMain div.tl,
+.uicTaskbar li.selectedMain div.tr,
+.uicTaskbar li.selectedMain div.bl,
+.uicTaskbar li.selectedMain div.c{
+	background-image: url();
+}
+
+.uicTaskbar li.selectedFile div.tl,
+.uicTaskbar li.selectedFile div.tr,
+.uicTaskbar li.selectedFile div.bl,
+.uicTaskbar li.selectedFile div.c{
+	background-image: url();
+}
+
+.uicTaskbar li.selectedProfile div.tl,
+.uicTaskbar li.selectedProfile div.tr,
+.uicTaskbar li.selectedProfile div.bl,
+.uicTaskbar li.selectedProfile div.c{
+	background-image: url();
+}
+
+.uicTaskbar li.selectedSearch div.tl,
+.uicTaskbar li.selectedSearch div.tr,
+.uicTaskbar li.selectedSearch div.bl,
+.uicTaskbar li.selectedSearch div.c {
+	background-image: url();
+}
+
+/* Positioning the corners */
+.uicTaskbar li div.t {
+	position:relative;
+	height: 3px;
+	zoom:1;
+	font-size:1px;
+}
+.uicTaskbar li div.tl {
+	position:absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 3px;
+	margin-left: -3px;
+	background-position: top left;
+}
+.uicTaskbar li div.tr {
+	height: 3px;
+	background-position: top right;
+}
+.uicTaskbar li div.b {
+	position:relative;
+	_overflow-y:hidden;
+	zoom:1;
+}
+.uicTaskbar li div.bl {
+	position:absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	_height:1600px;
+	width: 3px;
+	margin-left: -3px;
+	background-position: bottom left;
+}
+
+/* Label element */
+.uicTaskbar li div.c {
+	background-position: bottom right;
+	position:static;
+	max-height:1000px;
+	overflow:hidden;
+	white-space: nowrap;
+}
+.uicTaskbar li div.c span.uicTaskbarText {
+	display: block;
+	position:relative;
+	top:-.15em;
+	padding: 0 3px 0 28px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+.uicTaskbar li.main div.c span {
+	width: auto;
+}
+
+
+/* Icon management */
+.uicTaskbar li div.icon {
+	position: absolute;
+	top: 4px;
+	*top: 3px;
+	left: 0;
+	height: 22px;
+	width: 22px;
+	background-position: top left;
+	background-repeat: no-repeat;
+	z-index: 100;
+	background-image: url();
+}
+.uicTaskbar li.file div.icon {
+	background-position: 0 0;
+}
+.uicTaskbar li.profile div.icon {
+	background-position: -22px 0;
+}
+.uicTaskbar li.search div.icon {
+	background-position: -44px 0;
+}
+.uicTaskbar li.main div.icon {
+	background-position: -66px 0;
+}
+
+.uicTaskbar li.selectedFile div.icon {
+	background-position: 0px -22px;
+}
+.uicTaskbar li.selectedProfile div.icon {
+	background-position: -22px -22px;
+}
+.uicTaskbar li.selectedSearch div.icon {
+	background-position: -44px -22px;
+}
+.uicTaskbar li.selectedMain div.icon {
+	background-position: -66px -22px;
+}
+.uicTaskFile .uicTaskFileHeader {
+	background: #faf3e8 url(../aria/img/taskFile/back.gif) repeat-x bottom left;
+	margin: 0;
+	height: 2.1em;
+}
+.uicTaskFile .uicTaskFileHeader .title {
+	display: block;
+	float: left;
+	padding-left: 30px;
+}
+.uicTaskFile .uicTaskFileHeader .title strong {
+	display: block;
+	padding: .5em 60px .43em 0;
+}
+
+.uicTaskFile .uicTaskFileHeader .file {
+	background: #9ad9ad url(../aria/img/taskFile/taskHeaderDossier.gif) no-repeat bottom left;
+	color:  #1a61a9;
+}
+.uicTaskFile .uicTaskFileHeader .file strong {
+	background: #9ad9ad url(../aria/img/taskFile/taskHeaderDossier.gif) no-repeat bottom right;
+}
+
+.uicTaskFile .uicTaskFileHeader .profile {
+	background: #ababab url(../aria/img/taskFile/taskHeaderProfile.gif) no-repeat bottom left;
+	color:  #1a61a9;
+}
+.uicTaskFile .uicTaskFileHeader .profile strong {
+	background: #ababab url(../aria/img/taskFile/taskHeaderProfile.gif) no-repeat bottom right;
+}
+
+.uicTaskFile .uicTaskFileHeader .search {
+	background: #90b2d6 url(../aria/img/taskFile/taskHeaderSearch.gif) no-repeat bottom left;
+	border-top: 1px solid #2482CA;
+	color:  #1a61a9;
+}
+.uicTaskFile .uicTaskFileHeader .search strong {
+	background: #90b2d6 url(../aria/img/taskFile/taskHeaderSearch.gif) no-repeat bottom right;
+}
+
+.uicTaskFile .uicTaskFileHeader .btn {
+	display: block;
+	height: 16px;
+	width: 16px;
+	cursor: pointer;
+	float: right;
+	margin: .4em;
+}
+.uicTaskFile .uicTaskFileHeader .close {
+        background: url(../aria/img/borderlayout/close.gif) no-repeat top left;
+}
+.uicTaskFile .uicTaskFileBody {
+	padding: .3em;
+	clear: left;
+}
+.uicToolBar {
+	padding: 0 .4em;
+	margin: 0;
+	list-style-type: none;
+	background-color: #b2cbe1;
+	zoom:1;
+	background-image: url();	
+	background-repeat: repeat-x;
+	background-position: top left;
+	overflow:hidden;
+	_height:29px;
+	_clear:both
+}
+.uicToolBar.uicToolBarCoin {
+	padding-left: 145px ;
+}
+.uicToolBar .item {
+	border-left: 1px dotted transparent;
+	border-right: 1px dotted transparent;
+	_border: none;
+	float: left;
+	cursor: pointer;
+	padding: 0 0.3em;
+	line-height: 2.6em;
+	color: #000000;
+}
+.uicToolBar .item:hover {
+	border-left: 1px solid #91B3D6;
+	border-right: 1px solid #91B3D6;
+	background-color:#9FD0FC;
+	
+        background-image: url(../aria/img/toolbar/barBackgroundFocus.gif);
+	
+	background-repeat: repeat-x;
+	background-position: top left;
+}
+
+.uicToolBar .uicToolbarSelectButton:hover{
+	border-left-color: transparent;
+	border-right-color: transparent;
+    background-image: none;
+	background-color:transparent;
+}
+
+.uicToolBar .hover{
+	border-left: 1px solid #91B3D6 !important;
+	border-right: 1px solid #91B3D6 !important;
+	background-color:#9FD0FC !important;
+	
+        background-image: url(../aria/img/toolbar/barBackgroundFocus.gif) !important;
+	background-repeat: repeat-x;
+	background-position: top left;
+}
+
+.uicToolBar .uicItemHtml{
+	height:100%;
+}
+.uicToolBar .uicItemHtml:hover{
+	border-left: 1px dotted transparent;
+	border-right: 1px dotted transparent;
+	background: url();
+}
+#uicToolbarFolderMenu ul li {
+	float: left;
+	cursor: pointer;
+	padding: 0;
+	line-height: 2.6em;
+}
+.uicToolBar .item.separator {
+        background: url(../aria/img/toolbar/separator.gif) no-repeat center right;
+
+	margin-right: 0.3em;
+	padding-right: 1em;
+
+}
+.uicToolBar .item.separator:hover {
+        background: #B8DBF9 url(../aria/img/toolbar/separator.gif) no-repeat center right;
+}
+.uicToolBar .uicItemHtml.separator:hover {
+        background: transparent url(../aria/img/toolbar/separator.gif) no-repeat center right;
+}
+.uicToolBar .item span.uicIcon {
+	display: block;
+	float: left;
+	height: 100%;
+	width: 16px;
+	background-position: center;
+	font-size: 1em;
+	background-repeat: no-repeat;
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+   	user-select: none;
+}
+#uicToolbarFolderMenu ul li span {
+	display: block;
+	float: left;
+	height: 100%;
+	width: 16px;
+	background-position: center;
+	font-size: 1em;
+	background-repeat: no-repeat;
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+   	user-select: none;
+}
+#uicToolbarFolderMenu ul li:hover {
+	background-color: #E4E4E4;
+}
+.uicToolBar .item em {
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	margin-left: 4px;
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+   	user-select: none;
+}
+#uicToolbarFolderMenu ul li em {
+	font-style: normal;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	margin-left: 4px;
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+   	user-select: none;
+}
+.uicToolBar.uicToolBarIconOnly em, #uicToolbarFolderMenu.uicToolBarIconOnly  em {
+	display: none;
+}
+.uicToolBar.uicToolBarTextOnly span, #uicToolbarFolderMenu.uicToolBarTextOnly  span {
+	display: none !important;
+}
+.uicToolBar.uicToolBarTextOnly em, #uicToolbarFolderMenu.uicToolBarTextOnly  em {
+	margin-left: 0 !important;
+}
+.uicToolBar .item a, 
+.uicToolBar .item a:hover, 
+.uicToolBar .item a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+.uicToolBarDisabled {
+	cursor:default !important;
+	opacity:0.3;  
+	filter: alpha(opacity = 30);
+	-moz-user-select: none;
+   	-khtml-user-select: none;
+   	user-select: none;
+}
+.uicToolBarDisabled a {
+	cursor:default !important;
+}	
+.uicToolBarDisabled a:hover {
+	cursor:default !important;
+}
+#uicToolbarFolderMenu {
+	padding: 0;
+	border: 1px solid #CECECE;
+	border-top:0px;
+	background-color: #FFFFFF;
+	overflow:hidden;
+	clear:both;
+}
+#uicToolbarFolderMenu ul {
+	padding: 0px;
+	margin: 0;
+	list-style-type: none;
+}
+#uicToolbarFolderMenu ul li {
+	clear:both;
+	padding: 0 0.6em;
+	width: 100%;
+	
+}
+.uicTBarFOpened {
+	border-left: 1px Solid #91B3D6 !important;
+	border-right: 1px Solid #91B3D6 !important;
+	_border:none;
+	background:#9FD0FC !important;
+}
+
+.uicTBarFOpened.hover {
+	background-repeat: repeat-x !important;
+}
+.uicToolbarFolder em {
+	padding-right:10px;
+	background: url(../aria/img/toolbar/tbicon_folderexpand.gif) no-repeat center right;
+}
+
+.uicToolbarSelectButton em  {
+	background: url() no-repeat center center;
+}
+
+.uicToolbarSelectButton {
+	padding: 0 !important;
+}
+
+.uicToolbarSelectButton .uicToolbarButtonText {
+	display: inline-block;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+	padding: 0 3px 0 1px;
+	background:	url() repeat-x scroll left top transparent;
+}
+
+.uicToolbarSelectButton .uicToolbarSelectPushed {
+   background:url() repeat-x top left !important; 	
+   background-color:#EAEFF3 !important;
+}
+
+.uicToolbarSelectButton em.uicToolbarSelectPushed {
+   background:url() no-repeat top center !important; 	
+   background-color:#EAEFF3 !important;
+}
+
+.uicToolbarSelectButton em  {
+	padding-right:4px;
+	display: inline-block;
+	height: 100%;
+	margin-left: 0px !important;
+	padding: 0 3px;
+}
+
+.uicToolBarDisabled:hover {
+	background: none !important;
+}
+.uicToolBar .uicToolBarDisabled:hover {
+	border-left: 1px dotted transparent;
+	border-right: 1px dotted transparent;
+}
+
+.uicToolBar .uicToolbarSelectButton span span.uicIcon {
+    display: inline-block;
+    float: none;
+    margin: 0 0 0 5px;
+}
+
+.uicToolBar .disableMouseHover:hover {
+	border-left: 1px dotted transparent;
+	border-right: 1px dotted transparent;
+	background: none;
+}
+
+.tt {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #000000;
+	font-size: 1em;
+	background-color: #FFFFE1;
+	padding: .5em;
+	border: 1px solid #CECECE;
+	width: auto;
+}
+
+/* first or middle sibling, no children */
+.ygtvtn { background: url(../aria/img/treeview/tn.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+/* first or middle sibling, collapsable */
+.ygtvtm { background: url(../aria/img/treeview/tm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, collapsable, hover */
+.ygtvtmh { background: url(../aria/img/treeview/tmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable */
+.ygtvtp { background: url(../aria/img/treeview/tp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* first or middle sibling, expandable, hover */
+.ygtvtph { background: url(../aria/img/treeview/tph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* last sibling, no children */
+.ygtvln { background: url(../aria/img/treeview/ln.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+/* Last sibling, collapsable */
+.ygtvlm { background: url(../aria/img/treeview/lm.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, collapsable, hover */
+.ygtvlmh { background: url(../aria/img/treeview/lmh.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable */
+.ygtvlp { background: url(../aria/img/treeview/lp.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Last sibling, expandable, hover */
+.ygtvlph { background: url(../aria/img/treeview/lph.gif) 0 0 no-repeat; width:34px; height:22px; cursor:pointer }
+
+/* Loading icon */
+.ygtvloading { background: url(../aria/img/treeview/loadingNode.gif) 0 0 no-repeat; width:16px; height:22px; }
+
+/* the style for the empty cells that are used for rendering the depth
+ * of the node */
+.ygtvdepthcell { background: url(../aria/img/treeview/vline.gif) 0 0 no-repeat; width:17px; height:22px; }
+
+.ygtvblankdepthcell { width:17px; height:22px; }
+
+/* the style of the div around each node */
+.ygtvitem table{
+	width:13em;
+}
+li.ygtvitem {
+	list-style: none;
+}
+
+.ygtvitem td{
+	white-space:nowrape;
+}
+/* the style of the div around each node's collection of children */
+.ygtvchildren { }
+* html .ygtvchildren { height:1%; }
+
+ul.ygtvchildren {
+	padding: 0px;
+	margin: 0px;
+}
+
+/* the style of the text label in ygTextNode */
+.ygtvlabel, .ygtvlabel:link, .ygtvlabel:visited, .ygtvlabel:hover {
+	margin-left:2px;
+	text-decoration: none;
+	color: #000000;
+}
+
+/* the style of the text label in ygTextNode when the node is selected*/
+.ygtvlabelselected, .ygtvlabelselected:link, .ygtvlabelselected:visited, .ygtvlabelselected:hover , .ygtvlabelselected:focus {
+	margin-left:2px;
+	text-decoration: none;
+	color: blue;
+	border:0px none;
+}
+
+.yresizable-handle {
+    background:white none repeat scroll 0%;
+    font-size:1px;
+    line-height:6px;
+    opacity:0;
+    overflow:hidden;
+    position:absolute;
+    z-index:100;
+}
+.yresizable-handle-east {
+    cursor:e-resize;
+    height:100%;
+    margin-right:-1px;
+    right:0px;
+    top:0px;
+    width:6px;
+}
+.yresizable-handle-south {
+    bottom:0px;
+    cursor:s-resize;
+    height:6px;
+    left:0px;
+    margin-bottom:-1px;
+    width:100%;
+}
+.yresizable-handle-west {
+    cursor:w-resize;
+    height:100%;
+    left:0px;
+    top:0px;
+    width:6px;
+}
+.yresizable-handle-north {
+    cursor:n-resize;
+    height:6px;
+    left:0px;
+    top:0px;
+    width:100%;
+}
+.yresizable-handle-southeast {
+    bottom:0px;
+    cursor:se-resize;
+    height:6px;
+    right:0px;
+    width:6px;
+    z-index:101;
+}
+.yresizable-handle-northwest {
+    cursor:nw-resize;
+    height:6px;
+    left:0px;
+    top:0px;
+    width:6px;
+    z-index:101;
+}
+.yresizable-handle-northeast {
+    cursor:ne-resize;
+    height:6px;
+    right:0px;
+    top:0px;
+    width:6px;
+    z-index:101;
+}
+.yresizable-handle-southwest {
+    bottom:0px;
+    cursor:sw-resize;
+    height:6px;
+    left:0px;
+    width:6px;
+    z-index:101;
+}
+.yresizable-over .yresizable-handle,
+.yresizable-pinned .yresizable-handle {
+    opacity:1;
+}
+.yresizable-over .yresizable-handle-east,
+.yresizable-pinned .yresizable-handle-east {
+    background:transparent url(../aria/img/borderlayout/e-handle.gif) repeat scroll left center;
+}
+.yresizable-over .yresizable-handle-west,
+.yresizable-pinned .yresizable-handle-west {
+    background:transparent url(../aria/img/borderlayout/e-handle.gif) repeat scroll left center;
+}
+.yresizable-over .yresizable-handle-south,
+.yresizable-pinned .yresizable-handle-south {
+    background:transparent url(../aria/img/borderlayout/s-handle.gif) repeat scroll center top;
+}
+.yresizable-over .yresizable-handle-north,
+.yresizable-pinned .yresizable-handle-north {
+    background:transparent url(../aria/img/borderlayout/s-handle.gif) repeat scroll center top;
+}
+.yresizable-over .yresizable-handle-southeast,
+.yresizable-pinned .yresizable-handle-southeast {
+    background:transparent url(../aria/img/borderlayout/se-handle.gif) repeat scroll left top;
+}
+.yresizable-over .yresizable-handle-northwest,
+.yresizable-pinned .yresizable-handle-northwest {
+    background:transparent url(../aria/img/borderlayout/nw-handle.gif) repeat scroll right bottom;
+}
+.yresizable-over .yresizable-handle-northeast,
+.yresizable-pinned .yresizable-handle-northeast {
+    background:transparent url(../aria/img/borderlayout/ne-handle.gif) repeat scroll left bottom;
+}
+.yresizable-over .yresizable-handle-southwest,
+.yresizable-pinned .yresizable-handle-southwest {
+    background:transparent url(../aria/img/borderlayout/sw-handle.gif) repeat scroll right top;
+}
+.yresizable-proxy {
+    border: 1px dashed #aca899;
+    left:0pt;
+    overflow:hidden;
+    position:absolute;
+    top:0pt;
+    visibility:hidden;
+    z-index:1001;
+}
+.yresizable-overlay {
+      background:white;
+      border:1px solid red;
+    display:none;
+    height:100%;
+    left:0pt;
+    position:absolute;
+    top:0pt;
+    width:100%;
+    z-index:20000;
+    opacity:0;
+    filter:alpha(opacity=0);
+}
+.yunselectable {
+    -moz-user-select:none;
+    cursor:default;
+}
+.ydlg-proxy {
+    background-color: #FFFFFF;
+    border: 1px solid #aca899;
+    left:0pt;
+    overflow:hidden;
+    position:absolute;
+    top:0pt;
+    z-index:10001;
+}
+.ydlg-shadow {
+    background: #CECECE;
+    left:0pt;
+    position:absolute;
+    top:0pt;
+}
+.ydlg-focus {
+    height:0px;
+    left:0pt;
+    outline-color:invert;
+    outline-style:none;
+    outline-width:0pt;
+    overflow:hidden;
+    position:absolute;
+    top:0pt;
+    width:0px;
+}
+.ydlg-mask {
+    display:none;
+    left:0pt;
+    position:absolute;
+    top:0pt;
+    z-index:10000;
+}
+
+.uicMask {
+    background-image : url();
+    background-repeat : repeat-x repeat-y;
+}
+
+.uicMaskIE6 {
+    background-image : url();
+    background-repeat : repeat-x repeat-y;
+}
+
+body.masked {
+    overflow:hidden;
+}
+.ydlg {
+    background-color: white;
+    overflow:hidden;
+    position:absolute;
+    top:0pt;
+    z-index:10001;
+}
+.yresizable-proxy {
+    z-index:10002;
+}
+.ydlg .ydlg-hd {
+    background: white url() repeat-x scroll 0px 0px;
+    color: black;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight: bold;
+    line-height:normal;
+    overflow:hidden;
+    padding-left:5px;
+    padding-top:5px;
+    padding-bottom:5px;
+    margin: 0;
+}
+
+.ydlg .ydlg-icon {
+    /* By default we have no top left icons in dialog frame: */
+    display: none;
+}
+
+
+         /* Increase from 5px to 25px to make some room for icon: */
+         .ydlg .ydlg-hd {
+             padding-left:25px;
+        }
+
+        /* Display top left icon: */
+        .ydlg .ydlg-icon {
+            display: block;
+            background: url() no-repeat;
+            position:absolute;
+            top:0px;
+            left:2px;
+            width:23px;
+            height:23px;
+        }
+
+/* CR2253496 - Types for dialog */
+.ydlg .ydlg-type-overlay {
+    position:absolute;
+    top:1px;
+    left:1px;
+    height:53px;
+}
+
+.ydlg .ydlg-type-overlay .title {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 3px 20px 3px 5px;
+    margin-left: 54px;
+}
+.ydlg .ydlg-type-overlay.ydlg-type-dossier {
+    background: url(../aria/img/borderlayout/coinDossier.gif) no-repeat 0 -2px;
+}
+.ydlg .ydlg-type-overlay.ydlg-type-dossier .title {
+    background: url(../aria/img/borderlayout/titleDossier.gif) no-repeat bottom right;
+}
+.ydlg .ydlg-type-overlay.ydlg-type-profile {
+    background: url(../aria/img/borderlayout/coinProfile.gif) no-repeat 0 -2px;
+}
+.ydlg .ydlg-type-overlay.ydlg-type-profile .title {
+    background: url(../aria/img/borderlayout/titleProfile.gif) no-repeat bottom right;
+}
+.ydlg .ydlg-type-overlay.ydlg-type-search {
+    background: url(../aria/img/borderlayout/coinSearch.gif) no-repeat 0 -2px;
+}
+.ydlg .ydlg-type-overlay.ydlg-type-search .title {
+    background: url(../aria/img/borderlayout/titleSearch.gif) no-repeat bottom right;
+}
+/* End of CR2253496 */
+
+.ydlg .ydlg-hd-left {
+    background:transparent url() no-repeat  scroll 0px -82px;
+    margin:0px;
+    padding-left:3px;
+}
+.ydlg .ydlg-hd-right {
+    background:transparent url() no-repeat  scroll right -41px;
+    padding-right:3px;
+}
+
+     /* set paddings to 0 when no corners are needed */
+    .ydlg .ydlg-hd-left {
+        padding-left:0px;
+    }
+
+    .ydlg .ydlg-hd-right {
+        padding-right:0px;
+    }
+
+
+.ydlg .ydlg-dlg-body {
+    position: absolute;
+    background: white;
+    border: 1px solid white;
+    border-top: 0;
+    overflow:hidden;
+    padding: 0 5px 5px 5px;
+}
+
+.ydlg .ydlg-bd {
+    overflow:hidden;
+    position:relative;
+    border: 1px solid white;
+    background: #FFFFFF;
+    padding: 0px;
+}
+
+.ydlg .ydlg-ft {
+    overflow:hidden;
+    padding:5px 5px 0px;
+}
+.ydlg .yui-ext-tabbody {
+    background:white none repeat scroll 0%;
+    overflow:auto;
+}
+.ydlg .ytabs-top .yui-ext-tabbody {
+    border-color:-moz-use-text-color #6593CF rgb(101, 147, 207);
+    border-style:none solid solid;
+    border-width:0px 1px 1px;
+}
+.ydlg .ytabs-bottom .yui-ext-tabbody {
+    border-color:#6593CF rgb(101, 147, 207) -moz-use-text-color;
+    border-style:solid solid none;
+    border-width:1px 1px 0px;
+}
+.ydlg .ylayout-container .yui-ext-tabbody {
+    border:0px none;
+}
+.ydlg .inner-tab {
+    margin:5px;
+}
+.ydlg .ydlg-ft .ybtn {
+    clear:none;
+    float:right;
+    margin-right:5px;
+}
+.ydlg-draggable .ydlg-hd,.ydlg-draggable .ydlg-type-overlay {
+    cursor:move;
+}
+.ydlg-closable .ydlg-hd {
+    padding-right:22px;
+}
+.ydlg .ydlg-close {
+    background-image:url(../aria/img/borderlayout/close.gif);
+    background-repeat:no-repeat;
+    cursor:pointer;
+    font-size:1px;
+    height:16px;
+    line-height:1px;
+    margin:0px;
+    padding:0px;
+    position:absolute;
+    right:4px;
+    top:4px;
+    visibility:inherit;
+    width:16px;
+    z-index:6;
+}
+
+.ydlg .ydlg-minimize, .ydlg .ydlg-maximize {
+    background: url(../aria/img/borderlayout/minimize.gif) no-repeat center center;
+    cursor:pointer;
+    font-size:1px;
+    height:16px;
+    line-height:1px;
+    margin:0px;
+    padding:0px;
+    position:absolute;
+    right:19px;
+    top:4px;
+    visibility:inherit;
+    width:16px;
+    z-index:6;
+}
+.ydlg .ydlg-maximize {
+    background: url(../aria/img/borderlayout/maximize.gif) no-repeat center center;
+}
+.ydlg div.yresizable-handle-east {
+    background-image:url(../aria/img/borderlayout/e-handle.gif);
+    background-position:right center;
+    border:0px none;
+    margin-right:0pt;
+}
+.ydlg div.yresizable-handle-south {
+    background-image:url(../aria/img/borderlayout/s-handle.gif);
+    border:0px none;
+    height:6px;
+}
+.ydlg div.yresizable-handle-west {
+    background-image:url(../aria/img/borderlayout/e-handle.gif);
+    background-position:1px 50%;
+    border:0px none;
+}
+.ydlg div.yresizable-handle-north {
+    background-image:url(../aria/img/borderlayout/s-handle.gif);
+    border:0px none;
+}
+.ydlg div.yresizable-handle-northeast,
+.ytheme-gray .ydlg div.yresizable-handle-northeast {
+    background-image:url(../aria/img/borderlayout/ne-handle.gif);
+    border:0px none;
+}
+.ydlg div.yresizable-handle-northwest,
+.ytheme-gray .ydlg div.yresizable-handle-northwest {
+    background-image:url(../aria/img/borderlayout/nw-handle.gif);
+    border:0px none;
+}
+.ydlg div.yresizable-handle-southeast {
+    background-image:url(../aria/img/borderlayout/se-handle.gif);
+    background-position:right bottom;
+    border:0px none;
+    height:8px;
+    width:8px;
+}
+.ydlg div.yresizable-handle-southwest {
+    background-image:url(../aria/img/borderlayout/sw-handle.gif);
+    background-position:right top;
+    border:0px none;
+    margin-bottom:1px;
+    margin-left:1px;
+}
+.ydd-drag-proxy {
+    left:0pt;
+    position:absolute;
+    top:0pt;
+    visibility:hidden;
+    z-index:15000;
+}
+.ydd-drag-ghost {
+    background-color:white;
+    border-color:#dddddd #bbbbbb #bbbbbb #dddddd;
+    border-style:solid;
+    border-width:1px;
+    color:black;
+    font-family:arial,helvetica,sans-serif;
+    font-size:1em;
+    font-size-adjust:none;
+    font-stretch:normal;
+    font-style:normal;
+    font-variant:normal;
+    font-weight:normal;
+    line-height:normal;
+    opacity:0.85;
+    padding:3px 3px 3px 20px;
+    white-space:nowrap;
+}
+.ydd-drag-repair .ydd-drag-ghost {
+    background-color:transparent;
+    border:0px none;
+    opacity:0.4;
+    padding:0px;
+}
+.ydd-drag-repair .ydd-drop-icon {
+    visibility:hidden;
+}
+.ylayer-shadow {
+    background:#CCCCCC none repeat scroll 0%;
+    opacity:0.2;
+}
+
+.hidden_dlg{
+    top:0px;
+    left:0px;
+    visibility:hidden;
+    position:absolute;
+}
+
+.ydlg-calculate-size{
+    float:left;
+}
+
+
+
+/* START GLOBAL CSS RULES */
+
+.uicSeatMap {
+	position: relative;
+}
+
+.uicSeatMap .uicSeatMapMainWrapper {
+	border: #808080 1px solid;
+	background-color: #FFFFFF;
+	padding:0;
+	margin:0;
+	height: inherit;
+	position: relative;
+}
+
+.uicSeatMap .uicSeatMapBody {
+	height:inherit;
+	width:inherit;
+	position: relative;
+}
+
+
+.uicSeatMap  .uicLetters ,
+.uicSeatMap  .uicNumbers  {
+	background-image: none;
+	text-align: center;
+	width: 20px;
+}
+
+.uicSeatMap .uicWing  {
+
+	background-color: #EADBC8;
+	background-image: none;
+}
+
+.uicSeatMap .uicCorridor{
+	background-color: #EAEDED;
+}
+
+.uicSeatMap .uicEmptySeat {
+	cursor: pointer;
+}
+
+.uicSeatMap .uicOccupiedSeat {
+	cursor: auto;
+}
+
+
+
+.uicSeatMap .uicEmptySeat,
+.uicSeatMap .uicOccupiedSeat,
+.uicSeatMap .uicEmptyChargeableSeat,
+.uicSeatMap .uicOccupiedChargeableSeat {
+	background-color: #EAEDED;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+}
+
+.uicSeatMap .uicCabinContainer {
+	text-align: center;
+	vertical-align: middle;
+	width:auto;
+
+}
+
+.uicSeatMap .uicCabin {
+	display: inline;
+	table-layout: fixed;
+	text-align: center;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.uicSeatMap .uicHighlightedSeat {
+	background-color:  #FFCB63 ;
+}
+
+.uicSeatMap .uicSeatFacility,
+.uicSeatMap .uicZoneFacility {
+	border: 1px solid #EAEDED ;
+	background-color:  #8AAED3  ;
+	color: #FFFFFF  ;
+	text-align: center;
+	cursor: default
+}
+
+.uicSeatMap .uicFacilityDisabled {
+	text-indent : -9000px;
+	background:  #8AAED3 url(../aria/img/seatmap/squares/facilities/disabled.gif) 50% 50% no-repeat;
+}
+
+.uicSeatMap .uicFacilityGalley {
+	text-indent : -9000px;
+	background:  #8AAED3 url(../aria/img/seatmap/squares/facilities/galley.gif) 50% 50% no-repeat;
+}
+
+.uicSeatMap .uicFacilityToilet {
+	text-indent : -9000px;
+	background:  #8AAED3 url(../aria/img/seatmap/squares/facilities/toilets.gif) 50% 50% no-repeat;
+}
+
+.uicSeatMap .uicFacilityEmergencyExit {
+	background-color: #FFAFAF ;
+}
+
+.uicSeatMapLegend_galley {
+	background:  #8AAED3 url(../aria/img/seatmap/squares/facilities/galley.gif) 50% 50% no-repeat;
+}
+
+.uicSeatMapLegend_toilet {
+	background:  #8AAED3 url(../aria/img/seatmap/squares/facilities/toilets.gif) 50% 50% no-repeat;
+}
+
+.uicSeatMapLegend_disabled {
+	background:  #8AAED3 url(../aria/img/seatmap/squares/facilities/disabled.gif) 50% 50% no-repeat;
+}
+
+.uicSeatMapLegend_emergencyExit {
+	text-align: center;
+	color: white ;
+	background-color: #FFAFAF ;
+}
+
+.uicSeatMapLegend_generalFacility {
+	text-align: center;
+	color: white ;
+	background-color: #8AAED3 ;
+}
+
+.uicSeatMapLegend_highlighted {
+	background-color: #FFCB63  ;
+}
+
+.uicSeatMapLegend_verticalEmptySeat {
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/emptyseat.gif) ;
+}
+
+.uicSeatMapLegend_horizontalEmptySeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/emptyseat.gif) ;
+}
+
+.uicSeatMapLegend_verticalEmptyChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/emptychargeableseat.gif) ;
+}
+
+.uicSeatMapLegend_horizontalEmptyChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/emptychargeableseat.gif) ;
+}
+
+.uicSeatMapLegend_verticalOccupiedSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/occupiedseat.gif) ;
+}
+
+.uicSeatMapLegend_verticalOccupiedChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/occupiedchargeableseat.gif) ;
+}
+
+.uicSeatMapLegend_horizontalOccupiedChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/occupiedchargeableseat.gif) ;
+}
+
+.uicSeatMapLegend_horizontalOccupiedSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/occupiedseat.gif) ;
+}
+
+.uicSeatMapLegend_verticalSelectedSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/selectedseat.gif) ;
+}
+
+.uicSeatMapLegend_verticalSelectedChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/selectedchargeableseat.gif) ;
+}
+
+.uicSeatMapLegend_horizontalSelectedSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/selectedseat.gif) ;
+}
+
+.uicSeatMapLegend_horizontalSelectedChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/selectedchargeableseat.gif) ;
+}
+
+.uicSeatMapLegend_wings {
+	background-color: #EADBC8;
+}
+
+.uicSeatMapLegend_verticalSquare {
+	width: 17px;
+	height: 20px;
+	display:block;
+}
+
+.uicSeatMapLegend_horizontalSquare {
+	width: 20px;
+	height: 17px;
+    display:block;
+}
+
+
+/* END GLOBAL CSS RULES */
+
+/*************************************************************************************************************/
+
+/* START CSS RULES FOR HORIZONTAL LAYOUT */
+
+.uicSeatMap .uicHorizontalLayout {
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.uicSeatMap .uicHorizontalLayout .genericColumn {
+	width: 20px;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicSquare {
+	width: 20px;
+	height: 17px;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicSeatFacility {
+	width: 18px;
+	height: 15px;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicSeatMapBody {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+
+.uicSeatMap .uicHorizontalLayout .firstColumn {
+
+}
+
+.uicSeatMap .uicHorizontalLayout .lastColumn {
+
+}
+
+.uicSeatMap .uicHorizontalLayout .firstRow {
+
+}
+
+.uicSeatMap .uicHorizontalLayout .lastRow {
+
+}
+
+.uicSeatMap .uicHorizontalLayout .uicTopWindow,
+.uicSeatMap .uicHorizontalLayout .uicBottomWindow,
+.uicSeatMap .uicHorizontalLayout .uicNoWindow,
+.uicSeatMap .uicHorizontalLayout .uicWindowPlaceHolder {
+	width: 20px;
+	height: 3px;
+}
+
+
+.uicSeatMap .uicHorizontalLayout .uicTopWindow {
+	background: transparent url(../aria/img/seatmap/squares/windows/horizontal/window.gif)  0px 0px no-repeat;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicBottomWindow {
+	background: transparent url(../aria/img/seatmap/squares/windows/horizontal/window.gif) 0px -3px no-repeat;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicNoWindow {
+	background: transparent url(../aria/img/seatmap/squares/windows/horizontal/window.gif)  0px -6px no-repeat;
+}
+
+
+.uicSeatMap .uicHorizontalLayout .uicFirstWingTop {
+	background: transparent url(../aria/img/seatmap/squares/wings/horizontal-wings.gif)  0px -34px no-repeat;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicLastWingTop {
+	background: transparent url(../aria/img/seatmap/squares/wings/horizontal-wings.gif)  0px 0px no-repeat;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicFirstWingBottom {
+	background: transparent url(../aria/img/seatmap/squares/wings/horizontal-wings.gif)  0px -51px no-repeat;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicLastWingBottom {
+	background: transparent url(../aria/img/seatmap/squares/wings/horizontal-wings.gif)  0px -17px no-repeat;
+}
+
+.uicSeatMap .uicVerticalLayout  .uicNumbers {}
+.uicSeatMap .uicVerticalLayout .uicLetters {}
+
+.uicSeatMap .uicHorizontalLayout .uicEmptySeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/emptyseat.gif);
+}
+
+.uicSeatMap .uicHorizontalLayout .uicOccupiedSeat{
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/occupiedseat.gif);
+}
+
+.uicSeatMap .uicHorizontalLayout .uicSelectedSeat{
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/selectedseat.gif);
+}
+
+.uicSeatMap .uicHorizontalLayout .uicEmptyChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/emptychargeableseat.gif);
+}
+
+.uicSeatMap .uicHorizontalLayout .uicEmptyChargeableSeat.uicOccupiedSeat,
+.uicSeatMap .uicHorizontalLayout .uicOccupiedChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/occupiedchargeableseat.gif);
+}
+
+.uicSeatMap .uicHorizontalLayout .uicEmptyChargeableSeat.uicSelectedSeat{
+	background-image: url(../aria/img/seatmap/squares/seats/horizontal/selectedchargeableseat.gif);
+}
+
+.uicSeatMap .uicHorizontalLayout .uicZoneFacility {
+	width: 18px;
+}
+
+.uicSeatMap .uicHorizontalLayout .uicErrorTrigger .uicSeatError{
+	background-color: #FF0000;
+}
+
+/* END CSS RULES FOR HORIZONTAL LAYOUT */
+
+/*************************************************************************************************************/
+
+/* START CSS RULES FOR VERTICAL LAYOUT */
+
+.uicSeatMap .uicVerticalLayout {
+	overflow-y: auto;
+	overflow-x: visible;
+}
+
+.uicSeatMap .uicVerticalLayout .genericColumn {
+	width: 17px;
+}
+
+.uicSeatMap .uicVerticalLayout .genericColumnAsWindow {
+	width: 3px;
+}
+
+.uicSeatMap .uicVerticalLayout .uicSquare {
+	width: 17px;
+	height: 20px;
+}
+
+.uicSeatMap .uicVerticalLayout .uicSeatFacility {
+	width: 15px;
+	height: 18px;
+}
+
+.uicSeatMap .uicVerticalLayout .uicSeatMapBody {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.uicSeatMap .uicVerticalLayout .uicSquare {
+	width: 17px;
+	height: 20px;
+}
+
+.uicSeatMap .uicVerticalLayout .uicLeftWindow,
+.uicSeatMap .uicVerticalLayout .uicRightWindow,
+.uicSeatMap .uicVerticalLayout .uicNoWindow,
+.uicSeatMap .uicVerticalLayout .uicWindowPlaceHolder {
+	width: 3px;
+	height: 20px;
+}
+
+
+.uicSeatMap .uicVerticalLayout .uicLeftWindow {
+	background: transparent url(../aria/img/seatmap/squares/windows/vertical/window.gif)  0px 0px no-repeat;
+}
+
+.uicSeatMap .uicVerticalLayout .uicRightWindow {
+	background: transparent url(../aria/img/seatmap/squares/windows/vertical/window.gif) 0px -20px no-repeat;
+}
+
+.uicSeatMap .uicVerticalLayout .uicNoWindow {
+	background: transparent url(../aria/img/seatmap/squares/windows/vertical/window.gif)  0px -40px no-repeat;
+}
+
+
+
+.uicSeatMap .uicVerticalLayout .uicFirstWingLeft {
+	background: transparent url(../aria/img/seatmap/squares/wings/vertical-wings.gif)  0px 0px no-repeat;
+}
+
+.uicSeatMap .uicVerticalLayout .uicLastWingLeft {
+	background: transparent url(../aria/img/seatmap/squares/wings/vertical-wings.gif)  -34px 0px no-repeat;
+}
+
+.uicSeatMap .uicVerticalLayout .uicFirstWingRight {
+	background: transparent url(../aria/img/seatmap/squares/wings/vertical-wings.gif)  -17px 0px no-repeat;
+}
+
+.uicSeatMap .uicVerticalLayout .uicLastWingRight {
+	background: transparent url(../aria/img/seatmap/squares/wings/vertical-wings.gif)  -51px 0px no-repeat;
+}
+
+.uicSeatMap .uicVerticalLayout .uicEmptySeat {
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/emptyseat.gif);
+}
+
+.uicSeatMap .uicVerticalLayout .uicOccupiedSeat{
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/occupiedseat.gif);
+}
+
+.uicSeatMap .uicVerticalLayout .uicSelectedSeat{
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/selectedseat.gif);
+}
+
+.uicSeatMap .uicVerticalLayout .uicEmptyChargeableSeat {
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/emptychargeableseat.gif);
+}
+
+.uicSeatMap .uicVerticalLayout .uicEmptyChargeableSeat.uicOccupiedSeat,
+.uicSeatMap .uicVerticalLayout .uicOccupiedChargeableSeat{
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/occupiedchargeableseat.gif);
+}
+
+.uicSeatMap .uicVerticalLayout .uicEmptyChargeableSeat.uicSelectedSeat{
+	background-image: url(../aria/img/seatmap/squares/seats/vertical/selectedchargeableseat.gif);
+}
+
+.uicSeatMap .uicVerticalLayout .uicErrorTrigger .uicSeatError{
+	background-color: #FF0000;
+}
+/* END CSS RULES FOR VERTICAL LAYOUT */
+
+/*************************************************************************************************************/
+
+/**
+ * This CSS is targeted at media print only and is used
+ * to display only the specific print panel when a print
+ * command is sent
+ */
+
+/* Hide everything */
+
+@media print {
+
+	.noprint {
+		display: none ;
+	}
+	
+	/* Except the print panel DIV */
+	#ariaLayoutPrintPanel {
+		display: block ;
+	}
+}
+.uicTrace{
+	border-style:solid;
+	border-width:1px;
+	margin:5px;
+}
+
+.uicTrace ul {
+	padding-left:10px;
+}
+
+.uicTrace li{
+	margin-bottom:3px;
+}
+
+.uicTraceTitle{
+	display:block;
+	cursor:pointer;
+	background-color:#90B2D6;
+	font-size:1.1em;
+	padding:3px;
+	font-weight:bold;
+	color:#000;
+	border-bottom:#000 solid 1px;
+}
+.uicTraceTitle:hover{
+	text-decoration:none;
+	color:#000;
+}
+
+.uicTraceSectionIndex{
+	overflow:hidden;
+	background-color:#E1E1E1;
+	margin:10px 10px 10px 10px;
+	padding:3px;
+}
+
+.uicUtilLinkDiv{
+	float:left;
+	width:10%;
+}
+
+.uicUtilLink{
+	text-align:center;
+	padding:3px;
+	display:block;
+	width:70px;
+	background-color:#D4D0C8;
+	border:1px solid;
+	cursor:pointer;
+	margin: 5px 10px 5px 10px;
+}
+
+
+.uicTraceLinkSection{
+	width:22%;
+	float:left;
+	list-style-type:none;
+	text-align:center;
+	height:20px;
+	margin: 5px 0px 5px 0px;
+}
+
+.uicTraceSection{
+	overflow:hidden;
+	background-color:#E1E1E1;
+	margin:10px 10px 10px 10px;
+	padding:3px;
+}
+
+.uicTraceSectionHeader{
+	background-color:#90B2D6;
+	padding:3px;
+	overflow:hidden;
+}
+
+.uicTraceSectionTitle{
+	cursor:pointer;
+	display:block;
+	float:left;
+	width:96%;
+	font-size:1.1em;	
+	font-weight:bold;
+	color:#000;
+}
+.uicTraceSectionTitle:hover{
+	text-decoration:none;
+	color:#000;
+}
+
+.uicTraceToTop{
+	display:block;
+	text-align:right;
+	padding-right:3px;
+	width:3%;
+	float:left;
+}
+
+.uicFirstLi{
+	list-style-type:none;
+}
+
+.uicFirstLi ul {
+	margin-left:20px;
+	margin-bottom:5px;
+}
+
+.uicTraceHierarchyNode{
+	font-weight:bold;
+}
+
+.uicTraceKey {
+/*	float:left;
+	display:block;
+	min-width:150px;
+	text-align:left;*/
+}
+
+.uicTraceSeparator{
+	/*float:left;
+	margin:0px 5px 0px 5px;*/
+}
+
+.uicTraceValue{
+	/*text-align:left;*/
+}

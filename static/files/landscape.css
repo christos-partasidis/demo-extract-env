@@ -1,0 +1,1067 @@
+/*------------------------------------------------------------------
+
+
+	LANDSCAPE
+
+
+------------------------------------------------------------------*/
+
+#resultsDiv pre, #resultsDiv > h3, #searchDiv pre, #searchDiv > h3{
+	display: none;
+}
+
+/*------------------------------------------------------------------
+[ Layout ]
+*/
+
+	/*------------------------------------------------------------------
+	[ Wrappings ]
+	*/
+
+		.bodyWrapper{
+			width: 100%;
+			*width: 99%;
+			float: left;
+			overflow: hidden;
+		}
+
+		#mainDiv , #searchDiv, #resultsDiv, #search_form, #form_SearchCarsForm, #form_SearchCarsForm > div, .results, #footerContainer, .bodyWrapper{
+			clear: both;
+			width: 100%;
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+			position: relative;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+	/*------------------------------------------------------------------
+	[ Header bar ]
+	*/
+
+		.headDiv {
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.headlines{
+			width: 73%;
+			*width: 72%;
+			float: left;
+			margin-left: 1%;
+		}
+
+		.titlePt1, .titlePt2 {
+			float: left;
+			clear: left;
+		}
+
+		.titlePt1 {
+			line-height: 42px;
+			font-size: 28px;
+			font-weight: bold;
+			*width: 100%;
+		}
+
+		.titlePt2{
+			font-size:14px;
+			line-height: 24px;
+			font-weight: bold;
+			font-style: italic;
+			display: none;
+			margin-top: 0;
+			*width: 100%;
+		}
+
+		.affLogo {
+			background-position: right center;
+			background-repeat: no-repeat;
+			float: right;
+			margin: 0 1% 0 0;
+			width: 25%;
+			min-height: 52px;
+		}
+
+		.headDivider{
+			display: none;
+		}
+
+
+	/*-----------------------------------------------------------
+	[ Search bar ]
+	*/
+
+		#searchDiv {
+			float: left;
+			width: 100%;
+		}
+
+		#form_SearchCarsForm > div{
+			width: 99%;
+			margin: 8px 0 6px 0.5%;
+		}
+
+		#puPuDate, #puPuMonth, #puPuYear, #puPuHour, #puPuMin, #puDoDate, #puDoMonth, #puDoYear, #puDoHour, #puDoMin, #puDestination, #puDates, #doDates, #country-label, #city-label, #location-label, #puDate-label, #doDate-label, #puHour-label, #doHour-label, #puPuDate, #puPuMonth, #puPuYear, #puPuHour, #puPuMin, #puDoDate, #puDoMonth, #puDoYear, #puDoHour, #puDoMin{
+			float: left;
+		}
+
+		#puDates > div, #doDates > div, #puDestination > * {
+			margin-bottom: 4px;
+		}
+
+		#puMonth-label, #puYear-label, #doMonth-label, #doYear-label, #puMin-label, #doMin-label, #submitbutton-label {
+			display:none;
+			visibility:hidden;
+		}
+
+		#puDestination{
+			width: 79%;
+		}
+
+		#puDates, #doDates{
+			width: 39.5%;
+			padding-top: 4px;
+		}
+
+		#puCountry, #puCity, #puLocation{
+			width: 33.3%;
+			float: left;
+		}
+
+		#puPuMonth, #puPuYear, #puDoMonth, #puDoYear{
+			width: 18%;
+		}
+
+		#puPuMin, #puDoMin{
+			width: 11%;
+		}
+
+		#puPuHour, #puDoHour{
+			width: 22%;
+			margin-left: 2%;
+		}
+
+		#puHour-label, #doHour-label{
+			width: 50%;
+		}
+
+		#puHour, #doHour{
+			width: 49%;
+		}
+
+		#puPuDate, #puDoDate{
+			width: 27%;
+		}
+
+		#puDate, #doDate{
+			width: 39%;
+		}
+
+		#puDate-label, #doDate-label{
+			width: 60%;
+		}
+
+		#puDoDate{
+			margin-left: 1.3%%;
+		}
+
+		#puMonth, #puYear, #puMin, #doMonth, #doYear, #doMin{
+			width: 99%;
+		}
+
+		#country, #city, #location{
+			width: 74.5%;
+		}
+
+		#country-label, #city-label, #location-label{
+			clear: both;
+			width: 24.5%;
+		}
+
+		label {
+			text-align: left;
+			display: block;
+			font-size: 11px;
+			line-height: 18px;
+			padding: 0;
+			font-weight: bold;
+			white-space: nowrap;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		#city-label label, #location-label label {
+			text-align: center;
+		}
+
+		select{
+			border-width: 1px;
+			border-style: solid;
+			border-radius: 3px;
+			font-size: 10px;
+			padding: 1px;
+			margin: 0;
+		}
+
+
+
+	/*-----------------------------------------------------------
+	[ Results ]
+	*/
+
+		.resultsDiv {
+			overflow: hidden;
+			position: relative;
+		}
+
+		.resultsDiv > #loader{
+			height: 277px;
+		}
+
+		.searchDiv > #loader{
+			height: 64px;
+		}
+
+		.results{
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.wrapper{
+			background: #ffffff;
+			display: block;
+			width: 99%;
+			margin: 0 0 0 0.5%;
+			padding-top: 5px;
+			text-align: center;
+			border-width: 0 1px 1px 1px;
+			border-style: solid;
+			position: relative;
+			white-space: nowrap;
+		}
+
+		.wrapper:first-child{
+			border-width: 1px;
+		}
+
+		.results:after{
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+
+		.wrapper > div {
+			display: inline-block;
+			margin-left: -4px;
+			zoom: 1;
+			*display: inline;
+			vertical-align: middle;
+		}
+
+		.wrapper > div:first-child {
+			margin-left: 0;
+		}
+
+		.car{
+			width: 24%;
+			text-align: center;
+		}
+
+			.carimage{
+				max-height: 81px;
+			}
+
+		.result_info{
+			width: 25%;
+		}
+
+			.make, .type, .icons{
+				display: block;
+				width: 100%;
+				text-align: left;
+			}
+
+			.make{
+				font-size: 14px;
+				line-height: 20px;
+				margin: 0 0 10px 0;
+				font-weight: bold;
+			}
+
+			.type{
+				font-size: 12px;
+				line-height: 12px;
+				margin: 3px 0 6px 0;
+			}
+
+			.icons{
+
+			}
+
+			.icons > div {
+				position: relative;
+				display: inline-block;
+				margin-left: -4px;
+				zoom: 1;
+				*display: inline;
+				text-align: center;
+				width: auto;
+				padding: 0 2px 0 22px;
+				line-height: 20px;
+				margin: 2px 0 0 0;
+			}
+
+			.icons > div:first-child {
+				margin-left: 0;
+			}
+
+				.icons div div{
+					position: absolute;
+					width: 100%;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					background-image: url("../images/widgetGlyphs.png");
+					background-repeat: no-repeat;
+				}
+
+				.seats div { 			background-position: left -63px }
+				.doors div {			background-position: left -129px }
+				.aircon div {			background-position: left 2px }
+				.transmission div {		background-position: left -192px }
+
+		#deposit, .sellPanel {
+			width: 13%;
+			border-radius: 4px;
+		}
+
+		#deposit div, .sellPanelInner {
+			border-radius: 6px;
+		}
+
+		.deposit_book {
+			font-weight: bold;
+			white-space: nowrap;
+			font-size: 13px;
+		}
+
+		.whiteBox {
+			background: #FFF;
+			color: #EE3027;
+			padding: 2px 4px;
+			white-space: nowrap;
+			display: block;
+			margin-bottom: 3px;
+			border-radius: 4px;
+		}
+
+		.prices, .pricing{
+			width: 28%;
+			font-weight: bold;
+			text-align: center;
+		}
+
+			.was, .total_pricing, .now, .total_pricing_number{
+				width: 100%;
+			}
+
+			.total_pricing_number{
+				font-size: 9px;
+				padding-top: 5px;
+			}
+
+			.total_pricing_number > span{
+				border-top: 1px dotted #888888;
+				padding-top: 12px
+			}
+
+			.total_pricing_number_span{
+				font-size: 20px;
+				color: #cc0000;
+			}
+
+			.was{
+				text-decoration: line-through;
+				font-size: 14px;
+				line-height: 30px;
+			}
+
+			.now{
+				font-size: 18px;
+				line-height: 28px;
+			}
+
+			.now2{
+				font-size: 22px;
+				line-height: 36px;
+			}
+
+		.wrapper .btn{
+			width: 22%;
+		}
+
+			#showDetails{
+
+			}
+
+		#puSubmit{
+			width: 21%;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.slideButton{
+			display: none;
+ 			visibility: hidden;
+			position: absolute;
+			bottom: 4px;
+			width: 11%;
+			height: 25px;
+			font-size: 16px;
+			font-weight: bold;
+			line-height: 25px;
+			text-align: center;
+			cursor: pointer;
+			opacity:0.6;
+			filter:alpha(opacity=60); /* For IE8 and earlier */
+			border-radius: 4px;
+		}
+
+		.slideButton:hover{
+			opacity: 1;
+			filter:alpha(opacity=100); /* For IE8 and earlier */
+		}
+
+			.left{
+				left: 5%;
+			}
+
+			.right{
+				left: 33%;
+			}
+
+			.pause{
+				left: 19%;
+				font-size: 11px;
+			}
+
+			.paused{
+				opacity: 1;
+				filter:alpha(opacity=100); /* For IE8 and earlier */
+			}
+
+		#loader{
+			width:100%;
+			overflow:hidden;
+			text-align: center;
+			background-color: #ffffff;
+		}
+
+		#progress{
+			margin: 0 -100% 0 -100%;
+		}
+
+	/*-----------------------------------------------------------
+	[ No results ]
+	*/
+
+		.nocars_container{
+			background: #ffffff;
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+			width: 99%;
+			margin: 0 0 0 0.5%;
+			padding: 5px 0;
+			text-align: center;
+			border-width: 1px;
+			border-style: solid;
+			position: relative;
+			min-height: 265px;
+		}
+
+		.nocars_container > div{
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+			vertical-align: middle;
+		}
+
+		.nocars_image_box {
+			width: 32%;
+			margin: 70px 0 10px 0;
+			height: 185px;
+		}
+
+		#nocars_tx1{
+			width: 20%;
+			font-style: italic;
+			font-size: 18px;
+			line-height: 26px;
+			margin: 0 2%;
+			font-weight: bold;
+		}
+
+		.nocars_text_box{
+			width: 38%
+		}
+
+			#nocars_tx2{
+				font-size: 28px;
+				line-height: 32px;
+				margin-left: 15px;
+				text-align: right;
+				font-weight: bold;
+				padding-bottom: 12px;
+			}
+
+		.nocars_image{
+			max-width: 300px;
+			width: 100%;
+		}
+
+		i {
+			display: block;
+		
+		}
+
+		.nocars_container .addText{
+			display: none;
+		}
+
+
+	/*-----------------------------------------------------------
+	[ Footer ]
+	*/
+
+		#footerContainer{
+			padding: 3px 0;
+		}
+
+		.footerDiv{
+			width: 99%;
+			margin-left: 0.5%;
+		}
+
+		.viewmoreDiv {
+			float: right;
+			width: 21%;
+			text-align: center;
+		}
+
+		.supplierDiv{
+			/*background: url("../images/suppliers.png") left center no-repeat transparent;*/
+			float: left;
+			height: 30px;
+			width: 490px;
+			margin: 2px 0;
+		}
+
+/*------------------------------------------------------------------
+[ Buttons ]
+*/
+
+	.showDetailsButton, .showMoreButton{
+		font-size: 16px;
+	}
+
+	.searchNowButton {
+		font-size: 16px;
+	}
+
+	.nocars_button{
+		font-size: 26px;
+	}
+
+	#submitbutton{
+		margin-top: 8px;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+	}
+
+	.showDetailsButton, .showMoreButton, .searchNowButton, .nocars_button{
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		font-weight: bold;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+		white-space: normal;
+	}
+
+	.showDetailsButton, .showMoreButton{
+		min-width: 50%;
+		*min-width: auto;
+		padding: 6px 10px;
+	}
+
+	.searchNowButton, .nocars_button{
+		min-width: 60%;
+		max-width: 70%;
+		padding: 8px 5%;
+	}
+
+
+/*------------------------------------------------------------------
+[ Media Queries ]
+*/
+
+@media only screen and (max-width: 900px) {
+
+	#puDestination, #puDates{
+		margin-bottom: 2px;
+	}
+
+	#doDates{
+		margin-bottom: 2px;
+	}
+
+	#puDates > div, #doDates > div, #puDestination > *{
+		margin-bottom: 2px;
+	}
+
+	#form_SearchCarsForm > div {
+		margin: 4px 0 0px 0.5%;
+	}
+
+	#country-label, #city-label, #location-label{
+		width: 35%;
+	}
+
+	#country, #city, #location{
+		width: 65%;
+	}
+
+	#puDates, #doDates{
+		width: 79%;
+		padding-top: 0;
+	}
+
+	#puDoDate{
+		margin-left: 0;
+	}
+
+	#puPuDate, #puDoDate{
+		width: 24%;
+	}
+
+	#puDate-label, #doDate-label{
+		width: 48%;
+	}
+
+	#puDate, #doDate{
+		width: 51%;
+	}
+
+	#puPuHour, #puDoHour{
+		margin-left: 7%;
+	}
+
+	#puSubmit{
+		height: 71px;
+	}
+
+
+	.titlePt1 {
+		font-size: 18px;
+	}
+
+}
+
+@media only screen and (max-width: 800px) {
+
+	.searchNowButton{
+		font-size: 14px;
+	}
+
+}
+
+@media only screen and (max-width: 700px) {
+
+	.affLogo{
+		display: none;
+	}
+
+	.titlePt1{
+		width: 98%;
+		text-align: center;
+	}
+
+	#nocars_tx1{
+		font-size: 13px !important;
+		line-height: 22px;
+		margin: 8px;
+	}
+
+	#nocars_tx2{
+		font-size: 14px;
+		line-height: 18px;
+		margin: 0 8px 8px 8px;
+	}
+
+}
+
+@media only screen and (max-width: 700px) and (min-width: 481px) {
+
+	.type{
+		display: none;
+	}
+
+	.seats div { 		background-position: center -63px }
+	.doors div {		background-position: center -129px}
+	.aircon div {		background-position: center 2px }
+	.transmission div {	background-position: center -192px }
+
+	.icons > div{
+		padding: 20px 0 0 0;
+		min-width: 22px;
+	}
+
+	.car{
+		padding: 4px 0;
+	}
+
+	.carimage{
+		max-height: 70px;
+	}
+
+	.make{
+		white-space: normal;
+		margin: 0;
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.prices, .pricing{
+		width: 26%
+	}
+
+	.wrapper .btn{
+		width: 24%;
+	}
+
+	.now{
+		font-size: 14px;
+	}
+
+	.now2{
+		font-size: 22px;
+	}
+
+	.was{
+		font-size: 12px;
+	}
+
+	.searchNowButton, .showMoreButton, .showDetailsButton{
+		font-size: 12px;
+	}
+
+	.showMoreButton{
+		line-height: 20px;
+	}
+
+	label{
+		font-size: 10px;
+		font-weight: normal;
+	}
+
+	.supplierDiv{
+		width: 315px;
+	}
+
+	#puPuHour, #puDoHour{
+		margin-left: 3%;
+	}
+
+	#puPuDate, #puDoDate{
+		width: 28%;
+	}
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+	.bodyWrapper{
+		*width: 98%;
+	}
+
+	.wrapper > div{
+		float: left;
+	}
+
+	.slideButton{
+		display: block;
+ 		visibility: visible;
+	}
+
+	#searchDiv{
+		display: none;
+	}
+
+	#nocars_tx1{
+		text-align: right;
+		float: right;
+		width: 55%;
+		margin: 8px 5% 4px 0;
+		font-size: 14px;
+	}
+
+	i{
+		display: block;
+		font-size: 22px;
+		line-height: 24px;
+	}
+
+	.nocars_image_box{
+		width: 60%;
+		position: absolute;
+		bottom: 30px;
+		margin: 0;
+		height: auto;
+		left: -15%;
+	}
+
+	.nocars_container{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		border-width: 0;
+		min-height: 0;
+	}
+
+	.searchNowButton {
+		border-radius: 6px;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+	}
+
+	.nocars_text_box{
+		width: 60%;
+		float: right;
+	}
+
+	.nocars_button{
+		width: 80%;
+		margin: 0 0 28px 0;
+		font-size: 16px;
+		padding: 6px 0;
+	}
+
+	.nocars_image{
+		width: 100%;
+	}
+
+	.affLogo{
+		display: block;
+		background-position: center center;
+		background-repeat: no-repeat;
+		width: 100%;
+		margin: 0;
+		min-height: 52px;
+		height: auto !important;
+		height: 52px;
+	}
+
+	.titlePt1{
+		display: none;
+	}
+
+	#footerContainer{
+		display: none;
+	}
+
+	.wrapper  div{
+		white-space: normal;
+	}
+
+	.wrapper > div{
+		float: left;
+		display: block;
+		margin-left: 0;
+	}
+
+	.wrapper .prices, .pricing{
+		float: right;
+		width: 100%;
+	}
+
+	.wrapper .btn{
+		float: right;
+		width: 48%;
+		padding-right: 2%;
+	}
+
+	.wrapper .prices, .pricing{
+		margin: 10px 0 6px;
+	}
+
+	.total_pricing{
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.total_pricing_number {
+		padding-top: 8px;
+	}
+
+	.btn{
+		clear: right;
+	}
+
+	.wrapper{
+		margin: 0;
+		float: left;
+		zoom: 1;
+		*display: inline;
+		border: none !important;
+	}
+
+	.wrapper:first-child{
+		margin-left: 0;
+	}
+
+	.make, .type, .icons{
+		width: 90%;
+		padding: 0 5%;
+		text-align: center;
+	}
+
+	.was{
+		font-size: 14px;
+		line-height: 20px;
+	}
+
+	.now {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	.now2 {
+		font-size: 22px;
+		line-height: 44px;
+	}
+
+	.car, .result_info{
+		width: 50%;
+	}
+
+	.type{
+		display: none;
+	}
+
+	.make{
+		margin: 0;
+	}
+
+	.icons > div {
+		text-align: center;
+		padding: 0 0 0 25px;
+		margin: 0 1% 0 1%;
+	}
+
+	.searchNowButton {
+		min-width: 95%;
+		padding: 5px 0;
+	}
+
+	.sellPanel{
+		display: none;
+	}
+
+	#deposit {
+		margin-top: 8px;
+		width: 40%;
+		margin-left: 5%;
+		clear: left;
+	}
+
+	.deposit_book {
+		padding: 0;
+		font-size: 14px;
+	}
+
+	.deposit_book {
+
+	}
+
+	.searchNowButton{
+		font-size: 14px;
+	}
+
+	.nocars_container .addText{
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: #ffffff;
+		font-weight: bold;
+		text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4);
+		background:#595959;
+		padding: 4px 0;
+		font-size: 12px;
+	}
+
+	.headDiv{
+		padding-bottom: 0;
+	}
+
+	#mainDiv {
+		background: #ffffff;
+	}
+	
+	#nocars_tx1 {
+    	width: 100% !important;
+    	text-align: right !important;
+	}
+	.nocars_image {
+   		 width: 60% !important;
+	}
+	
+	.nocars_image_box {
+    	left: -5% !important;
+	}
+	
+	#nocars_tx2 {
+    	display: none;
+	}
+	
+	#nocars_tx1 {
+    font-size: 12px !important;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 21px !important;
+    margin: 0px 2% !important;
+    width: 20%;
+     padding-bottom: 8px;
+    padding-right: 6px;
+}
+
+}
+
+@media only screen and (max-width: 480px) and (min-width: 300px) {
+
+	.icons > div {
+		margin: 0 5% 0 5%;
+	}
+
+}
+
+.vehiclehotlink {
+	cursor: pointer;
+}

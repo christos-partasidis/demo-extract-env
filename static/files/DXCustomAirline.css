@@ -1,0 +1,512 @@
+/*
+*@version
+* 2018-6-29: XC: PTR 15362990 [Medium]: WWW AeRE CVT: // Confirmation button missing
+* 2018-7-10: XC: PTR 15363078 [Medium]: WWW AeRE CVT: display issues
+* 2018-12-12: CR 15715227 : Add Pop-up
+* 2018-12-12: RF: EUR-2204
+* 2018-12-12: Fixes CSS
+* 2019-07-19: XC: WO 17102166: FI:EMEA xHTML e-Retail Engine Reques FI activate APN-FI/E+emile/Pn and have both options APN
+              Hide email notification message on APIM/MAPIM page
+*/
+
+/*  2018-12-12: Fixes CSS */
+
+.traveller-contact-information-panel header {
+  background-color: #123a7d;
+}
+
+.bound-table-cell-reco-available > div {
+  vertical-align: top;
+}
+
+.bound-table-cell-not-combinable > div {
+  vertical-align: top;
+}
+
+.DPURCView .payment fieldset.fop .mop-legend {
+  background: #ececec;
+  box-shadow: none;
+  border-color: #D8D8D8;
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  color: #444;
+}
+
+.row.promotion-code-title.title-panel {
+  background-color: #123a7d !important;
+  color: #fff !important;
+}
+
+[data-template-name="RTPL"] .travreview-review-banner {
+  background-color: #123a7d !important;
+  color: #ffffff !important;
+}
+
+[data-template-name="RTPL"] .travreview-review-banner:hover {
+  background-color: #5578b3 !important;
+}
+
+[data-template-name="RTPL"] .segment-details .display-FLIFO-link {
+  display: none !important;
+}
+
+.promotion-code .promotion-code-button button.btn.btn-tertiary {
+  display: inline-block;
+  background-color: #497522 !important;
+  color: #fff !important;
+  vertical-align: middle;
+  text-transform: none !important;
+}
+
+#widget-group-purchaseForm-termsConditionsForm-termsAndCondition :not(#foo) input[type=checkbox]+label:before {
+  padding: 0;
+}
+
+[data-template-name="RADVS"] .itinreview-bound .form-group .checkbox:not(#foo) input[type=checkbox]+label:before {
+   margin-top: 0 !important;
+}
+
+/*  CR 15715227 : Add Pop-up */
+
+[data-page-device-type="MOBILE"] #dialog-modalFareSelection .btn-confirm {
+  margin-top: 5px;
+}
+
+/* PTR 15362990 [Medium]: WWW AeRE CVT: // Confirmation button missing */
+[data-page-device-type="MOBILE"] .catalogServices-dialog-btn-primary.btn-confirm-seat {
+  justify-content: center;
+      width: 100%;
+  }
+  
+  .catalogServices-dialog-btn-primary.btn-confirm-seat i {
+    display: none;
+  }
+  
+  [data-page-device-type="MOBILE"] .catalogServices-modal-content .modal-footer-buttons {
+    padding: 0.714em;
+  }
+  
+  [data-page-device-type="MOBILE"] #dialog-content-modalMessage {
+    max-height: 27.6em;
+  }
+  
+  /*PTR 15363078 [Medium]: WWW AeRE CVT: display issues*/
+  #PURC-page .payment-wrapper.row {
+    margin: 0px;
+  }
+  
+  /* test for fare family icons */
+  img#fare_icon {
+      width: 11px;
+      margin-right: 3px;
+  }
+  .row-overflowed img#fare_icon {
+    width: 11%;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+section.panel.reservation-heading.heading.on-hold, section.panel.reservation-heading.heading.on-hold a {
+  color: #fff !important;
+}
+
+.availability-bound-title.bound-title-1, .availability-bound-title.bound-title-0 {
+  text-align: left !important;
+}
+  /* overwrite for manage booking and bookingflow*/
+  header.panel-heading {
+    background-color: #123a7d !important;
+    color: #fff !important;
+}
+.apimTraveller-panel.panel-primary .apimTraveller-header-error, .apimTraveller-panel.panel-default .apimTraveller-header-error {
+  color: #cb0034 !important;
+  text-transform: none !important;
+}
+
+.teaser-switch .btn-group.uxd-btn-multiple.uxd-toggle-delayed .btn {
+  text-transform: unset !important;
+}
+
+button.btn.plnext-widget-btn.btn-primary.small-primary > span {
+  text-transform: none !important;
+}
+
+.tripsummary-travellers {
+  text-transform: none !important;
+}
+
+:not(#foo) input[type=checkbox]:checked+label:before {
+  background-color: #fff !important;
+}
+
+.confirmation-email-text {
+  display: none;
+}
+
+.apimTravellers-avatar, .apimTraveller-panel .travellerList-title h3 {
+  margin: 10px !important;
+}
+
+.cell-reco-details .cell-reco-no-bag-text span {
+  text-decoration: none !important;
+}
+
+.close-apim-panel i {
+  color: #fff !important;
+}
+
+.plnext-dropdown.dropdown-container.confirmation-dropdown.reservation-menu-responsive, .plnext-dropdown.dropdown-container.start-new-search.reservation-menu-responsive {
+  display: none;
+}
+
+.btn-secondary, .btn-default {
+  background-color: #497523 !important;
+  color: #fff !important;
+}
+
+button.btn.btn-secondary.tripsummary-btn-delete-icon.icon.icon-trash {
+  color: #123A7D !important;
+  background-color: transparent !important;
+}
+
+.teaser-switch .btn-secondary {
+  background-color: #F4F4F4 !important;
+  color: #444 !important;
+}
+
+span.alert-icon.alert-icon-warning.icon-warning-sign, h4#alert-title-message-apim-top {
+  color: #123A7D !important;
+}
+
+.plnext-message .alert-icon-danger, .plnext-message-danger .alert-title, .plnext-message .alert-icon-warning, 
+.plnext-message-warning .alert-title, .plnext-message .alert-icon-danger, .apim-card-level-errors li a,
+.apimTraveller-panel.panel-primary .apimTraveller-header-error, .apimTraveller-panel.panel-default .apimTraveller-header-error,
+.tripsummary-different-airport, .has-error .help-block, .has-error .control-label, .has-error .radio, 
+.has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-feedback .form-control-feedback,
+.has-error .form-control  {
+  color: #cb0034 !important;
+}
+
+button.btn.plnext-widget-btn.btn-default > span, button.btn.plnext-widget-btn.btn-secondary > span, button.btn.plnext-widget-btn.btn-tertiary > span {
+  text-transform: none !important;
+}
+
+.plnext-dropdown > button {
+  color: black !important;
+  background-color: #D8D8D8 !important;
+}
+
+.plnext-dropdown.dropdown-container.reservation-dropdown.reservation-menu-responsive > button {
+  color: #fff !important;
+  background-color: #538026 !important
+}
+
+header.panel-heading legend, .panel-primary>.panel-heading legend {
+  color: #fff !important;
+}
+
+.ffcomp-col-xs-height1 img#fare_icon, .bound-fare img#fare_icon, .tripsummary-ff-short-desc img#fare_icon, .bound-table-flightline img#fare_icon {
+    display: none;
+}
+
+footer.traveller-panel-footer {
+  display: none;
+}
+
+.flight-details .flight-details-group .aircraft {
+  display: block !important;
+}
+  
+  /* if we want to make changes to fare family header */
+  li.bound-table-header-col {
+    
+  }
+  
+  .pull-left .title-container.has-steps {
+    height: 55px !important;
+  }
+
+  [data-page-device-type="MOBILE"] iframe.confirmation-banner.oneline {
+      width: 100%;
+      height: 650px !important;
+  }
+
+  iframe.confirmation-banner.oneline {
+    width: 100%;
+    height: 175px;
+  }
+
+  .ff-table-header-content .ff-table-header-ff-name {
+    margin-bottom: 18px !important;
+}
+
+[data-page-device-type="MOBILE"] iframe.carrental-banner.oneline {
+    width: 100%;
+    height: 300px !important;
+    margin-top: 10px;
+}
+
+  iframe.carrental-banner.oneline {
+    width: 50%;
+    height: 254px;
+    margin-top: 10px;
+    float: left;
+  }
+
+section.traveller-panel-body.panel-body .col-xs-24 {
+    width: 100% !important;
+}
+
+section.traveller-contact-information-panel-body.panel-body .col-lg-offset-4 {
+  margin: 0 !important;
+}
+
+section.traveller-contact-information-panel-body.panel-body .col-md-12.hidden-sm {
+  display: none !important;
+}
+
+section.traveller-contact-information-panel-body.panel-body .col-xs-24 {
+  width: 100% !important;
+}
+
+[data-page-device-type="MOBILE"] section.traveller-contact-information-panel-body.panel-body .col-xs-6, [data-page-device-type="MOBILE"] section.traveller-contact-information-panel-body.panel-body .col-xs-18 {
+  width: 100% !important;
+}
+
+  #b_container {
+    background-color: #fff !important;
+    margin-top: 10px;
+    height: 254px;
+  }
+
+  [data-page-device-type="MOBILE"] #b_container {
+    background-color: #fff !important;
+    margin-top: 10px;
+    height: unset;
+  }
+
+  section#component-term-conditions, section#component-additional-baggage {
+    position: relative;
+    min-height: 1px;
+    padding-right: 7.5px;
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 19px;
+    border-bottom: 1px solid #D8D8D8;
+    border-left: 1px solid #D8D8D8;
+    border-right: 1px solid #D8D8D8;
+    box-shadow: none;
+  }
+
+  section#component-term-conditions p.error {
+    color: red;
+    font-weight: bold;
+  }
+
+  /* to align icons in fare comparison table */
+  td#ffcomp-col-AEUSB-icons-id {
+    text-align: center;
+  }
+
+  /* remove from manage booking flight type */
+.flight-info.flight-info-cabin.row {
+    display: none;
+}
+
+  /* plusgrade banner */
+  div#plusgrade-offering-content {
+    background: #fff;
+  }
+
+  div#plusgrade-offering-content img {
+    max-height: 240px;
+    width: auto !important;
+}
+
+div#plusgrade-content-title {
+  display: none;
+}
+
+.bullets li {
+  list-style: disc;
+  margin-left: 10px;
+}
+
+.buttonPage a {
+  border-radius: 0 0 2px 2px;
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: bold;
+  padding: 10px 0px 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none !important;
+}
+
+.services-table-footer {
+  font-size: 100% !important;
+}
+
+.calendarmatrix .icon-lowest {
+  color: #123A7D !important;
+}
+
+/* EUR-2204: style the fare note panel*/
+.fare-notes-panel .panel-title {
+  color: white;
+  font-family: "CustomFontOne" !important;
+}
+
+.fare-notes-panel h4 {
+  font-family: "CustomFontOne" !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+}
+
+/* Upsell teaser css */  
+
+[data-template-name="FPOW"] .availability-upsellTeaser, 
+[data-template-name="RFDFF"] .availability-upsellTeaser {
+  padding: 0 !important;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsell-teaser-arrow, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsell-teaser-arrow{
+  display: none !important;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-placeholder, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-placeholder, 
+[data-template-name="FPOW"] .availability-upsellTeaser .col-xs-20,
+[data-template-name="RFDFF"] .availability-upsellTeaser .col-xs-20  {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container {
+  width: 100%;
+  float: none;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  padding: 20px;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .col-xs-12, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .col-xs-12 {
+  padding: 0;
+  width: 100%;
+  float: none;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container > div, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container > div {
+  width: 100%;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .section1, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .section1  {
+  margin-right: 20px;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .section2, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .section2  {
+  padding: 0 0 60px;
+  position: relative;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-price,
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-price {
+  margin-bottom: 20px;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-price .upsellteaser-price-integer, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-price .upsellteaser-price-integer {
+  color: #003a7d;
+  margin-left: 5px;
+  font-size: 28px;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-upgrade-description,
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-upgrade-description {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-picture img,
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-picture img {
+  width: 100%;
+  height: auto;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-fixed-placeholder-button, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-fixed-placeholder-button {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-fixed-placeholder-button button, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-fixed-placeholder-button button  {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color .25s,color .25s;
+  color: #003a7d;
+  border: 1px solid #003a7d;
+  border-radius: 100px;
+  background-color: transparent;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-fixed-placeholder-button .icon, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .upsellteaser-fixed-placeholder-button .icon {
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+
+[data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .action-close, 
+[data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .action-close {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: #003a7d;
+  opacity: 1;
+}
+
+@media(max-width: 768px) {
+  [data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container, 
+  [data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  [data-template-name="FPOW"] .availability-upsellTeaser .upsellteaser-inner-container .action-close,
+  [data-template-name="RFDFF"] .availability-upsellTeaser .upsellteaser-inner-container .action-close {
+    top: 10px;
+  }
+}
+
+/* Addon from Xin, mobile changes for pop-up*/
+[data-page-device-type="MOBILE"] #dialog-content-flightInfoDialog {
+  padding: 0.5em;
+}
+
+[data-page-device-type="MOBILE"] #flightinfo-buttons {
+  margin: 0;
+}
+
+/*Hide email notification message on APIM/MAPIM page*/
+div#widget-group-apimTravellers-contactInformation-EMailNotif {
+  display: none;
+}

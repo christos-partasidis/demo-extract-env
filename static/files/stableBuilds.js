@@ -1,0 +1,1 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).digitalAnalyticsStableBuilds=t()}(this,(function(){"use strict";return{alpha:"v3.5.6",uat:"v3.5.6",preprod:"v3.5.6",stable:"v3.4.12"}}));

@@ -1,0 +1,35 @@
+{
+  "name": "riviera-dev-ppe",
+  "description": "Demo server Riviera Dev PPE",
+  "private": true,
+  "version": "1.0.0",
+  "author": "Benjamin Hilaire <benjamin.hilaire@amadeus.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://rndwww.nce.amadeus.net/git/scm/dgasec/azurtechserver.git"
+  },
+  "contributors": [
+    {
+      "name": "Benjamin Hilaire",
+      "email": "benjamin.hilaire@amadeus.com"
+    },
+    {
+      "name": "Fares Siala",
+      "email": "fares.siala@amadeus.com"
+    }
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "1.20.2",
+    "colors": "1.4.0",
+    "compression": "1.7.4",
+    "express": "4.18.2",
+    "morgan": "1.10.0",
+    "mustache-express": "1.3.2",
+    "serve-static": "1.15.0",
+    "node-emoji":"2.1.0",
+    "coolest-logger":"*"
+  }
+}

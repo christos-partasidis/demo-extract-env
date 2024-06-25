@@ -1,0 +1,8 @@
+/**
+ * Implementation library for e-Retail DX
+ * --------------------------------------
+ * For Amadeus usage only. Usage of methods by any other party is discouraged and not supported.
+ * 
+ * @copyright Amadeus Implementation Team
+ */
+function IMPLibDxAaas(){var i=this;this.VERSION="1.1",this.overrideModifyButton=function(e){if(implibdx.core.isRetrievePage()){var t=implibdx.core.getOverrideParameterValues(e);i.overrideModifyButtonWithValues(t)}},this.overrideModifyButtonWithValues=function(i){if(implibdx.core.isRetrievePage()){var e=function(e){for(key in i)i.hasOwnProperty(key)&&(e[key]=i[key]);return e.implibdx=JSON.stringify(implibdx.core.getDeployedLibs()),e};plnextv2.utils.ImplementationUtils.addActionFilters({action:"RetrievePNRServices",newAction:"Override",filterData:function(i){return e(i),i.UI_EMBEDDED_TRANSACTION="RetrievePNRServices",i}}),plnextv2.utils.ImplementationUtils.addActionFilters({action:"AddDynamicCatalogSelectionToTripPlanInServicing",newAction:"Override",filterData:function(i){return e(i),i.UI_EMBEDDED_TRANSACTION="AddDynamicCatalogSelectionToTripPlanInServicing",i}})}},this.hideModifyButtonIfNoMail=function(e){if(implibdx.core.isRetrievePage()){var t=implibdx.core.getEmail();""==t&&implibdx.core.updateDom(".modify-services-button",function(){i.hideModifyButton(),plnextv2.utils.ImplementationUtils.addError("",implibdx.core.i18n(e),"W")})}},this.hideModifyButton=function(){implibdx.core.isRetrievePage()&&jQuery(document.body).append("<style id = 'customStyleAaasHide'>.modify-services-button,.servicesbreakdown-footer .btn{display:none}</style>")},this.showModifyButton=function(){jQuery("#customStyleAaasHide").remove()}}var implibdx=implibdx||{};implibdx.aaas=new IMPLibDxAaas;

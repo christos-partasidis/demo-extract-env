@@ -1,0 +1,2745 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://wav.eu1.amadeus.com/plnext/icelandairNewB/Override.action#/TLIST -->
+<html dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <base href=".">
+
+    <!-- Copyright 2006- Amadeus s.a.s. All rights reserved -->
+    <!-- No use of any portion hereof is authorised, except pursuant to a written agreement with Amadeus s.a.s. -->
+
+
+    
+    <link rel="shortcut icon" href="">
+
+  <script type="text/javascript" src="./files/Universal_DX_Stable.js">
+
+     
+     
+
+      
+          <script src="./files/map_plnext_git_19.6_prod.73_050819.js"></script>
+      
+    
+
+    
+      
+      <link rel="stylesheet" href="./files/Common.css">
+    
+      
+      <link rel="stylesheet" href="./files/Fonts.css">
+    
+
+    
+      
+        
+        <link rel="stylesheet" href="./files/bootstrap-24.css">
+      
+        
+        <link rel="stylesheet" href="./files/bootstrap-custom.css">
+      
+    
+
+    
+
+    
+    <style id="xCsstpl" type="text/css" media="all">/**
+plnextv2.styles.Common
+**/
+
+
+
+
+
+
+
+.left-divider {
+padding-left: 20px;
+border-left: 1px solid #f0f0f0;
+}
+.right-divider {
+padding-right: 20px;
+border-right: 1px solid #f0f0f0;
+}
+
+select.form-control {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+text-indent: 0.01px;
+text-overflow: '';
+background-repeat: no-repeat ;
+}
+
+
+select.form-control::-ms-expand {
+display: none;
+}
+
+label.control-label{
+margin-bottom:0;
+}
+label.control-label.mandatory-label {
+font-weight:700;
+}
+
+.anchor[tabindex] {
+
+}
+
+
+.main-icon {
+font-size: 2.5em;
+display: inline-block;
+margin: 0 0.5em 0 0.3em;
+color: #dfdfdf;
+}
+
+.heading-icon {
+font-size: 1.7em;
+margin-left: 0.3em;
+}
+
+
+a {
+text-decoration:underline;
+}
+
+
+select.form-control {
+background-image: url("files/corner.png");
+background-position: right bottom;
+background-image: none\9;
+}
+
+@media (max-width: 599px) {
+.col-xxs-8 {
+width: 33.33333333%;
+}
+.col-xxs-12 {
+width: 50%;
+}
+.col-xxs-16 {
+width: 66.66666667%;
+}
+.col-xxs-24 {
+width: 100%;
+}
+}
+
+@media (max-width: 479px) {
+.col-xxxs-8 {
+width: 33.33333333%;
+}
+.col-xxxs-12 {
+width: 50%;
+}
+.col-xxxs-16 {
+width: 66.66666667%;
+}
+.col-xxxs-24 {
+width: 100%;
+}
+}
+
+
+.btn {
+overflow: hidden;
+position: relative;
+}
+
+.uxd-ink {
+display: block;
+position: absolute;
+background: rgba(0,0,0,.3);
+border-radius: 100%;
+transform: scale(0);
+margin: 0!important;
+padding: 0!important
+}
+
+.btn-primary .uxd-ink {
+background: rgba(255,255,255,.5);
+}
+
+.uxd-ink.uxd-animate {
+-webkit-animation: uxd-ripple-animation .45s linear;
+-o-animation: uxd-ripple-animation .45s linear;
+animation: uxd-ripple-animation .45s linear
+}
+
+.uxd-ripple-animation 100% {
+opacity: 0;
+transform: scale(2.5)
+}
+
+@-webkit-keyframes uxd-ripple-animation {
+100% {
+opacity: 0;
+transform: scale(2.5)
+}
+}
+
+@keyframes uxd-ripple-animation {
+100% {
+opacity: 0;
+transform: scale(2.5)
+}
+}
+
+
+
+.page-actions-bar {
+margin-top: 20px;
+}
+
+.page-actions-bar button {
+margin-right: 10px;
+margin-bottom: 10px;
+}
+
+
+@media (max-width: 479px) {
+.page-actions-bar .button-container {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-direction: column;
+flex-direction: column;
+}
+
+.page-actions-bar .button-container .btn {
+-ms-flex-order: 3;
+order: 3;
+}
+
+.page-actions-bar .button-container .btn.next-button {
+-ms-flex-order: 1;
+order: 1;
+}
+
+.page-actions-bar .button-container .btn.ignore-button {
+-ms-flex-order: 2;
+order: 2;
+}
+}
+
+
+button.btn.btn-primary, button.btn.btn-secondary, button.btn.btn-tertiary,
+button.btn.btn-default {
+max-width: 100%;
+white-space: normal;
+word-break: break-word;
+}
+
+
+button.btn.btn-primary i {
+padding-right: 6px;
+}
+
+button.btn.btn-primary i + span + i {
+padding: 0 0 0 6px;
+}
+
+
+button.btn.btn-default i, button.btn.btn-default span,
+button.btn.btn-secondary i, button.btn.btn-secondary span {
+padding-right: 6px;
+}
+
+button.btn.btn-default i + span + i, button.btn.btn-default span + span + span,
+button.btn.btn-secondary i + span + i, button.btn.btn-secondary span + span + span {
+padding: 0 0 0 6px;
+}
+
+button.btn.btn-default > *, button.btn.btn-secondary > *,
+button.btn.btn-primary > *, button.btn.btn-tertiary > * {
+
+float: none;
+display: table-cell;
+white-space: normal;
+word-break: break-word;
+vertical-align: middle;
+}
+
+
+@media (max-width: 479px){
+
+.uxd-btn-multiple > button.btn.btn-default,
+.uxd-btn-multiple > button.btn.btn-tertiary,
+.uxd-btn-multiple > button.btn.btn-secondary,
+.uxd-btn-multiple > button.btn.btn-primary.small-primary {
+width: auto;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary, button.btn.btn-secondary,
+button.btn.btn-primary.small-primary {
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary > *, button.btn.btn-secondary > *,
+button.btn.btn-primary.small-primary > *{
+display: inline-block;
+margin: 0;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary > span, button.btn.btn-secondary > span,
+button.btn.btn-primary.small-primary > span {
+width: auto;
+}
+}
+
+button.btn.btn-tertiary.calendarmatrix-modifydates-btn > * {
+display: inline-block;
+}
+
+.btn-invisible:focus {
+outline:none;
+border:none;
+}
+
+
+.btn-invisible:focus {
+outline:none;
+border:none;
+}
+
+.btn-invisible {
+
+position: absolute;
+
+
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+
+filter: alpha(opacity=0);
+
+
+-moz-opacity: 0;
+
+
+-khtml-opacity: 0;
+
+
+opacity: 0;
+}
+
+/**
+plnextv2.modules.TLIST.desktop.styles.DTLISTStyle
+**/
+
+
+.DTLISTView{
+position: relative;
+}
+
+.reservation-bottom-continue-btn {
+width: 100%;
+float: left;
+}
+
+.reservation-bottom-continue-btn .btn {
+float: right;
+}
+
+.DTLISTView .heading-icon {
+font-size: 1.7em;
+margin-left: 0.3em;
+}
+
+
+
+
+.DTLISTView .panel {
+position: relative;
+margin-bottom: 1em;
+background-color: ;
+border-bottom: 1px solid #ddd\9;
+border-right: 1px solid #ddd\9;
+box-shadow: 1px 1px 1px #AAAAAA;
+}
+
+.DTLISTView .area {
+padding: 1.5em 1.5em 1em 1.5em;
+}
+
+.DTLISTView section {
+margin-top: 1em;
+}
+
+
+section[tabindex]:focus, aside[tabindex]:focus {
+border: inherit;
+outline: 1px dotted;
+}
+
+.reservation-search-panel  ul li{
+float:left;
+}
+
+.reservation-search-panel fieldset{
+background-color: ;
+}
+
+.reservation-search-panel fieldset legend{
+padding:0;
+visibility:hidden;
+font-size: 0px;
+}
+
+.reservation-list .btn{
+box-shadow: none;
+white-space: initial;
+}
+
+#TLIST-page :not(#foo) input[type=radio] + label:before {
+float: left;
+}
+
+
+#TLIST-page .reservation-lists{
+position: relative;
+top: 4px;
+}
+
+
+#TLIST-page .result-data{
+text-align:left;
+}
+
+.reservation-menu {
+margin-top: -20px !important;
+}
+
+.reservation-btn.new-search {
+display: inline-block;
+}
+
+
+/**
+plnextv2.styles.PageTemplateStyle
+**/
+
+/**
+plnextv2.styles.RadioCheckStyle
+**/
+
+
+
+:not(#foo) input[type=checkbox],
+:not(#foo) input[type=radio] {
+display: inline-block;
+opacity: 0;
+}
+
+.radio > input[type=checkbox],
+.radio > input[type=radio] {
+float: none;
+}
+
+:not(#foo) input[type=checkbox] + label:before,
+:not(#foo) input[type=radio] + label:before {
+font-family: 'ADC-icons';
+content: "";
+color: #005eb8;
+display: inline-block;
+background-color: #f8f8f8;
+border: 1px solid #bcbcbc;
+font-size: 1em;
+line-height: 14px;
+text-align: center;
+width: 20px;
+height: 20px;
+vertical-align: middle;
+margin: -3px 6px 0 -20px;
+box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, .2), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+
+:not(#foo) input[type=checkbox] + label:before {
+padding: 2px 0 0 0;
+}
+
+:not(#foo) input[type=radio] + label:before {
+border-radius: 50%;
+}
+
+
+@media screen\0 {
+:not(#foo) input[type=radio] + label:before {
+padding: 2px 0 0 0;
+}
+}
+
+:not(#foo) input[type=radio]:focus + label:before,
+:not(#foo) input[type=checkbox]:focus + label:before {
+outline: 0;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.75), 0 0 15px rgba(102, 175, 233, 1);
+border: 1px solid;
+}
+
+.has-error :not(#foo) input[type=radio] + label:before,
+.has-error :not(#foo) input[type=checkbox] + label:before  {
+border-color: #c30054;
+}
+
+.has-error :not(#foo) input[type=checkbox]:focus + label:before {
+border-color: ;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff358b;
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff358b;
+}
+
+:not(#foo) input[type=checkbox]:checked + label:before {
+content: "\f00c";
+}
+
+:not(#foo) input[type=radio]:checked + label:before {
+content: "\25CF";
+}
+
+
+/**
+plnextv2.components.breadCrumb.desktop.styles.DBreadCrumbStyle
+**/
+
+
+.bread-crumb-container {
+
+padding:0;
+background-color: #005eb8;
+color: #FFFFFF;
+}
+
+
+
+.bread-crumb-component {
+background-color: #005eb8;
+color: #FFFFFF;
+}
+
+.bread-crumb-component .title-container {
+padding: 20px;
+}
+
+.bread-crumb-component .title-container.has-steps {
+padding: 20px 20px 0 20px;
+}
+
+.bread-crumb-component .title-container .bread-crumb-title {
+margin:0;
+font-family: "Roboto Black";
+text-transform: uppercase;
+font-weight:700;
+}
+
+.bread-crumb-component h1.bread-crumb-title span.subtitle {
+font-family: "Roboto Light";
+}
+
+.bread-crumb-component .steps-container {
+display:table;
+width: 100%;
+padding: 0 0 0 20px;
+border-spacing: 10px 0;
+}
+
+.bread-crumb-component .steps-container ol {
+margin:0;
+padding:0;
+display:table-row;
+counter-reset: li;
+}
+
+.bread-crumb-component .steps-container ol > li {
+display: table-cell;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+text-transform: uppercase;
+counter-increment: li;
+text-align: center;
+text-shadow: 1px 1px rgba(0,0,0,0.6);
+line-height:74px;
+padding: 0 10px 0 10px;
+font-family: "Roboto Light";
+}
+
+.bread-crumb-component .steps-container ol > li > i {
+margin-right: .5em;
+}
+
+.bread-crumb-component .steps-container ol > li:before {
+text-shadow: none;
+content: counter(li) '';
+margin-right: .5em;
+border-radius: 1em;
+font-family: sans-serif;
+border: 1px solid #fff;
+width: 2em;
+height: 2em;
+line-height: 2em;
+display: inline-block;
+font-weight:bold;
+}
+
+.bread-crumb-component .steps-container ol > li.current {
+border-bottom: 5px solid #FFFFFF;
+font-family: "Roboto Black";
+}
+
+.bread-crumb-component .steps-container ol > li.current strong{
+border-bottom: 1px solid #FFFFFF;
+}
+
+.bread-crumb-component .steps-container ol > li.current:before {
+background-color: #FFFFFF;
+color:#000000;
+}
+
+
+@media only screen and (max-width: 599px){
+
+.bread-crumb-component .title-container .bread-crumb-title {
+font-size:16px;
+}
+
+.bread-crumb-component .steps-container {
+table-layout:fixed;
+margin-top:20px;
+font-size:12px;
+}
+
+.bread-crumb-component .steps-container ol > li {
+line-height: 1.833em;
+padding-bottom: 15px;
+}
+
+.bread-crumb-component .steps-container ol > li:before {
+margin: auto;
+display: block;
+padding: 0;
+}
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+
+.bread-crumb-component .title-container .bread-crumb-title {
+font-size:18px;
+}
+
+.steps-container {
+table-layout:fixed;
+}
+}
+
+.bread-crumb-component .spacer {
+clear: both;
+height: 0;
+}
+
+
+/**
+plnextv2.components.reservationList.desktop.styles.DReservationListStyle
+**/
+
+
+.reservationList-container-page .reservationList-container-col{
+padding-left: 0px;
+padding-right: 0px;
+}
+
+
+.reservationList-vertical .container-xs-height {
+display:table;
+padding-left:0px;
+padding-right:0px;
+}
+
+.reservationListTable {
+display :table;
+}
+
+.reservationListRow {
+display:table-row;
+}
+
+.reservationListCol{
+display: table-column;
+}
+
+.reservation-search-no-data{
+padding: 3em;
+display: inline-block;
+background: #FFFFFF;
+box-shadow: 1px 1px 1px 1px ;
+position: relative;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.reservation-list {
+padding: 0 0 0 0;
+display: inline-block;
+background: #FFFFFF;
+position: relative;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.reservation-lists {
+display: inline-table;
+}
+
+.reservation-list ul{
+padding: 0;
+}
+
+.reservation-lists li{
+border-left: 1rem solid #ececec;
+padding : 0.5em ;
+margin-bottom: 1rem;
+margin-top: 1rem;
+display: inherit;
+border-right: 0.2rem;
+margin-top: 0em;
+}
+
+.reservation-lists label {
+cursor: inherit;
+width:100%;
+}
+
+.reservation-detail{
+padding-bottom: 0.5em;
+}
+
+.reservation-list li:hover{
+border-left: 1rem solid ;
+border-bottom: 0.2rem;
+border-bottom-style: inset;
+border-right-style: inset;
+margin-bottom:0.6em
+}
+
+.reservationlist-button-continue{
+padding-bottom: 10px;
+clear: both;
+bottom: -6px;
+position:relative;
+width: 100%;
+}
+
+.reservationlist-button-continue .btn{
+float: right;
+}
+
+.reservation-lists .btn{
+-webkit-user-select: inherit;
+-moz-user-select: inherit;
+user-select: inherit;
+}
+
+.whatIsOffline-title{
+vertical-align: middle;
+display: table-cell;
+padding: 5px 10px;
+color: #000000;
+background: #f8f8f8;
+border-bottom: 1px solid #ececec;
+word-break: break-word;
+white-space: normal;
+text-align: left;
+margin: 0px;
+width:17em;
+}
+
+.tooltip-text{
+color: #056ccf;
+cursor: pointer;
+font-size: 0.9em;
+}
+
+#reservationList .popover-content{
+padding: 0;
+}
+
+#reservationList header{
+background-color: ;
+color: ;
+padding: 2rem;
+margin: 0;
+}
+
+#reservationList header span{
+color:inherit;
+font-size:large;
+font-weight:bold;
+}
+
+#reservationList .popover-content p {
+padding: 9px 14px;
+}
+
+.reservation-list-heading {
+padding:0.6em;
+
+}
+
+.list-view-element{
+font-weight: bold;
+margin-right: 0.2em;
+font-size: 1.28em;
+}
+
+.element-date{
+font-weight: normal;
+}
+
+.reservation-lists .button-container {
+padding-left:1.5em;
+}
+
+.list-view-pnr-status, .list-view-pnr-mod-date{
+padding-left:0;
+font-variant:small-caps;
+}
+
+.message{
+padding: 1rem 2rem 1rem 1rem;
+background-color: ;
+margin-left: 1rem;
+}
+
+.dspl-pnr-mod-date, .dspl-pnr-mod-text{
+display: inline-block;
+}
+
+.offline-pnr-text{
+display: inline-block;
+}
+
+
+@media (max-width: 599px) {
+.col-xxs-8 {
+width: 33.33333333%;
+}
+.col-xxs-12 {
+width: 50%;
+}
+.col-xxs-16 {
+width: 66.66666667%;
+}
+.col-xxs-24 {
+width: 100%;
+}
+}
+
+@media (max-width: 479px) {
+.col-xxxs-8 {
+width: 33.33333333%;
+}
+.col-xxxs-12 {
+width: 50%;
+}
+.col-xxxs-16 {
+width: 66.66666667%;
+}
+.col-xxxs-24 {
+width: 100%;
+}
+}
+
+
+.btn {
+overflow: hidden;
+position: relative;
+}
+
+.uxd-ink {
+display: block;
+position: absolute;
+background: rgba(0,0,0,.3);
+border-radius: 100%;
+transform: scale(0);
+margin: 0!important;
+padding: 0!important
+}
+
+.btn-primary .uxd-ink {
+background: rgba(255,255,255,.5);
+}
+
+.uxd-ink.uxd-animate {
+-webkit-animation: uxd-ripple-animation .45s linear;
+-o-animation: uxd-ripple-animation .45s linear;
+animation: uxd-ripple-animation .45s linear
+}
+
+.uxd-ripple-animation 100% {
+opacity: 0;
+transform: scale(2.5)
+}
+
+@-webkit-keyframes uxd-ripple-animation {
+100% {
+opacity: 0;
+transform: scale(2.5)
+}
+}
+
+@keyframes uxd-ripple-animation {
+100% {
+opacity: 0;
+transform: scale(2.5)
+}
+}
+
+
+
+.page-actions-bar {
+margin-top: 20px;
+}
+
+.page-actions-bar button {
+margin-right: 10px;
+margin-bottom: 10px;
+}
+
+
+@media (max-width: 479px) {
+.page-actions-bar .button-container {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-direction: column;
+flex-direction: column;
+}
+
+.page-actions-bar .button-container .btn {
+-ms-flex-order: 3;
+order: 3;
+}
+
+.page-actions-bar .button-container .btn.next-button {
+-ms-flex-order: 1;
+order: 1;
+}
+
+.page-actions-bar .button-container .btn.ignore-button {
+-ms-flex-order: 2;
+order: 2;
+}
+}
+
+
+button.btn.btn-primary, button.btn.btn-secondary, button.btn.btn-tertiary,
+button.btn.btn-default {
+max-width: 100%;
+white-space: normal;
+word-break: break-word;
+}
+
+
+button.btn.btn-primary i {
+padding-right: 6px;
+}
+
+button.btn.btn-primary i + span + i {
+padding: 0 0 0 6px;
+}
+
+
+button.btn.btn-default i, button.btn.btn-default span,
+button.btn.btn-secondary i, button.btn.btn-secondary span {
+padding-right: 6px;
+}
+
+button.btn.btn-default i + span + i, button.btn.btn-default span + span + span,
+button.btn.btn-secondary i + span + i, button.btn.btn-secondary span + span + span {
+padding: 0 0 0 6px;
+}
+
+button.btn.btn-default > *, button.btn.btn-secondary > *,
+button.btn.btn-primary > *, button.btn.btn-tertiary > * {
+
+float: none;
+display: table-cell;
+white-space: normal;
+word-break: break-word;
+vertical-align: middle;
+}
+
+
+@media (max-width: 479px){
+
+.uxd-btn-multiple > button.btn.btn-default,
+.uxd-btn-multiple > button.btn.btn-tertiary,
+.uxd-btn-multiple > button.btn.btn-secondary,
+.uxd-btn-multiple > button.btn.btn-primary.small-primary {
+width: auto;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary, button.btn.btn-secondary,
+button.btn.btn-primary.small-primary {
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary > *, button.btn.btn-secondary > *,
+button.btn.btn-primary.small-primary > *{
+display: inline-block;
+margin: 0;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary > span, button.btn.btn-secondary > span,
+button.btn.btn-primary.small-primary > span {
+width: auto;
+}
+}
+
+button.btn.btn-tertiary.calendarmatrix-modifydates-btn > * {
+display: inline-block;
+}
+
+.btn-invisible:focus {
+outline:none;
+border:none;
+}
+
+
+.btn-invisible:focus {
+outline:none;
+border:none;
+}
+
+.btn-invisible {
+
+position: absolute;
+
+
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+
+filter: alpha(opacity=0);
+
+
+-moz-opacity: 0;
+
+
+-khtml-opacity: 0;
+
+
+opacity: 0;
+}
+
+/**
+plnextv2.components.reservationList.desktop.styles.DReservationListSearchStyle
+**/
+
+
+.panel header.panel-heading{
+background-color: #ececec;
+color: #3f3f3f;
+padding: 2rem 2rem 0;
+margin: 0;
+font-family: "Roboto Bold";
+}
+
+.panel h1{
+font-weight: 900;
+font-size: 1.8rem;
+}
+
+.panel h3{
+font-size: 1.8rem;
+}
+
+.panel.panel-search{
+background-color: #FFFFFF;
+display: inline-block;
+margin-bottom: 2em;
+float: left;
+width: 100%;
+}
+
+.reservation-search-no-data{
+padding: 3em;
+}
+
+.reservation-search-footer{
+clear: both;
+float: left;
+width: 100%;
+background-color: #f8f8f8;
+padding: 2rem;
+border-top: 1px solid #ececec;
+}
+
+.instruction-example {
+font-family: 'Roboto Thin', sans-serif;
+}
+
+.search-by-pnr-form, .search-by-pnr-footer {
+display: inline-block;
+}
+
+.search-by-pnr-form {
+border-left: 1px solid #ececec;
+padding-left: 7.5px;
+padding-right: 0px;
+margin-bottom: 10px;
+}
+
+.search-by-pnr-footer-wrapper {
+padding: 0px;
+}
+
+.search-by-pnr-submit-button {
+font-family: 'Roboto Bold', sans-serif;
+}
+
+.tabs{
+background: #ececec;
+padding: 2rem 0 0;
+}
+
+.tab{
+padding: 1rem 1rem;
+display: inline-block;
+}
+
+.active{
+background: #FFFFFF;
+border-bottom: #FFFFFF;
+}
+
+.active span.xICNcheckBoxes::after{
+content:'';
+left: 0.5rem;
+position:absolute;
+height: 10px;
+width: 10px;
+border-radius: 50%;
+background: #056ccf;
+top: 0.5rem;
+
+}
+
+.reservation-search-fields, .reservation-number, .frequent-flyer {
+display: block;
+}
+
+.search-list-button-form{
+width: auto;
+float: left;
+}
+
+.reservation-search-fields{
+padding: 2rem 0;
+}
+
+.reservation-search-fields label{
+font-weight: 700;
+}
+
+.tabs .xICNcheckBoxes{
+background-image: none;
+background-color: #dfdfdf;
+width: 2.2rem;
+height:2.2rem;
+border-radius: 50%;
+border: 1px solid #bcbcbc;
+box-shadow: 20px 2px 3px rgba(0,0,0,.05);
+}
+
+.tabs .xICNcheckBoxes:focus{
+border: 1px solid #005eb8;
+}
+
+.tab-pane{
+position: relative;
+}
+
+.reservation-search-panel  ul li{
+float:left;
+}
+.reservation-search-panel fieldset{
+background-color: #ececec;
+}
+.reservation-search-panel fieldset legend{
+padding:0;
+visibility:hidden;
+font-size: 0px;
+}
+
+
+.reservation-search-panel fieldset .tab{
+padding: 0rem;
+position: relative;
+left: -40px;
+margin: 17px 0 0 0;
+top: 0px;
+}
+.reservation-search-panel fieldset .tab .btn{
+
+
+border: 0;
+}
+.reservation-search-panel fieldset .active{
+background-color: #ececec;
+}
+.reservation-search-panel fieldset .btn-tertiary {
+box-shadow: 0;
+-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); */
+box-shadow: 0px 0px 0px
+}
+.reservation-search-panel fieldset .active .btn-tertiary {
+-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+background-color:#FFFFFF;
+padding-left: 12px;
+border: 0;
+box-shadow: 0 #bcbcbc;
+}
+
+.reservation-search-panel fieldset label {
+cursor: inherit;
+}
+
+
+@media (max-width: 767px){
+
+.search-by-pnr-form {
+border-left: 0px;
+padding-left: 0px;
+}
+
+.search-by-pnr-footer {
+display: flex;
+}
+
+.search-by-pnr-submit-button {
+flex-grow: 1;
+display: inline-flex;
+justify-content: center;
+}
+
+.search-by-pnr-submit-button .icon-plane {
+padding-top: 4px;
+}
+}
+
+@media (max-width: 599px) {
+.col-xxs-8 {
+width: 33.33333333%;
+}
+.col-xxs-12 {
+width: 50%;
+}
+.col-xxs-16 {
+width: 66.66666667%;
+}
+.col-xxs-24 {
+width: 100%;
+}
+}
+
+@media (max-width: 479px) {
+.col-xxxs-8 {
+width: 33.33333333%;
+}
+.col-xxxs-12 {
+width: 50%;
+}
+.col-xxxs-16 {
+width: 66.66666667%;
+}
+.col-xxxs-24 {
+width: 100%;
+}
+}
+
+
+.btn {
+overflow: hidden;
+position: relative;
+}
+
+.uxd-ink {
+display: block;
+position: absolute;
+background: rgba(0,0,0,.3);
+border-radius: 100%;
+transform: scale(0);
+margin: 0!important;
+padding: 0!important
+}
+
+.btn-primary .uxd-ink {
+background: rgba(255,255,255,.5);
+}
+
+.uxd-ink.uxd-animate {
+-webkit-animation: uxd-ripple-animation .45s linear;
+-o-animation: uxd-ripple-animation .45s linear;
+animation: uxd-ripple-animation .45s linear
+}
+
+.uxd-ripple-animation 100% {
+opacity: 0;
+transform: scale(2.5)
+}
+
+@-webkit-keyframes uxd-ripple-animation {
+100% {
+opacity: 0;
+transform: scale(2.5)
+}
+}
+
+@keyframes uxd-ripple-animation {
+100% {
+opacity: 0;
+transform: scale(2.5)
+}
+}
+
+
+
+.page-actions-bar {
+margin-top: 20px;
+}
+
+.page-actions-bar button {
+margin-right: 10px;
+margin-bottom: 10px;
+}
+
+
+@media (max-width: 479px) {
+.page-actions-bar .button-container {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-direction: column;
+flex-direction: column;
+}
+
+.page-actions-bar .button-container .btn {
+-ms-flex-order: 3;
+order: 3;
+}
+
+.page-actions-bar .button-container .btn.next-button {
+-ms-flex-order: 1;
+order: 1;
+}
+
+.page-actions-bar .button-container .btn.ignore-button {
+-ms-flex-order: 2;
+order: 2;
+}
+}
+
+
+button.btn.btn-primary, button.btn.btn-secondary, button.btn.btn-tertiary,
+button.btn.btn-default {
+max-width: 100%;
+white-space: normal;
+word-break: break-word;
+}
+
+
+button.btn.btn-primary i {
+padding-right: 6px;
+}
+
+button.btn.btn-primary i + span + i {
+padding: 0 0 0 6px;
+}
+
+
+button.btn.btn-default i, button.btn.btn-default span,
+button.btn.btn-secondary i, button.btn.btn-secondary span {
+padding-right: 6px;
+}
+
+button.btn.btn-default i + span + i, button.btn.btn-default span + span + span,
+button.btn.btn-secondary i + span + i, button.btn.btn-secondary span + span + span {
+padding: 0 0 0 6px;
+}
+
+button.btn.btn-default > *, button.btn.btn-secondary > *,
+button.btn.btn-primary > *, button.btn.btn-tertiary > * {
+
+float: none;
+display: table-cell;
+white-space: normal;
+word-break: break-word;
+vertical-align: middle;
+}
+
+
+@media (max-width: 479px){
+
+.uxd-btn-multiple > button.btn.btn-default,
+.uxd-btn-multiple > button.btn.btn-tertiary,
+.uxd-btn-multiple > button.btn.btn-secondary,
+.uxd-btn-multiple > button.btn.btn-primary.small-primary {
+width: auto;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary, button.btn.btn-secondary,
+button.btn.btn-primary.small-primary {
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary > *, button.btn.btn-secondary > *,
+button.btn.btn-primary.small-primary > *{
+display: inline-block;
+margin: 0;
+}
+
+button.btn.btn-default, button.btn.btn-tertiary > span, button.btn.btn-secondary > span,
+button.btn.btn-primary.small-primary > span {
+width: auto;
+}
+}
+
+button.btn.btn-tertiary.calendarmatrix-modifydates-btn > * {
+display: inline-block;
+}
+
+.btn-invisible:focus {
+outline:none;
+border:none;
+}
+
+
+.btn-invisible:focus {
+outline:none;
+border:none;
+}
+
+.btn-invisible {
+
+position: absolute;
+
+
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+
+filter: alpha(opacity=0);
+
+
+-moz-opacity: 0;
+
+
+-khtml-opacity: 0;
+
+
+opacity: 0;
+}
+
+/**
+plnextv2.components.reservationMenu.desktop.styles.DReservationMenuStyle
+**/
+
+
+.reservation-icon{
+margin-right: 0.5em;
+}
+
+.reservation-btn {
+text-align: left;
+margin-top: 1em;
+padding-left: 1em;
+padding-right: 0;
+width: 100%;
+display: block;
+}
+
+.reservation-btn.new-search .icon-caret-right {
+padding: 0.1em;
+margin-right: 0.5em;
+}
+
+.dropdown-container {
+position: relative;
+}
+
+.dropdown-container ul.dropdown-body a span {
+text-decoration: none;
+}
+
+.dropdown-body {
+margin-top: 0;
+display: none;
+min-width: 100%;
+cursor: pointer;
+}
+
+.reservation-menu-responsive {
+position: relative;
+display: inline-block;
+margin-right: 20px;
+min-width: 180px;
+max-width: 210px;
+}
+
+.reservation-menu-responsive.dropdown-container{
+vertical-align: bottom;
+}
+
+.reservation-menu-responsive .reservation-btn {
+margin-top: 0px;
+}
+
+.reservation-menu-responsive .confirmation-btn {
+margin-top: -13px;
+}
+
+.responsive-menu,
+.responsive-reservation {
+padding: 0 1em;
+}
+
+.reservation-menu-responsive.reservation-dropdown button,
+.reservation-menu-responsive .confirmation-btn {
+background-color: #dfdfdf;
+border-color: #dfdfdf;
+}
+
+@media (max-width: 599px) {
+.reservation-menu-responsive {
+width: 100%;
+max-width:none;
+}
+
+.reservation-menu-responsive .reservation-btn.new-search {
+width: 100%;
+}
+
+.reservation-menu-responsive .confirmation-btn {
+margin-top: -12px;
+}
+
+.reservation-menu-responsive.start-new-search {
+margin-left: 0;
+margin-top: 0;
+}
+
+.button-container.row {
+width: 98%;
+margin: auto;
+}
+}
+
+@media (min-width: 480px){
+
+div#reservation-menu .plnext-widget-btn > span {
+width: 100%;
+}
+
+div#reservation-menu .plnext-widget-btn{
+width: 100%;
+}
+}
+
+@media (max-width: 480px){
+.reservation-menu-responsive {
+max-width: 100%;
+}
+}
+
+
+/**
+plnextv2.modules.COMMON.timeout.desktop.styles.TimeoutStyle
+**/
+
+
+.timeout-warning .timeout-warning-content h2{
+margin-top: -20px;
+}
+
+.timeout-warning .timeout-warning-content h2:focus {
+box-shadow: none;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+}
+
+.timeout-alert .timeout-alert-content h2 {
+margin-top: 0px;
+}
+
+.timeout-alert .timeout-alert-content h2:focus {
+box-shadow: none;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+}
+
+.timeout-warning button,
+.timeout-alert button {
+margin-top: 5px;
+}
+
+button.btn.btn-primary .timeout-warning-btn-reset-session-text,
+button.btn.btn-primary .timeout-alert-btn-availability-text,
+button.btn.btn-primary .timeout-alert-btn-start-over-text {
+white-space: normal;
+word-break: normal;
+vertical-align: middle;
+}
+
+</style>
+    <style id="xCsswgt" type="text/css" media="all">/**
+aria.widgets.GlobalStyle
+**/
+
+
+
+.xLDI {
+background: #fff url(https://wav.eu1.amadeus.com/plnext/default/plnext_git_19.6_prod.73_050819/static/ariatemplates/aria/css/atskin/imgs/loading.gif) no-repeat center center;_background-image: url(https://wav.eu1.amadeus.com/plnext/default/plnext_git_19.6_prod.73_050819/static/ariatemplates/aria/css/atskin/imgs/loading.gif) !important;
+filter: alpha(opacity=80);
+-moz-opacity: 0.8;
+opacity: 0.8;
+
+}
+
+.xOverlay {
+background-color: #ddd;
+
+filter: alpha(opacity=40);
+-moz-opacity: 0.4;
+opacity: 0.4;
+
+border: 1px solid black;
+
+
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
+
+}
+
+
+
+.xWidget {
+position: relative;
+display: inline-block;
+vertical-align: middle;
+}
+
+
+.xWidget textarea,
+.xWidget select,
+.xWidget input,
+.xWidget button,
+.xWidget table {
+
+}
+ a {
+
+}
+ a:link {
+
+}
+ a:visited {
+
+}
+ a:hover {
+
+}
+ a:focus {
+
+}
+
+
+.xWidget.xBlock, .xBlock, .xWidget.xFullWidth {
+display: block;
+}
+
+
+.xDialogMask {
+
+width:100%;
+height:100%;
+background-color: black;
+
+filter: alpha(opacity=40);
+-moz-opacity: 0.4;
+opacity: 0.4;
+
+}
+
+.xFrameContent {
+display: inline-block;
+position:relative;
+padding: 0 !important;
+border: 0 !important;
+}
+
+.xFixedHeightFrame_w {
+display: inline-block;
+position: relative;
+overflow: hidden;
+vertical-align: middle;
+}
+.xFixedHeightFrame_bme {
+display: inline-block;
+vertical-align: middle;
+}
+.xSimpleFrame {
+display: inline-block;
+position: relative;
+}
+
+
+*:focus {
+outline-width: 0;
+}
+
+
+.xWidget.xFullWidth .xSimpleFrame {
+display: block;
+width: auto !important;
+}
+.xWidget.xFullWidth .xFixedHeightFrame_w {
+display: block;
+}
+.xWidget.xFullWidth .xFixedHeightFrame_w .xFrameContent {
+width: 100% !important;
+}
+
+.xFloatLabelRight {
+float: right;
+}
+.xFloatLabelLeft {
+float: left;
+}
+
+.xSROnly {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0,0,0,0);
+border: 0;
+outline: none;
+}
+
+
+/**
+plnextv2.utils.widgets.plnextLib.message.style.MessageStyle
+**/
+
+
+.plnext-message {
+padding: 20px;
+border: 2px solid;
+}
+
+.plnext-message > .alert-title {
+font-size: 16px;
+font-weight: 900;
+word-break: normal;
+text-transform: none;
+margin-top: 2px;
+}
+
+.plnext-message > .alert-icon {
+margin-right: 7px;
+font-size: 24px;
+float: left;
+width: 24px;
+}
+
+.plnext-message > .content {
+margin-left: 20px;
+margin-top: 2px;
+}
+
+.plnext-message > .content p {
+font-size: 14px;
+color: #616161;
+margin-left: 10px;
+}
+
+.plnext-message > .content p:last-child {
+margin-bottom: 0;
+}
+
+.plnext-message > .content ul li {
+font-size: 14px;
+line-height: 14px;
+margin-left: 10px;
+margin-bottom: 15px;
+display: inline-block;
+width: 100%
+}
+
+.plnext-message > .content *:last-child {
+margin-bottom: 0;
+}
+
+.plnext-message-danger > .alert-icon, .plnext-message-danger > .alert-title,
+.plnext-message-warning > .alert-icon, .plnext-message-warning > .alert-title {
+color: #ce0058;
+}
+.plnext-message-info > .alert-icon, .plnext-message-info > .alert-title {
+color: #005eb8;
+}
+.plnext-message-confirmation > .alert-icon, .plnext-message-confirmation > .alert-title {
+color: #008942;
+}
+.plnext-message-widget > .alert-icon, .plnext-message-widget > .alert-title {
+color: #3f3f3f;
+}
+
+.plnext-message-danger,
+.plnext-message-warning {
+border-color: #ce0058;
+background-color: #FFFFFF;
+}
+.plnext-message-info {
+border-color: #005eb8;
+background-color: #FFFFFF;
+}
+.plnext-message-confirmation {
+border-color: #008942;
+background-color: #FFFFFF;
+}
+.plnext-message-widget {
+border: none;
+background-color: #FFFFFF;
+}
+
+.plnext-message.message-panel-styled .content .checkbox,
+.plnext-message.message-panel-styled .content .checkbox input[type="checkbox"] {
+margin: 0;
+padding-left: 8px;
+}
+
+.plnext-message.message-panel-original .cancelled-car-message-text {
+top:10px;
+position:relative;
+}
+
+.cancelled-car-hidden {
+display:none;
+}
+
+.plnext-message.message-panel-styled .alert-title strong {
+font-family: inherit;
+font-weight: inherit;
+}
+
+.plnext-message.message-panel-styled .content .checkbox label {
+margin-left: 2px;
+}
+
+.plnext-message.message-panel-styled .content .form-group {
+margin-left: 8px;
+margin-bottom: 0;
+}
+
+.plnext-message.message-panel-styled .content .checkbox input[type=checkbox] + label:before {
+color: #005eb8;
+background-color: #f8f8f8;
+line-height: 18px;
+text-align: center;
+font-family: 'ADC-icons';
+cursor: pointer;
+content: "";
+display: inline-block;
+border: 1px solid #bcbcbc;
+width: 20px;
+height: 20px;
+vertical-align: middle;
+margin: -3px 6px 0 -20px;
+
+
+-webkit-box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,.05), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+-moz-box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,.05), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+box-shadow: inset 1px 1px 3px 0px rgba(0,0,0,.05), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+
+}
+
+.plnext-message.message-panel-styled .content .checkbox input[type=checkbox]:checked + label:before {
+content: "\f00c";
+}
+
+.plnext-message.message-panel-styled .content .checkbox-container {
+margin-top: 28px;
+}
+
+
+.plnext-message.message-panel-styled .content .checkbox input[type=checkbox]:focus + label:before,
+.traveller-additional-options .checkbox input[type=checkbox]:not(:checked):focus + label:before {
+border-color: #66AFE9;
+outline: 0;
+
+
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+
+}
+
+@media (max-width: 767px) {
+.plnext-message {
+padding: 10px;
+}
+
+.plnext-message-widget.message-panel-styled .content .checkbox,
+.plnext-message-widget .content .checkbox input[type="checkbox"] {
+padding-left: 8px;
+}
+}
+
+
+/**
+plnextv2.utils.widgets.plnextLib.modalDialog.style.ModalDialogStyle
+**/
+
+.dialog {
+-moz-box-shadow: 0 0 5px 5px #3f3f3f;
+-webkit-box-shadow: 0 0 5px 5px #3f3f3f;
+box-shadow: 0 0 5px 5px #3f3f3f;
+background-color: #f8f8f8;
+
+position:fixed;
+}
+
+.dialog-header {
+border-bottom: solid thin #dfdfdf;
+display:table;
+padding: 5px;
+width: 100%;
+}
+
+.dialog-header-container {
+display: table;
+width: 100%;
+}
+
+.dialog-title {
+display:table-cell;
+text-align: left;
+margin:0;
+padding:0;
+vertical-align: middle;
+}
+
+.dialog-close-button {
+display:table-cell;
+text-align: right;
+vertical-align: top;
+cursor:pointer;
+width:1%;
+}
+
+.dialog-content {
+overflow: auto;
+display:inline-block;
+}
+
+.dialog-mask {
+background-color : #000000;
+filter: alpha(opacity=65);
+-khtml-opacity: 0.65;
+-moz-opacity: 0.65;
+opacity: 0.65;
+}
+
+.dialog.dialog-hide {
+visibility : hidden;
+}
+
+.dialog.dialog-show {
+visibility : visible;
+}
+
+.dialog-close{
+width :1.7em;
+float :right;
+background :none;
+border :none;
+}
+
+.dialog-footer {
+display: table;
+width: 100%;
+}
+.dialog-footer-close-button {
+float: right;
+}
+
+
+
+.plnext-modal-dialog {
+
+position: fixed;
+top: 0;
+
+bottom: 0;
+
+height: 100%;
+
+left: 10px;
+right: 10px;
+}
+
+.plnext-modal-dialog.dialog-hide {
+visibility : hidden;
+}
+
+.plnext-modal-dialog.dialog-show {
+visibility : visible;
+}
+
+.plnext-modal-dialog .dialog-content {
+padding: 20px;
+
+position: relative;
+display:block;
+margin: auto;
+max-width: 500px;
+
+top: 50%;
+transform: translateY(-50%);
+}
+
+.plnext-modal-dialog h2 {
+font-weight: 700;
+}
+
+.plnext-modal-dialog .btn {
+margin-right: .5em;
+}
+
+@media (max-width: 479px) {
+.plnext-modal-dialog .btn,
+.plnext-modal-dialog .plnext-widget-btn.btn-primary {
+width: 100%;
+margin-right: 0;
+}
+}
+
+/**
+plnextv2.utils.widgets.plnextLib.dialog.style.DialogStyle
+**/
+
+.dialog {
+-moz-box-shadow: 0 0 5px 5px #3f3f3f;
+-webkit-box-shadow: 0 0 5px 5px #3f3f3f;
+box-shadow: 0 0 5px 5px #3f3f3f;
+background-color: #f8f8f8;
+
+position:fixed;
+}
+
+.dialog-header {
+border-bottom: solid thin #dfdfdf;
+display:table;
+padding: 5px;
+width: 100%;
+}
+
+.dialog-header-container {
+display: table;
+width: 100%;
+}
+
+.dialog-title {
+display:table-cell;
+text-align: left;
+margin:0;
+padding:0;
+vertical-align: middle;
+}
+
+.dialog-close-button {
+display:table-cell;
+text-align: right;
+vertical-align: top;
+cursor:pointer;
+width:1%;
+}
+
+.dialog-content {
+overflow: auto;
+display:inline-block;
+}
+
+.dialog-mask {
+background-color : #000000;
+filter: alpha(opacity=65);
+-khtml-opacity: 0.65;
+-moz-opacity: 0.65;
+opacity: 0.65;
+}
+
+.dialog.dialog-hide {
+visibility : hidden;
+}
+
+.dialog.dialog-show {
+visibility : visible;
+}
+
+.dialog-close{
+width :1.7em;
+float :right;
+background :none;
+border :none;
+}
+
+.dialog-footer {
+display: table;
+width: 100%;
+}
+.dialog-footer-close-button {
+float: right;
+}
+
+
+/**
+plnextv2.utils.widgets.plnextLib.button.style.ButtonCss
+**/
+
+
+
+
+button.btn.plnext-widget-btn {
+width: auto;
+max-width: 100%;
+white-space: normal;
+word-break: break-word;
+}
+
+button.btn.plnext-widget-btn > * {
+
+display: table-cell;
+float: none;
+vertical-align: middle;
+white-space: normal;
+word-break: break-word;
+}
+
+button.btn.plnext-widget-btn > span {
+max-width: 100%;
+padding: 0;
+text-align: left;
+}
+
+button.btn.plnext-widget-btn > span.no-icons {
+
+display: inline-block;
+}
+
+button.btn.plnext-widget-btn  i.icon-large{
+font-size : 130%;
+}
+
+html[dir="ltr"] .btn > span.plnext-widget-btn-text::first-letter {
+text-transform: capitalize;
+}
+
+html[dir="ltr"][lang="th"] .btn > span.plnext-widget-btn-text::first-letter {
+text-transform: none;
+}
+
+
+
+button.btn.plnext-widget-btn.btn-primary .padding-left{
+padding-left: 20px;
+}
+
+button.btn.plnext-widget-btn.btn-primary .padding-right{
+padding-right: 20px;
+}
+
+button.btn.plnext-widget-btn.btn-primary {
+padding: 10px 20px;
+font-size: 16px;
+font-weight: 900;
+}
+
+button.btn.plnext-widget-btn.btn-primary > span {
+text-transform: uppercase;
+}
+
+html[lang="th"] button.btn.plnext-widget-btn.btn-primary > span {
+text-transform: none;
+}
+
+
+
+
+button.btn.plnext-widget-btn.btn-primary.small-primary {
+font-size: 14px;
+padding: 6px 10px;
+}
+
+button.btn.plnext-widget-btn.btn-primary.small-primary > span {
+text-transform: lowercase;
+}
+
+button.btn.plnext-widget-btn.btn-primary.small-primary > span::first-letter {
+text-transform: uppercase;
+}
+
+html[lang="th"] button.btn.plnext-widget-btn.btn-primary.small-primary > span ,
+html[lang="th"] button.btn.plnext-widget-btn.btn-primary.small-primary > span::first-letter {
+text-transform: none;
+}
+
+button.btn.plnext-widget-btn.btn-primary.small-primary .padding-right {
+padding-right: 5px;
+}
+
+button.btn.plnext-widget-btn.btn-primary.small-primary .padding-left {
+padding-left: 5px;
+}
+
+
+@media (max-width: 479px){
+button.btn.plnext-widget-btn.btn-primary.small-primary {
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+button.btn.plnext-widget-btn.btn-primary.small-primary > * {
+display: inline-block;
+margin: 0;
+}
+
+button.btn.plnext-widget-btn.btn-primary.small-primary > span {
+width: auto;
+text-align: center;
+}
+
+}
+
+
+
+
+@media (max-width: 599px){
+button.btn.plnext-widget-btn.btn-primary > span, button.btn.plnext-widget-btn.btn-primary {
+width: 100%;
+}
+}
+
+
+
+
+@media (max-width: 479px){
+
+button.btn.plnext-widget-btn.btn-default,
+button.btn.plnext-widget-btn.btn-secondary,
+button.btn.plnext-widget-btn.btn-tertiary {
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+button.btn.plnext-widget-btn.btn-default > *,
+button.btn.plnext-widget-btn.btn-secondary > *,
+button.btn.plnext-widget-btn.btn-tertiary > * {
+display: inline-block;
+}
+
+button.btn.plnext-widget-btn.btn-primary.small-primary > span,
+button.btn.plnext-widget-btn.btn-default > span,
+button.btn.plnext-widget-btn.btn-secondary > span,
+button.btn.plnext-widget-btn.btn-tertiary > span {
+width: auto;
+text-align: center;
+}
+
+button.btn.plnext-widget-btn.btn-default.btn-big, button.btn.plnext-widget-btn.btn-secondary.btn-big,
+button.btn.plnext-widget-btn.btn-tertiary.btn-big, button.btn.plnext-widget-btn.btn-default.btn-big > span, button.btn.plnext-widget-btn.btn-secondary.btn-big > span,
+button.btn.plnext-widget-btn.btn-tertiary.btn-big > span {
+text-align: left;
+}
+}
+
+
+
+
+
+button.btn.plnext-widget-btn.btn-default .padding-left, button.btn.plnext-widget-btn.btn-secondary .padding-left,
+button.btn.plnext-widget-btn.btn-tertiary .padding-left {
+padding-left: 5px;
+}
+
+button.btn.plnext-widget-btn.btn-default > span,
+button.btn.plnext-widget-btn.btn-secondary > span,
+button.btn.plnext-widget-btn.btn-tertiary > span {
+text-transform: lowercase;
+}
+
+html[lang="th"] button.btn.plnext-widget-btn.btn-default > span,
+html[lang="th"] button.btn.plnext-widget-btn.btn-secondary > span,
+html[lang="th"] button.btn.plnext-widget-btn.btn-tertiary > span {
+text-transform: none;
+}
+
+html[dir="ltr"] button.btn.plnext-widget-btn.btn-default > span::first-letter,
+html[dir="ltr"] button.btn.plnext-widget-btn.btn-secondary > span::first-letter,
+html[dir="ltr"] button.btn.plnext-widget-btn.btn-tertiary > span::first-letter {
+text-transform: uppercase;
+}
+
+html[dir="ltr"][lang="th"] button.btn.plnext-widget-btn.btn-default > span::first-letter,
+html[dir="ltr"][lang="th"] button.btn.plnext-widget-btn.btn-secondary > span::first-letter,
+html[dir="ltr"][lang="th"] button.btn.plnext-widget-btn.btn-tertiary > span::first-letter {
+text-transform: none;
+}
+
+button.btn.plnext-widget-btn.btn-default .padding-right, button.btn.plnext-widget-btn.btn-secondary .padding-right,
+button.btn.plnext-widget-btn.btn-tertiary .padding-right {
+padding-right: 5px;
+}
+
+button.btn.plnext-widget-btn.btn-default, button.btn.plnext-widget-btn.btn-secondary,
+button.btn.plnext-widget-btn.btn-tertiary {
+padding: 6px 15px;
+}
+
+.plnext-widget-btn.btn.btn-primary.text-centered,
+.plnext-widget-btn.btn.btn-primary.text-centered > span {
+text-align: center;
+}
+
+button.plnext-widget-btn.btn.btn-secondary.btn-cancel.section-dialog-btn.section-dialog-btn-cancel,
+button.btn.plnext-widget-btn.btn-default.btn-big, button.btn.plnext-widget-btn.btn-secondary.btn-big,
+button.btn.plnext-widget-btn.btn-tertiary.btn-big {
+padding: 10px 20px;
+font-size: 16px;
+}
+
+button.plnext-widget-btn.btn.btn-secondary.btn-cancel.section-dialog-btn.section-dialog-btn-cancel > span,
+button.btn.plnext-widget-btn.btn-default.btn-big > span,
+button.btn.plnext-widget-btn.btn-secondary.btn-big > span,
+button.btn.plnext-widget-btn.btn-tertiary.btn-big > span {
+text-transform: uppercase;
+}
+
+html[lang="th"] button.plnext-widget-btn.btn.btn-secondary.btn-cancel.section-dialog-btn.section-dialog-btn-cancel > span,
+html[lang="th"] button.btn.plnext-widget-btn.btn-default.btn-big > span,
+html[lang="th"] button.btn.plnext-widget-btn.btn-secondary.btn-big > span,
+html[lang="th"] button.btn.plnext-widget-btn.btn-tertiary.btn-big > span {
+text-transform: none;
+}
+
+@media (max-width: 767px) {
+.plnext-widget-btn.btn.btn-primary.text-centered,
+.plnext-widget-btn.btn.btn-primary.text-centered > span {
+text-align: left;
+}
+}
+
+.plnext-widget-btn.btn.btn-primary.text-centered .plnext-widget-btn-text.no-icons {
+width: 100%;
+}
+
+.plnext-widget-btn.btn.btn-primary.grey-button,
+.plnext-widget-btn.btn.btn-primary.grey-button:hover {
+background-color: #ddd;
+border-color: #ddd;
+color: #3f3f3f;
+}
+
+.plnext-widget-btn.btn.btn-primary.white-button,
+.plnext-widget-btn.btn.btn-primary.white-button:hover {
+background-color: #FFFFFF;
+border: 0;
+color: #616161;
+}
+
+.plnext-widget-btn.btn.btn-primary.white-button,
+.plnext-widget-btn.btn.btn-primary.white-button span {
+text-align: center;
+}
+
+.plnext-widget-btn.btn.btn-primary.white-button:hover {
+background-color: #fdfdfd;
+}
+
+
+button.plnext-widget-btn.btn.btn-primary i, button.plnext-widget-btn.btn.btn-secondary i,
+button.plnext-widget-btn.btn.btn-tertiary i, button.plnext-widget-btn.btn.btn-default i {
+padding-right: 0;
+}
+
+button.plnext-widget-btn.btn-primary i + span + i, button.plnext-widget-btn.btn-secondary i,
+button.plnext-widget-btn.btn-tertiary i, button.plnext-widget-btn.btn-default i {
+padding: 0;
+}
+</style>
+
+    
+    
+      <link rel="stylesheet" href="./files/DXCustom.css">
+    
+
+    
+    
+      
+    
+
+
+    
+
+    
+        
+        <script src="./files/cse.min.js">
+        </script>
+    
+        
+        <script src="./files/cse-pe.min.js">
+        </script>
+    
+
+
+    <!--[if lt IE 9]>
+    
+        
+        <script src="https://wav.eu1.amadeus.com/plnext/default/plnext_git_19.6_prod.73_050819/static/plnextv2/lib/js/html5shiv.js" media="print" >
+        </script>
+    
+        
+        <script src="https://wav.eu1.amadeus.com/plnext/default/plnext_git_19.6_prod.73_050819/static/plnextv2/lib/js/respond.min.js" media="print" >
+        </script>
+    
+        
+        <script src="https://wav.eu1.amadeus.com/plnext/default/plnext_git_19.6_prod.73_050819/static/plnextv2/lib/js/polyfill/toISOString.js" media="print" >
+        </script>
+    
+    <![endif]-->
+
+    
+    
+
+    
+
+    
+    
+    
+    
+    
+    
+  <title>Modify Reservation</title></head>
+
+  <body data-device-type="DESKTOP" data-page-device-type="DESKTOP" data-template-name="TLIST">
+  
+  
+
+
+  
+
+  <section id="main-container" class="container">
+      
+      
+      <p id="sr-status" role="status" aria-live="polite" class="plnext-sr-only"></p>
+
+      <header id="main-layout-header" class="row layout-header main-headerengineoff">
+        
+          <script src="./files/IMPLibDxCustomFI.js"></script><script src="./files/IMPLibDxCore.js"></script>
+<script src="./files/IMPLibDxAtc.js"></script>
+<script src="./files/IMPLibDxAaas.js"></script>
+<script src="./files/IMPLibDxPlusGrade.js"></script>
+
+<script src="./files/optimizely.js"></script>
+<script src="./files/trackingDxEvents.js"></script>
+<script src="./files/s7676.js"></script>
+        
+      </header>
+
+      <section class="row layout-middle">
+
+        <aside id="main-layout-left" class="hidden-md hidden-lg hidden-sm hidden-xs layout-left">
+          
+            
+          
+        </aside>
+
+        
+        <div class="col-xs-24 layout-center-column">
+
+          <header id="main-layout-top" class="row layout-top hidden-sm hidden-xs">
+            
+              
+            
+          </header>
+
+          <section class="row layout-body" id="page-container-parent">
+              <section id="page-container" class="col-xs-24 layout-center page " data-placeholder-path="TLIST" _template="plnextv2.views.MainTemplate" atdelegate="d0"><div id="plnext-skip-link-container"><a class="plnext-sr-only skip-link hidden-print plnext-sr-only-page btn" id="skip-to-TLIST-page" href="" data-target-id="TLIST-page" tabindex="1">Skip to main content</a></div><div id="w0"><div data-placeholder-path="TLIST/pageContent" _template="plnextv2.modules.TLIST.desktop.views.DTLISTView" class=" " atdelegate="d1">
+
+<header id="page-template-header" class="row">
+<span id="w1"><div data-placeholder-path="TLIST/pageContent/debug_dwm_placeholder"></div></span><span id="w2"><div data-placeholder-path="TLIST/pageContent/top_dwm_placeholder"></div></span>
+<div id="bread-crumb" class="component-container bread-crumb-container ">
+<span id="w3"><div data-placeholder-path="TLIST/pageContent/breadCrumb" _template="plnextv2.components.breadCrumb.desktop.views.DBreadCrumbView" class=" " atdelegate="d6">
+
+<div class="component bread-crumb-component header-component">
+
+<div class="pull-left">
+<div class="title-container ">
+<h1 class="bread-crumb-title">
+MODIFY RESERVATION {{RLOC}}
+</h1>
+</div>
+</div>
+
+
+
+<div class="spacer"> </div>
+
+</div>
+</div></span>
+</div>
+
+</header>
+
+
+<section id="TLIST-page" data-page-name="TLIST" class="row page-template-section ">
+<section id="TLIST-page-content" class=" col-xs-24 ">
+
+<aside id="left-page-custom-content" class="page-custom-content">
+<script id="left-panel-script"></script><span id="w4"><div data-placeholder-path="TLIST/pageContent/left_dwm_placeholder"></div></span>
+
+
+</aside>
+
+<div class="DTLISTView">
+
+<section class=" col-xs-24  col-sm-24 ">
+<span id="w6"><div data-placeholder-path="TLIST/pageContent/reservationList" _template="plnextv2.components.reservationList.desktop.views.DReservationListView" class=" " atdelegate="d7">
+
+<div class="Reservation-list-search" id="tpl3_ReservationListSearch">
+<div id="w18" class=" " _template="plnextv2.components.reservationList.desktop.views.DReservationListSearchView" atdelegate="d8">
+
+
+<div class="global-form-error">
+<div id="w18_tabOptiona" atdelegate="d9">
+
+<form action="" method="POST">
+
+
+
+<div class="col-xs-24">
+<div tabindex="-1" id="form-global-errors-reservationSearchForm" class="form-global-error message-panel-styled plnext-message plnext-message-danger alert alert-danger message-show" style="display:none;"><span class="alert-icon alert-icon-danger icon-remove-sign" aria-hidden="true"></span><h2 id="alert-title-form-global-errors-reservationSearchForm" class="alert-title"><strong>0 error</strong></h2><div class="content">
+<p>Please check the information in red </p>
+
+
+<ul class="error">
+<li class="globalError" style="display:none" id="w18_global-error-message--reservationSearchForm-passengerLastName" atdelegate="d11">
+<a href="javascript:;">
+
+</a>
+</li><li class="globalError" style="display:none" id="w18_global-error-message--reservationSearchForm-recordLocatorOrETicket" atdelegate="d12">
+<a href="javascript:;">
+
+</a>
+</li>
+</ul>
+
+</div></div>
+</div>
+
+
+
+</form>
+</div>
+</div>
+
+<div class="panel panel-search">
+
+
+<header class="panel-heading">
+<h3 class="panel-title"><span>Modify reservation(s)</span></h3>
+</header>
+<div id="w18_tabOptions" atdelegate="d13">
+<div class="reservation-search-panel">
+
+<div class="tabs">
+LOGIN OK
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></span>
+</section>
+
+
+
+<section id="reservation-menu" class=" col-xs-24  col-sm-24  hidden-print reservation-menu">
+
+
+
+<div class="text-right">
+<span id="w7"><div data-placeholder-path="TLIST/pageContent/reservationMenu" _template="custom.components.reservationMenu.desktop.views.CustomDReservationMenuView" class=" " atdelegate="d20"><span id="w20"><div></div></span>
+<div class=" button-container">
+
+<div class="plnext-dropdown dropdown-container start-new-search reservation-menu-responsive">
+<button type="button" id="w21" class="plnext-widget-btn btn btn-secondary reservation-btn new-search" atdelegate="d21"><i class="icon icon-left reservation-icon icon-search padding-right" aria-hidden="true"></i><span class="plnext-widget-btn-text one-icon">Start new search</span></button>
+</div>
+
+
+</div>
+<span id="w22"><div></div></span></div></span>
+</div>
+</section>
+
+
+
+
+</div>
+
+<aside id="right-page-custom-content" class="page-custom-content">
+<span id="w8"><div data-placeholder-path="TLIST/pageContent/right_dwm_placeholder"></div></span>
+</aside>
+<div id="dialog-timeout-warning-dialog" class="plnext-modal-dialog dialog-hide " aria-hidden="true" tabindex="-1" aria-describedby="dialog-content-timeout-warning-dialog"><div id="dialog-content-timeout-warning-dialog" class="dialog dialog-content" tabindex="-1"><div id="w12" _template="plnextv2.modules.COMMON.timeout.desktop.views.TimeoutTemplate" class=" " atdelegate="d22">
+
+<section class="timeout-warning">
+<br>
+<div class="row">
+<div class="timeout-warning-content col-xs-24">
+<h2>Do you need more time?</h2>
+<p>The results on this page are available for 10 minutes of inactivity.</p><p>If you need more time, click the button below to add another 10 minutes.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-24">
+<button class="plnext-widget-btn btn btn-primary timeout-warning-btn-reset-session small-primary" atdelegate="d23"><i class="icon icon-left icon-repeat timeout-warning-btn-reset-session-icon-repeat padding-right" aria-hidden="true"></i><span class="plnext-widget-btn-text timeout-warning-btn-reset-session-text">Add more time</span><i class="icon icon-right " aria-hidden="true"></i></button>
+</div>
+</div>
+</section>
+
+</div></div></div><div id="dialog-timeout-dialog" class="plnext-modal-dialog dialog-hide " aria-hidden="true" tabindex="-1" aria-describedby="dialog-content-timeout-dialog"><div id="dialog-content-timeout-dialog" class="dialog dialog-content" tabindex="-1"><div id="w16" _template="plnextv2.modules.COMMON.timeout.desktop.views.TimeoutAlertTemplate" class=" " atdelegate="d24"><section class="timeout-alert" id="w16_timeout" atdelegate="d25">
+<div class="row">
+<div class="timeout-alert-content col-xs-24">
+<h2></h2>
+You can start a new search.
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-24">
+<button class="plnext-widget-btn btn btn-primary timeout-alert-btn-start-over small-primary" atdelegate="d26"><span class="plnext-widget-btn-text timeout-alert-btn-start-over-text no-icons">Go to Home page</span></button>
+</div>
+</div>
+
+</section></div></div></div>
+</section>
+
+</section>
+
+<footer id="page-template-footer" class="row">
+<span id="w17"><div data-placeholder-path="TLIST/pageContent/bottom_dwm_placeholder"></div></span>
+</footer>
+</div></div></section>
+          </section>
+
+          <footer id="main-layout-bottom" class="row layout-bottom hidden-sm hidden-xs">
+            
+              
+            
+          </footer>
+
+        </div>
+
+        <aside id="main-layout-right" class="hidden-md hidden-lg hidden-sm hidden-xs layout-right">
+          
+              
+          
+        </aside>
+      </section>
+
+      <footer id="main-layout-footer" class="row layout-footer">
+        
+          
+        
+      </footer>
+   </section>
+
+    
+      
+    <script>
+
+    var rootClassPath  = "https://wav.eu1.amadeus.com/plnext/default/plnext_git_19.6_prod.73_050819/static/";
+
+     aria.core.AppEnvironment.setEnvironment({
+          defaultWidgetLibs : {
+            "aria" : "aria.widgets.AriaLib",
+            "embed" : "cse.pageEngine.CseWidgets",
+            "html" : "aria.html.HtmlLibrary",
+            "plnext" : "plnextv2.utils.widgets.PlnextLib",
+            "light" : "plnextv2.utils.widgets.light.LightWidgetLib"
+          },
+          templateSettings : {
+              escapeHtmlByDefault: false
+          },
+          language : {
+            primaryLanguage : 'en',
+            region : 'GB'
+          },
+          requestHandler: {
+              implementation: "aria.modules.requestHandler.JSONRequestHandler"
+          }
+      });
+
+
+
+      /*set default root for aria */
+      aria.core.DownloadMgr.updateRootMap({
+         "pageEngine": rootClassPath,
+         "pageConfigs" : rootClassPath+"plnextv2/",
+         "plnextv2" : rootClassPath,
+         "custom" : "/go/r421/"
+
+      });
+
+      
+
+      var dependencies = ["cse.pageEngine.CustomPageEngine"
+                          , "plnextv2.utils.pageProvider.PlnextPageProvider"
+                          , "plnextv2.utils.HtmlUtils"
+                          , "plnextv2.utils.ImplementationUtils"
+                          , "plnextv2.utils.requestManager.CustomResourcesFilter"
+                          , "plnextv2.utils.requestManager.RTLResourcesFilter"
+                          ]
+
+    </script>
+
+
+  
+
+  
+  
+
+  
+
+<div id="d__fFH" style="position: absolute !important; top: -5000px !important; left: -5000px !important;"><object id="d_dlg" classid="clsid:3050f819-98b5-11cf-bb82-00aa00bdce0b" width="0px" height="0px"></object><span id="d__fF" style="font-family: Courier, serif !important; font-size: 72px !important; visibility: hidden;">The quick brown fox jumps over the lazy dog.</span></div></body></html>
